@@ -4,10 +4,8 @@ from .models import BlogCategory, BlogPost
 
 @admin.register(BlogCategory)
 class BlogCategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug')
-    search_fields = ('name', 'slug')
-    # Automatically generate slug from name
-    prepopulated_fields = {'slug': ('name',)}
+    list_display = ('name',)
+    search_fields = ('name',)
 
 
 @admin.register(BlogPost)
