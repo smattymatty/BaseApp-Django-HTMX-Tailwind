@@ -1,4 +1,4 @@
-name: Django CI
+name: Django Tests
 
 on:
   push:
@@ -28,11 +28,13 @@ jobs:
     - name: Create credentials.py
       run: |
         cp credentials_example.py credentials.py 
-    - name: Run Tests
+    - name: Run Django Tests
       run: |
         coverage run manage.py test
         coverage report
-    - name: Run Performance Tests with Locust
+    - name: Start Gunicorn
       run: |
-        python manage.py runserver &
+        gunicorn core.wsgi:application --bind 0.0.0.0:8000 & #replace core.wsgi:application with your path
+    - name: Run Locust Performance Tests
+      run: |
         locust -f locust_tests.py --headless --host=http://localhost:8000 -u 10 -r 2 --run-time 30s
