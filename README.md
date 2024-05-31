@@ -4,6 +4,16 @@ A customizable Django foundation with Tailwind CSS, HTMX, Loguru logging, and st
 
 I'm making this for fun, it's not finished but feel free to use it, don't question my old messy code that I plan on refactoring later :)
 
+## Features
+
+* **Frontend Technologies:**
+    * Tailwind CSS: A utility-first CSS framework for building modern designs.
+    * HTMX:  A library for adding rich interactions without the need for full-page reloads.
+* **Backend Enhancements:**
+    * Loguru: A powerful logging library for structured, efficient logging.
+    * Custom User Model:  Provides more flexibility than Django's built-in user model.
+* **JavaScript Modules:** Ready-to-use components for adding interactive features to your templates (e.g., toggle button groups).
+
 ## Installation and Setup
 1. Clone the repository to your local machine:
 ```bash
@@ -64,7 +74,8 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 # or
-.\run_dev.bat
+.\run_dev.bat # Windows
+run_dev.sh # Linux/macOS
 ```
 
 ### Working with Tailwind & HTMX
@@ -82,7 +93,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-Base.html, which is the base template for all pages, includes the following lines:
+`base.html`, which all pages inherit from, includes the following lines:
 
 ```html
 {% load static tailwind_tags django_htmx %}
@@ -106,8 +117,18 @@ The `{% tailwind_css %}` tag is used to include the Tailwind CSS stylesheet in t
 
 The `{% django_htmx_script %}` tag is used to include the HTMX script in the HTML document.
 
-# Javascript Modules
-This project comes with a set of ready-to-use JavaScript modules for enhanced frontend interactivity. These modules can be easily integrated into your Django project to enhance the user experience.
+Run the command:
+```bash
+./tailwind_run.bat # Windows
+./tailwind_run.sh # Linux/macOS
+```
+To start the Tailwind CSS development server provided by the 'Django-Tailwind' package.
+
+# JavaScript Modules for Enhanced Interactivity
+This project includes JavaScript modules to add interactive features to your Django templates.
+
+Check the console for warnings and errors that are meat to guide you through the process in case you are stuck.
+
 ## button_handlers.mjs
 Button handlers are a set of classes that allow you to create interactive button groups.
 ### ToggledButtonGroup
@@ -142,11 +163,11 @@ The ToggledButtonGroup class allows you to create interactive button groups wher
 `data-active-class`: Specifies the CSS class(es) to apply to the active button. You can include multiple classes separated by spaces (e.g., bg-blue-500 text-white).
 
 `data-initial-active`: Determines which button should be active when the page loads. It can be:
-- "first": Activates the first button.
-- "last": Activates the last button.
-- "none": No button is active initially.
-- "random": A random button is activated.
-- 1, 2, 3, etc.: Activates the button at the specified index (1-based).
+"first": Activates the first button.
+"last": Activates the last button.
+"none": No button is active initially.
+"random": A random button is activated.
+1, 2, 3, etc.: Activates the button at the specified index (1-based).
 
 3. JavaScript Initialization:
 
