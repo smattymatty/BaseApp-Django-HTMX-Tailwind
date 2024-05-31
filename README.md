@@ -1,8 +1,11 @@
-# Base Django App
+# Base Django App [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A customizable Django foundation with Tailwind CSS, HTMX, Loguru logging, and streamlined user management. Includes ready-to-use JavaScript modules for enhanced frontend interactivity. 
+[Optional Logo]
 
-I'm making this for fun, it's not finished but feel free to use it, don't question my old messy code that I plan on refactoring later :)
+A customizable Django foundation with Tailwind CSS, HTMX, Loguru logging, and streamlined user management. Includes ready-to-use JavaScript modules for enhanced frontend interactivity.
+
+This project is a work in progress, but feel free to use it and provide feedback! Contributions are welcome. 
+
 
 ## Features
 
@@ -12,23 +15,17 @@ I'm making this for fun, it's not finished but feel free to use it, don't questi
 * **Backend Enhancements:**
     * Loguru: A powerful logging library for structured, efficient logging.
     * Custom User Model:  Provides more flexibility than Django's built-in user model.
-* **JavaScript Modules:** Ready-to-use components for adding interactive features to your templates (e.g., toggle button groups).
+* **JavaScript Modules:** Ready-to-use components for adding interactive features to your templates (e.g., toggle button groups, modal handlers).
 
 ## Installation and Setup
-1. Clone the repository to your local machine:
-```bash
-git clone https://github.com/smattymatty/Base-Django-HTMX-Tailwind
-cd Base-Django-HTMX-Tailwind
-```
-2. Create a virtual environment (recommended):
-```bash
-python -m venv venv  # Create a virtual environment
-source venv/bin/activate  # Activate it (Linux/macOS)
-venv\Scripts\activate  # Activate it (Windows)
 
-```
-3. Install Dependencies:
+1. Clone the repository: `git clone https://github.com/smattymatty/Base-Django-HTMX-Tailwind`
+2. Change into the project directory: `cd Base-Django-HTMX-Tailwind`
+3. Create/activate a virtual environment and install dependencies:
 ```bash
+python -m venv venv  
+source venv/bin/activate  # Linux/macOS
+.\venv\Scripts\activate  # Windows (Note: Use `.\` instead of `source`)
 pip install -r requirements.txt
 ```
 4. Create Credentials in your project's root:
@@ -127,7 +124,7 @@ To start the Tailwind CSS development server provided by the 'Django-Tailwind' p
 # JavaScript Modules for Enhanced Interactivity
 This project includes JavaScript modules to add interactive features to your Django templates.
 
-Check the console for warnings and errors that are meat to guide you through the process in case you are stuck.
+Check the console for warnings and errors that should guide you through the process in case you are stuck.
 
 ## button_handlers.mjs
 Button handlers are a set of classes that allow you to create interactive button groups.
