@@ -1,8 +1,8 @@
 # Base Django App
 
- A customizable Django foundation with Tailwind CSS, HTMX, Loguru logging, and streamlined user management. Includes ready-to-use JavaScript modules for enhanced frontend interactivity. 
+A customizable Django foundation with Tailwind CSS, HTMX, Loguru logging, and streamlined user management. Includes ready-to-use JavaScript modules for enhanced frontend interactivity. 
 
-    I'm making this for fun, it's not finished but feel free to use it, don't question my old messy code that I plan on refactoring later :)
+I'm making this for fun, it's not finished but feel free to use it, don't question my old messy code that I plan on refactoring later :)
 
 ## Installation and Setup
 1. Clone the repository to your local machine:
@@ -109,7 +109,7 @@ The `{% django_htmx_script %}` tag is used to include the HTMX script in the HTM
 # Javascript Modules
 This project comes with a set of ready-to-use JavaScript modules for enhanced frontend interactivity. These modules can be easily integrated into your Django project to enhance the user experience.
 ## button_handlers.mjs
-    Button handlers are a set of classes that allow you to create interactive button groups.
+Button handlers are a set of classes that allow you to create interactive button groups.
 ### ToggledButtonGroup
 
 The ToggledButtonGroup class allows you to create interactive button groups where only one button can be active at a time. Clicking a button toggles its active state. You can customize the appearance of active buttons, choose the initially active button, and easily manage multiple button groups on your page.
