@@ -80,7 +80,7 @@ This project is already configured to use Tailwind and HTMX. It uses the popular
 # settings.py
 INSTALLED_APPS = [
     ...
-    "django_htmx",
+    'django_htmx',
     'tailwind',
     'theme',
     ...
@@ -117,6 +117,63 @@ Run the command:
 ./tailwind_run.sh # Linux/macOS
 ```
 To start the Tailwind CSS development server provided by the 'Django-Tailwind' package.
+
+### Working with Loguru
+
+This project utilizes Loguru, a powerful and flexible logging library for Python, to provide a structured and efficient logging system.
+
+#### Key Benefits
+
+- Simple Setup: Loguru's configuration is intuitive and concise.
+Customization: You can easily customize log formats, levels, and destinations.
+- Automatic File Rotation: Log files are automatically rotated based on size or time, preventing them from growing too large.
+- Filtering: You can filter logs based on specific criteria, such as log level, module name, or any custom attribute.
+- Context Binding: Loguru allows you to bind contextual information to your log records for better traceability.
+
+#### Configuration
+
+The main Loguru configuration is located in the BaseApp/utils.py file. It includes:
+
+`get_module_logger` function: This function is used to create a logger instance for a specific module.
+`from .constants import LOG_FORMAT`: The log format includes the timestamp, log level, module name, and the log message. This lies in the BaseApp/constants.py file.
+```python
+#constants.py
+LOG_FORMAT = "{time} -- {level} -- {function} -- line {line}\n\t {message}"
+```
+
+#### Usage
+
+1. Import the Logger:
+```python
+from BaseApp.utils import get_module_logger
+```
+2. Get the logger instance:
+```python
+logger = get_module_logger("my_module", __file__)
+```
+This line creates a logger instance bound to the "my_module" module and the file where the logger is being used.
+3.Log Messages:
+Use the standard Loguru logging methods:
+```python
+logger.debug("This is a debug message")
+logger.info("This is an info message")
+logger.warning("This is a warning message")
+logger.error("This is an error message")
+logger.critical("This is a critical message")
+```
+4. Customizing Log Levels: 
+You can adjust the minimum log level in get_module_logger to control which messages are logged.
+
+#### Example: Logging in `CustomUserManager`
+```python
+# In your managers.py file:
+from BaseApp.utils import get_module_logger
+module_logger = get_module_logger("managers", __file__)
+
+# ... later in your code ...
+module_logger.debug(f"Creating user with username: {username} and email: {email}")
+```
+In this example, module_logger logs a debug message when a new user is being created. This helps you track user creation activities.
 
 # JavaScript Modules for Enhanced Interactivity
 This project includes JavaScript modules to add interactive features to your Django templates.
