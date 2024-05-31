@@ -31,9 +31,9 @@ class Command(BaseCommand):
         # Get all available authors (users)
         authors = list(User.objects.all())
         if not authors:
-            self.stdout.write(self.style.ERROR(
-                'No authors found. Please create some users first.'))
-            return
+            self.stdout.write(self.style.WARNING(
+                'No authors found. Creating a Random Author...'))
+            authors = [self.create_random_user(fake)]  # Create one random user
 
         for _ in range(num_posts):
             title = fake.sentence()[:64]  # Limit title to 64 characters
@@ -69,3 +69,24 @@ class Command(BaseCommand):
             categories.append(category)
 
         return categories
+
+    def create_random_user(self, fake):
+        """Creates a random user using Faker."""
+
+        first_name = fake.first_name()
+        last_name = fake.last_name()
+        username = f"{first_name.lower()}_{last_name.lower()}"
+
+        # Ensure username is unique
+        while User.objects.filter(username=username).exists():
+            username = f"{username}_{random.randint(1, 1000)}"
+
+        email = fake.email()
+        password = fake.password()
+
+        user = User.objects.create_user(
+            username=username,
+            email=email,
+            password=password,
+        )
+        return user
