@@ -142,11 +142,11 @@ The ToggledButtonGroup class allows you to create interactive button groups wher
 `data-active-class`: Specifies the CSS class(es) to apply to the active button. You can include multiple classes separated by spaces (e.g., bg-blue-500 text-white).
 
 `data-initial-active`: Determines which button should be active when the page loads. It can be:
-    - "first": Activates the first button.
-    - "last": Activates the last button.
-    - "none": No button is active initially.
-    - "random": A random button is activated.
-    - 1, 2, 3, etc.: Activates the button at the specified index (1-based).
+- "first": Activates the first button.
+- "last": Activates the last button.
+- "none": No button is active initially.
+- "random": A random button is activated.
+- 1, 2, 3, etc.: Activates the button at the specified index (1-based).
 
 3. JavaScript Initialization:
 
