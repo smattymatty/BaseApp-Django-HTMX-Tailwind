@@ -1,7 +1,5 @@
 # Base Django App [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[Optional Logo]
-
 A customizable Django foundation with Tailwind CSS, HTMX, Loguru logging, and streamlined user management. Includes ready-to-use JavaScript modules for enhanced frontend interactivity.
 
 This project is a work in progress, but feel free to use it and provide feedback! Contributions are welcome. 
