@@ -5,6 +5,10 @@ import os
 
 
 class Command(BaseCommand):
+    """
+    Generate a dummy HTML file for Tailwind CSS classes.
+        - Example usage: python manage.py tailwind_dummy
+    """
     help = 'Generate a dummy HTML file for Tailwind CSS classes'
 
     def handle(self, *args, **kwargs):

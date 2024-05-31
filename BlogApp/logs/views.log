@@ -2018,3 +2018,9 @@
 	 page_number=1, search_query=''
 2024-05-30T14:57:38.167060-0400 -- DEBUG -- get_blog_post_list -- line 34
 	 page_number=1, search_query=''
+2024-05-30T23:45:34.233303-0400 -- DEBUG -- get_blog_post_list -- line 34
+	 page_number=1, search_query=''
+2024-05-30T23:45:37.176632-0400 -- DEBUG -- get_blog_post_list -- line 34
+	 page_number=2, search_query=''
+2024-05-30T23:47:24.845475-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info

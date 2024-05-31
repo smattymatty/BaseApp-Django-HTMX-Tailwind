@@ -4,6 +4,10 @@ from django.views.generic.base import TemplateView
 from django.template import loader
 from django.http import HttpResponse
 
+from BaseApp.utils import get_module_logger
+
+module_logger = get_module_logger("views", __file__)
+
 
 class BaseView(TemplateView):
     template_name = 'BaseApp/base.html'
@@ -29,6 +33,7 @@ def get_django_info(request):
 
 
 def get_tailwind_info(request):
+    module_logger.debug("get_tailwind_info")
     template = loader.get_template(
         'BaseApp/home/partials/tailwind_partial.html')
     context = {
