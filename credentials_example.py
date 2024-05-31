@@ -4,7 +4,7 @@
 # Replace the following placeholder with a strong, unique secret key for your Django project.
 # You can generate one using:
 #     python -c "import secrets; print(secrets.token_urlsafe(50))"
-SECRET_KEY = ''  # Replace this with your actual secret key
+SECRET_KEY = 'replace me'  # Replace this with your actual secret key
 
 # Database configuration
 # NOTE: This is a sample SQLite configuration for initial setup and testing.

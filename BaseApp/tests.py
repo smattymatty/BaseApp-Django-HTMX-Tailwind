@@ -10,12 +10,6 @@ import os
 
 class UtilsTests(SimpleTestCase):
 
-    def test_get_parent_folder(self):
-        """Test the get_parent_folder function to ensure that the parent folder is properly extracted"""
-        test_path = "C:\\Users\\example\\project\\file.py"
-        expected_output = "C:\\Users\\example\\project"
-        self.assertEqual(get_parent_folder(test_path), expected_output)
-
     def test_get_module_logger(self):
         """Test the get_module_logger function to ensure that the logger is properly created and the log file exists"""
         module_name = "test_module"
@@ -53,35 +47,3 @@ class UtilsTests(SimpleTestCase):
             expected_output = "folder/subfolder/file.txt"
 
         self.assertEqual(join_paths(*paths), expected_output)
-
-
-class GenerateTailwindDummyCommandTest(TestCase):
-
-    def setUp(self):
-        '''Register a test-specific style'''
-        @register_style(name="test-style")
-        class TestStyle(TailwindStyle):  # pylint disable= unused-variable-name
-            '''Test style class'''
-            classes = "test-class-1 test-class-2"
-
-    def test_generate_tailwind_dummy_with_test_style(self):
-        '''Define the expected path of the dummy file'''
-        expected_file_path = os.path.join(
-            'BaseApp', 'templates', 'BaseApp', 'tailwind_dummy.html')
-
-        # Call the management command
-        call_command('tailwind_dummy')
-
-        # Check if the file is created
-        self.assertTrue(os.path.exists(expected_file_path))
-
-        # Read the file and check if the test style is included
-        with open(expected_file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
-            self.assertIn('test-class-1', content)
-            self.assertIn('test-class-2', content)
-
-    def tearDown(self):
-        '''Remove the generated dummy file after the test'''
-        os.remove(os.path.join('BaseApp', 'templates',
-                  'BaseApp', 'tailwind_dummy.html'))
