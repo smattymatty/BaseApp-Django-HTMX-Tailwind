@@ -3,7 +3,6 @@ from django.test import TestCase, RequestFactory, SimpleTestCase
 from django.template import Context, Template
 
 from BaseApp.styles import TailwindStyle, register_style
-from BaseApp.menus import nav_items
 from BaseApp.utils import get_parent_folder, get_module_logger, bleach_clean_value, join_paths
 
 import os
@@ -54,30 +53,6 @@ class UtilsTests(SimpleTestCase):
             expected_output = "folder/subfolder/file.txt"
 
         self.assertEqual(join_paths(*paths), expected_output)
-
-
-class NavButtonsTemplateTagTest(TestCase):
-    def setUp(self):
-        # Set up the request factory
-        self.factory = RequestFactory()
-
-    def render_template(self, string, context):
-        """render the template with your custom template tag"""
-        return Template(string).render(Context(context))
-
-    def test_nav_buttons_tag(self):
-        """test the nav_buttons template tag"""
-        rendered = self.render_template(
-            '{% load menu_tags %}{% nav_buttons %}',
-            {}
-        )
-
-        # Check if the output contains expected strings for each button
-        for button_name, options in nav_items.items():
-            self.assertIn(button_name, rendered)
-            for option in options:
-                self.assertIn(option.name, rendered)
-                self.assertIn(option.url, rendered)
 
 
 class GenerateTailwindDummyCommandTest(TestCase):

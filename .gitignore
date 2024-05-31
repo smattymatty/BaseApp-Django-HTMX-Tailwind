@@ -3,3 +3,5 @@ venv/
 .pylintrc
 .prettierignore
 credentials.py
+/htmlcov/
+.coverage

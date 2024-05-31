@@ -4,6 +4,7 @@ A customizable Django foundation with Tailwind CSS, HTMX, Loguru logging, and st
 
 This project is a work in progress, but feel free to use it and provide feedback! Contributions are welcome. 
 
+There is a lot to re-do, and a lot of docs to write, especially for navigation and user management. I'm working on it.
 
 ## Features
 
@@ -183,6 +184,7 @@ Check the console for warnings and errors that should guide you through the proc
 ## button_handlers.mjs
 Button Handlers are a set of classes that allow you to create interactive button groups.
 ### ToggledButtonGroup
+Visit [BaseApp/button_examples.html](BaseApp/templates/BaseApp//ui_elements/sections/buttons_examples.html) for an example.
 ![Gif of buttons changing](https://i.imgur.com/lfe5AWF.gif)
 The ToggledButtonGroup class allows you to create interactive button groups where only one button can be active at a time. Clicking a button toggles its active state. You can customize the appearance of active buttons, choose the initially active button, and easily manage multiple button groups on your page.
 

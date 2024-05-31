@@ -1680,8 +1680,16 @@ a:hover:visited {
   min-height: 0.5rem;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .w-1\/3 {
   width: 33.333333%;
+}
+
+.w-1\/6 {
+  width: 16.666667%;
 }
 
 .w-6 {
@@ -1694,14 +1702,6 @@ a:hover:visited {
 
 .w-full {
   width: 100%;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-1\/6 {
-  width: 16.666667%;
 }
 
 .max-w-\[90vw\] {
@@ -1718,14 +1718,6 @@ a:hover:visited {
 
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.flex-shrink {
-  flex-shrink: 1;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
 }
 
 .flex-grow {
@@ -1750,10 +1742,6 @@ a:hover:visited {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap;
 }
 
 .content-start {
@@ -1792,12 +1780,12 @@ a:hover:visited {
   justify-content: space-evenly;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-x-4 {
@@ -1876,10 +1864,6 @@ a:hover:visited {
   border-width: 1px;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
 .border-x {
   border-left-width: 1px;
   border-right-width: 1px;
@@ -1933,6 +1917,10 @@ a:hover:visited {
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-black\/10 {
+  border-color: rgb(0 0 0 / 0.1);
 }
 
 .border-black\/50 {
@@ -1995,18 +1983,6 @@ a:hover:visited {
 .border-zinc-950 {
   --tw-border-opacity: 1;
   border-color: rgb(9 9 11 / var(--tw-border-opacity));
-}
-
-.border-black\/10 {
-  border-color: rgb(0 0 0 / 0.1);
-}
-
-.border-black\/20 {
-  border-color: rgb(0 0 0 / 0.2);
-}
-
-.border-black\/0 {
-  border-color: rgb(0 0 0 / 0);
 }
 
 .border-y-blue-500 {
@@ -2121,6 +2097,14 @@ a:hover:visited {
   background-color: rgb(153 27 27 / 0.7);
 }
 
+.bg-slate-200\/100 {
+  background-color: rgb(226 232 240 / 1);
+}
+
+.bg-slate-900\/50 {
+  background-color: rgb(15 23 42 / 0.5);
+}
+
 .bg-teal-500\/70 {
   background-color: rgb(20 184 166 / 0.7);
 }
@@ -2146,64 +2130,6 @@ a:hover:visited {
 .bg-zinc-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(9 9 11 / var(--tw-bg-opacity));
-}
-
-.bg-white\/20 {
-  background-color: rgb(255 255 255 / 0.2);
-}
-
-.bg-white\/30 {
-  background-color: rgb(255 255 255 / 0.3);
-}
-
-.bg-white\/50 {
-  background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-gray-100\/20 {
-  background-color: rgb(243 244 246 / 0.2);
-}
-
-.bg-slate-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.bg-slate-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
-.bg-slate-900\/50 {
-  background-color: rgb(15 23 42 / 0.5);
-}
-
-.bg-slate-300\/50 {
-  background-color: rgb(203 213 225 / 0.5);
-}
-
-.bg-slate-200\/50 {
-  background-color: rgb(226 232 240 / 0.5);
-}
-
-.bg-slate-100\/50 {
-  background-color: rgb(241 245 249 / 0.5);
-}
-
-.bg-slate-100\/80 {
-  background-color: rgb(241 245 249 / 0.8);
-}
-
-.bg-slate-300\/80 {
-  background-color: rgb(203 213 225 / 0.8);
-}
-
-.bg-slate-300\/100 {
-  background-color: rgb(203 213 225 / 1);
-}
-
-.bg-slate-200\/100 {
-  background-color: rgb(226 232 240 / 1);
 }
 
 .bg-opacity-80 {
@@ -2440,8 +2366,17 @@ a:hover:visited {
   letter-spacing: 0em;
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-black\/50 {
   color: rgb(0 0 0 / 0.5);
+}
+
+.text-black\/70 {
+  color: rgb(0 0 0 / 0.7);
 }
 
 .text-blue-700 {
@@ -2482,19 +2417,6 @@ a:hover:visited {
 
 .text-white\/70 {
   color: rgb(255 255 255 / 0.7);
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-black\/70 {
-  color: rgb(0 0 0 / 0.7);
-}
-
-.text-black\/20 {
-  color: rgb(0 0 0 / 0.2);
 }
 
 .opacity-0 {
@@ -2695,10 +2617,6 @@ a:hover:visited {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-white\/30:hover {
-  background-color: rgb(255 255 255 / 0.3);
-}
-
 .hover\:pt-3:hover {
   padding-top: 0.75rem;
 }
@@ -2784,16 +2702,8 @@ a:hover:visited {
 }
 
 @media (min-width: 640px) {
-  .sm\:w-1\/2 {
-    width: 50%;
-  }
-
   .sm\:max-w-\[80vw\] {
     max-width: 80vw;
-  }
-
-  .sm\:flex-wrap {
-    flex-wrap: wrap;
   }
 
   .sm\:px-4 {
@@ -2813,14 +2723,6 @@ a:hover:visited {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-wrap {
-    flex-wrap: wrap;
-  }
-
-  .md\:flex-nowrap {
-    flex-wrap: nowrap;
   }
 
   .md\:px-8 {

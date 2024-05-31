@@ -3994,3 +3994,123 @@
 	 Creating Profile for admin
 2024-05-22T23:43:16.664108-0400 -- DEBUG -- get_blog_post_list -- line 31
 	 Request: <WSGIRequest: POST '/blog/blog-post-list/'>
+2024-05-30T22:48:32.797720-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser4
+2024-05-30T22:48:33.215365-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser3
+2024-05-30T22:48:33.710732-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:48:34.110869-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser2
+2024-05-30T22:48:34.614225-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for admin
+2024-05-30T22:48:35.115866-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser5
+2024-05-30T22:48:35.905236-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser5
+2024-05-30T22:48:36.913199-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser1
+2024-05-30T22:48:37.316091-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser2
+2024-05-30T22:48:37.708140-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser3
+2024-05-30T22:48:38.528137-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser_for_unusual_email1
+2024-05-30T22:48:38.905625-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser_for_unusual_email2
+2024-05-30T22:48:39.774289-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:48:40.270275-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser1
+2024-05-30T22:48:40.664286-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:49:37.281069-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser4
+2024-05-30T22:49:37.683657-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser3
+2024-05-30T22:49:38.168814-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:49:38.552057-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser2
+2024-05-30T22:49:39.076919-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for admin
+2024-05-30T22:49:39.565406-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser5
+2024-05-30T22:49:40.346620-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser5
+2024-05-30T22:49:41.309043-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser1
+2024-05-30T22:49:41.688641-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser2
+2024-05-30T22:49:42.062964-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser3
+2024-05-30T22:49:42.855008-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser_for_unusual_email1
+2024-05-30T22:49:43.248360-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser_for_unusual_email2
+2024-05-30T22:49:44.111698-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:49:44.614184-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser1
+2024-05-30T22:49:45.002218-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:50:06.163555-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser4
+2024-05-30T22:50:06.571138-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser3
+2024-05-30T22:50:07.070886-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:50:07.509317-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser2
+2024-05-30T22:50:08.004796-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for admin
+2024-05-30T22:50:08.494981-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser5
+2024-05-30T22:50:09.268431-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser5
+2024-05-30T22:50:10.220308-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser1
+2024-05-30T22:50:10.605221-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser2
+2024-05-30T22:50:10.982334-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser3
+2024-05-30T22:50:11.782797-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser_for_unusual_email1
+2024-05-30T22:50:12.161568-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser_for_unusual_email2
+2024-05-30T22:50:13.026616-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:50:13.525987-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser1
+2024-05-30T22:50:13.920598-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:53:27.916883-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser4
+2024-05-30T22:53:28.340456-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser3
+2024-05-30T22:53:28.825624-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:53:29.278146-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser2
+2024-05-30T22:53:29.820812-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for admin
+2024-05-30T22:53:30.333924-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser5
+2024-05-30T22:53:31.162574-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser5
+2024-05-30T22:53:32.176557-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser1
+2024-05-30T22:53:32.551169-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser2
+2024-05-30T22:53:32.962263-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser3
+2024-05-30T22:53:33.739722-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser_for_unusual_email1
+2024-05-30T22:53:34.158738-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser_for_unusual_email2
+2024-05-30T22:53:35.190476-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser
+2024-05-30T22:53:35.690095-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser1
+2024-05-30T22:53:36.091685-0400 -- DEBUG -- create_user_profile -- line 56
+	 Creating Profile for testuser

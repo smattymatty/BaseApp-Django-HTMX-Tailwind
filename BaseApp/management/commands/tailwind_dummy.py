@@ -11,7 +11,7 @@ class Command(BaseCommand):
         # registed_styles is a dictionary of style classes
         styles = []
         for style, style_class in registered_styles.items():
-            if style_class.classes is "":
+            if style_class.classes == "":
                 self.stdout.write(self.style.ERROR(
                     f'{style_class.__name__}.classes is empty! Not Registered!'))
                 continue
