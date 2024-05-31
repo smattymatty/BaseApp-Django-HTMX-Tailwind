@@ -1,4 +1,5 @@
 from locust import HttpUser, task, between
+from faker import Faker
 
 
 class WebsiteUser(HttpUser):
@@ -16,26 +17,32 @@ class WebsiteUser(HttpUser):
 
 
 class BlogUser(HttpUser):
-    wait_time = between(1, 5)  # Simulate user think time
+
+    wait_time = between(1, 5)
+
+    def on_start(self):
+        # Get CSRF token on session start
+        response = self.client.get("/blog/")
+        self.csrf_token = response.cookies['csrftoken']
 
     @task(1)
     def basic_blog_post_list(self):
-        # Get the first page (default)
-        self.client.post("/blog/blog-post-list/", data={"page": 1})
+        self.client.post("/blog/blog-post-list/",
+                         data={"page": 1}, headers={"X-CSRFToken": self.csrf_token})
 
     @task(2)
     def next_page_blog_post_list(self):
-        # Get a subsequent page
-        self.client.post("/blog/blog-post-list/", data={"page": 2})
+        self.client.post("/blog/blog-post-list/",
+                         data={"page": 2}, headers={"X-CSRFToken": self.csrf_token})
 
     @task(3)
     def search_blog_posts(self):
-        search_term = "western"  # Or generate random search terms
-        self.client.post("/blog/blog-post-list/",
-                         data={"page": 1, "search_query": search_term})
+        search_term = Faker().word()
+        self.client.post("/blog/blog-post-list/", data={
+                         "page": 1, "search_query": search_term}, headers={"X-CSRFToken": self.csrf_token})
 
     @task(4)
-    def search_blog_posts_with_pagination(self):
-        search_term = "black"  # Or generate random search terms
-        self.client.post("/blog/blog-post-list/",
-                         data={"page": 2, "search_query": search_term})
+    def next_page_search_blog_posts(self):
+        search_term = Faker().word()
+        self.client.post("/blog/blog-post-list/", data={
+                         "page": 2, "search_query": search_term}, headers={"X-CSRFToken": self.csrf_token})

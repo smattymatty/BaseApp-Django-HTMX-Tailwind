@@ -24,9 +24,9 @@ class Command(BaseCommand):
         # Get all available categories
         categories = list(BlogCategory.objects.all())
         if not categories:
-            self.stdout.write(self.style.ERROR(
-                'No categories found. Please create some categories first.'))
-            return
+            self.stdout.write(self.style.WARNING(
+                'No categories found. Creating 5 Random Categories...'))
+            categories = self.create_random_categories()
 
         # Get all available authors (users)
         authors = list(User.objects.all())
@@ -55,3 +55,18 @@ class Command(BaseCommand):
 
         self.stdout.write(self.style.SUCCESS(
             f'Successfully created {num_posts} blog posts'))
+
+    def create_random_categories(self, num_categories=5):
+        """Creates random blog categories using Faker."""
+        fake = Faker()
+        categories = []
+
+        for _ in range(num_categories):
+            category_name = fake.unique.bs()  # Get a unique "bs" (business buzzword)
+            category = BlogCategory.objects.create(
+                name=category_name,
+                slug=category_name.lower().replace(" ", "-")  # Simple slug generation
+            )
+            categories.append(category)
+
+        return categories
