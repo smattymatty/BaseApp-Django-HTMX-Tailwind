@@ -38,11 +38,13 @@ class BlogUser(HttpUser):
     @task(3)
     def search_blog_posts(self):
         search_term = Faker().word()
+        print(search_term)
         self.client.post("/blog/blog-post-list/", data={
                          "page": 1, "search_query": search_term}, headers={"X-CSRFToken": self.csrf_token})
 
     @task(4)
     def next_page_search_blog_posts(self):
         search_term = Faker().word()
+        print(search_term)
         self.client.post("/blog/blog-post-list/", data={
                          "page": 2, "search_query": search_term}, headers={"X-CSRFToken": self.csrf_token})
