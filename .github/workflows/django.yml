@@ -98,13 +98,13 @@ jobs:
           gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 5 --log-level debug &
       - name: Run Locust Performance Tests (Easy)
         run: |
-          locust -f locust_tests.py --headless --host=http://localhost:8000 -u 50 -r 4 --run-time 20s --processes -1 --loglevel DEBUG
+          locust -f locust_tests.py --headless --host=http://localhost:8000 -u 50 -r 4 --run-time 20s --processes -1
       - name: Run Locust Performance Tests (Medium)
         run: |
-          locust -f locust_tests.py --headless --host=http://localhost:8000 -u 100 -r 8 --run-time 20s --processes -1 --loglevel DEBUG
+          locust -f locust_tests.py --headless --host=http://localhost:8000 -u 100 -r 8 --run-time 20s --processes -1
       - name: Run Locust Performance Tests (Hard)
         run: |
-          locust -f locust_tests.py --headless --host=http://localhost:8000 -u 200 -r 16 --run-time 20s --processes -1 --loglevel DEBUG
+          locust -f locust_tests.py --headless --host=http://localhost:8000 -u 200 -r 16 --run-time 20s --processes -1
       - name: Run Locust Performance Tests (Impossible)
         run: |
-          locust -f locust_tests.py --headless --host=http://localhost:8000 -u 1000 -r 64 --run-time 20s --processes -1 --loglevel DEBUG
+          locust -f locust_tests.py --headless --host=http://localhost:8000 -u 1000 -r 64 --run-time 20s --processes -1
