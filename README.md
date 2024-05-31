@@ -134,8 +134,8 @@ This project utilizes Loguru, a powerful and flexible logging library for Python
 
 The main Loguru configuration is located in the `BaseApp/utils.py` file. It includes:
 
-`get_module_logger`: This function is used to create a logger instance for a specific module.
-`from .constants import LOG_FORMAT`: The log format includes the timestamp, log level, module name, and the log message. This lies in the `BaseApp/constants.py` file.
+- `get_module_logger`: This function is used to create a logger instance for a specific module.
+- `from .constants import LOG_FORMAT`: The log format includes the timestamp, log level, module name, and the log message. This lies in the `BaseApp/constants.py` file.
 ```python
 #constants.py
 LOG_FORMAT = "{time} -- {level} -- {function} -- line {line}\n\t {message}"
