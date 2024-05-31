@@ -51,8 +51,7 @@ DATABASE = {
 # API_KEY = 'your_api_key'
 ```
 
-`SECRET_KEY`: Replace the placeholder SECRET_KEY = '' with a strong, unique secret key for your Django project. You can generate one using:
-
+`SECRET_KEY`: Replace the placeholder SECRET_KEY = '' with a strong, unique secret key for your Django project. You can generate one using: `python -c "import secrets; print(secrets.token_urlsafe(50))`
 `DATABASE`: Replace the placeholder with your actual database settings (e.g., PostgreSQL).
 
 5. Run Migrations:
@@ -75,7 +74,7 @@ run_dev.sh # Linux/macOS
 
 ### Working with Tailwind & HTMX
 
-This project is already configured to use Tailwind and HTMX. It uses the popular third-party packages 'Django-Tailwind' and 'Django-HTMX' to integrate these technologies into the project.
+This project is already configured to use Tailwind and HTMX. It uses the popular third-party packages **[Django-Tailwind](https://github.com/timonweb/django-tailwind)** and **[Django-HTMX](https://github.com/adamchainz/django-htmx)** to integrate these technologies into the project.
 
 ```python
 # settings.py
@@ -127,7 +126,7 @@ Check the console for warnings and errors that should guide you through the proc
 ## button_handlers.mjs
 Button handlers are a set of classes that allow you to create interactive button groups.
 ### ToggledButtonGroup
-
+![Gif of buttons changing](https://i.imgur.com/lfe5AWF.gif)
 The ToggledButtonGroup class allows you to create interactive button groups where only one button can be active at a time. Clicking a button toggles its active state. You can customize the appearance of active buttons, choose the initially active button, and easily manage multiple button groups on your page.
 
 #### Basic Usage
