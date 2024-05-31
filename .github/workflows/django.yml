@@ -32,9 +32,18 @@ jobs:
       run: |
         coverage run manage.py test
         coverage report
+    - name: Generate blog posts
+      run: |
+          python manage.py generate_blog_posts 100
     - name: Start Gunicorn
       run: |
         gunicorn core.wsgi:application --bind 0.0.0.0:8000 & #replace core.wsgi:application with your path
-    - name: Run Locust Performance Tests
+    - name: Run Locust Performance Tests (Easy)
       run: |
-        locust -f locust_tests.py --headless --host=http://localhost:8000 -u 20 -r 4 --run-time 30s
+        locust -f locust_tests.py --headless --host=http://localhost:8000 -u 20 -r 4 --run-time 10s
+    - name: Run Locust Performance Tests (Medium)
+      run: |
+        locust -f locust_tests.py --headless --host=http://localhost:8000 -u 40 -r 8 --run-time 10s
+    - name: Run Locust Performance Tests (Hard)
+      run: |
+        locust -f locust_tests.py --headless --host=http://localhost:8000 -u 80 -r 16 --run-time 10s
