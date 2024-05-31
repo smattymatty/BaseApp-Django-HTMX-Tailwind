@@ -34,7 +34,8 @@ jobs:
         coverage report
     - name: Generate blog posts
       run: |
-          python manage.py generate_blog_posts 100
+        python manage.py migrate
+        python manage.py generate_blog_posts 100
     - name: Start Gunicorn
       run: |
         gunicorn core.wsgi:application --bind 0.0.0.0:8000 & #replace core.wsgi:application with your path
