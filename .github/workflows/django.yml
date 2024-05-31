@@ -32,3 +32,6 @@ jobs:
       run: |
         coverage run manage.py test
         coverage report
+    - name: Run Performance Tests with Locust
+      run: |
+        locust -f locust_tests.py --headless --host=http://localhost:8000 -u 10 -r 2 --run-time 30s
