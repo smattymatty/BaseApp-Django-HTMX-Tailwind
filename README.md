@@ -124,7 +124,7 @@ This project includes JavaScript modules to add interactive features to your Dja
 Check the console for warnings and errors that should guide you through the process in case you are stuck.
 
 ## button_handlers.mjs
-Button handlers are a set of classes that allow you to create interactive button groups.
+Button Handlers are a set of classes that allow you to create interactive button groups.
 ### ToggledButtonGroup
 ![Gif of buttons changing](https://i.imgur.com/lfe5AWF.gif)
 The ToggledButtonGroup class allows you to create interactive button groups where only one button can be active at a time. Clicking a button toggles its active state. You can customize the appearance of active buttons, choose the initially active button, and easily manage multiple button groups on your page.
@@ -166,11 +166,14 @@ The ToggledButtonGroup class allows you to create interactive button groups wher
 3. JavaScript Initialization:
 
 ```javascript
-import { ToggledButtonGroup } from "{% static 'BaseApp/button_handlers.mjs' %}";ToggledButtonGroup.initAll(); // Initializes all button groups on the page
+import { ToggledButtonGroup } from "{% static 'BaseApp/button_handlers.mjs' %}";
+ToggledButtonGroup.initAll(); 
+// Initializes all button groups on the page
 ```
 
 - If you want to initialize only specific groups, you can pass a filter to `initAll()`:
 
 ```javascript
-ToggledButtonGroup.initAll("myButtonGroup"); // Initializes only the group with ID "myButtonGroup-button-group"
+ToggledButtonGroup.initAll("myButtonGroup"); 
+// Initializes only the group with ID "myButtonGroup-button-group"
 ```
