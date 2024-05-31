@@ -57,7 +57,9 @@ def get_blog_post_list(request):
         module_logger.error(e)
         print(f"Error in get_blog_post_list: {e}")
         if settings.DEBUG:
-            return JsonResponse({'error': f'Error in get_blog_post_list:\n {e}'},
-                                status=500)
-        return JsonResponse({'error': 'Internal Server Error'},
-                            status=500)
+            return JsonResponse(
+                {'error': f'Error in get_blog_post_list:\n {e}'},
+                status=500)
+        return JsonResponse(
+            {'error': 'Internal Server Error'},
+            status=500)

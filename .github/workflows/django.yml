@@ -95,6 +95,9 @@ jobs:
       - name: Create credentials.py
         run: |
           cp credentials_example.py credentials.py
+      - name: Migrate
+        run: |
+          python manage.py migrate
       - name: Start Gunicorn
         run: |
           gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 5 --log-level debug &

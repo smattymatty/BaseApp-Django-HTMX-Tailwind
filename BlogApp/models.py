@@ -1,6 +1,9 @@
 from django.db import models
 
 from BaseApp.constants import COLORS
+from BaseApp.utils import get_module_logger
+
+logger = get_module_logger("models", __file__)
 
 
 class BlogCategory(models.Model):
