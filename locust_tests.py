@@ -17,34 +17,55 @@ class WebsiteUser(HttpUser):
 
 
 class BlogUser(HttpUser):
-
     wait_time = between(1, 5)
 
     def on_start(self):
-        # Get CSRF token on session start
         response = self.client.get("/blog/")
-        self.csrf_token = response.cookies['csrftoken']
+        if response.status_code == 200:
+            self.csrf_token = response.cookies.get('csrftoken')
+        else:
+            self.csrf_token = None
 
     @task(1)
     def basic_blog_post_list(self):
-        self.client.post("/blog/blog-post-list/",
-                         data={"page": 1}, headers={"X-CSRFToken": self.csrf_token})
+        if self.csrf_token:
+            response = self.client.post("/blog/blog-post-list/",
+                                        data={"page": 1},
+                                        headers={"X-CSRFToken": self.csrf_token})
+            if response.status_code != 200:
+                print(
+                    f"Failed POST /blog/blog-post-list/: {response.status_code} - {response.text}")
 
     @task(2)
     def next_page_blog_post_list(self):
-        self.client.post("/blog/blog-post-list/",
-                         data={"page": 2}, headers={"X-CSRFToken": self.csrf_token})
+        if self.csrf_token:
+            response = self.client.post("/blog/blog-post-list/",
+                                        data={"page": 2},
+                                        headers={"X-CSRFToken": self.csrf_token})
+            if response.status_code != 200:
+                print(
+                    f"Failed POST /blog/blog-post-list/: {response.status_code} - {response.text}")
 
     @task(3)
     def search_blog_posts(self):
-        search_term = Faker().word()
-        print(search_term)
-        self.client.post("/blog/blog-post-list/", data={
-                         "page": 1, "search_query": search_term}, headers={"X-CSRFToken": self.csrf_token})
+        if self.csrf_token:
+            search_term = Faker().word()
+            response = self.client.post("/blog/blog-post-list/",
+                                        data={"page": 1,
+                                              "search_query": search_term},
+                                        headers={"X-CSRFToken": self.csrf_token})
+            if response.status_code != 200:
+                print(
+                    f"Failed POST /blog/blog-post-list/: {response.status_code} - {response.text}")
 
     @task(4)
     def next_page_search_blog_posts(self):
-        search_term = Faker().word()
-        print(search_term)
-        self.client.post("/blog/blog-post-list/", data={
-                         "page": 2, "search_query": search_term}, headers={"X-CSRFToken": self.csrf_token})
+        if self.csrf_token:
+            search_term = Faker().word()
+            response = self.client.post("/blog/blog-post-list/",
+                                        data={"page": 2,
+                                              "search_query": search_term},
+                                        headers={"X-CSRFToken": self.csrf_token})
+            if response.status_code != 200:
+                print(
+                    f"Failed POST /blog/blog-post-list/: {response.status_code} - {response.text}")

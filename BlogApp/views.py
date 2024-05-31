@@ -8,6 +8,7 @@ from django.views.decorators.http import require_http_methods
 import BlogApp.logic as logic
 from BaseApp.views import BaseView
 from BaseApp.utils import get_module_logger
+from core import settings
 
 from .models import BlogCategory, BlogPost
 
@@ -55,5 +56,8 @@ def get_blog_post_list(request):
     except Exception as e:
         module_logger.error(e)
         print(f"Error in get_blog_post_list: {e}")
+        if settings.DEBUG:
+            return JsonResponse({'error': f'Error in get_blog_post_list:\n {e}'},
+                                status=500)
         return JsonResponse({'error': 'Internal Server Error'},
                             status=500)
