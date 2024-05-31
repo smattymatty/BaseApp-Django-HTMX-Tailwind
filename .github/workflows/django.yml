@@ -30,6 +30,5 @@ jobs:
         cp credentials_example.py credentials.py 
     - name: Run Tests
       run: |
-        python manage.py test
         coverage run manage.py test
         coverage report
