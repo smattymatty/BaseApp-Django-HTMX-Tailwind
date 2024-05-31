@@ -38,7 +38,7 @@ jobs:
         python manage.py generate_blog_posts 100
     - name: Start Gunicorn
       run: |
-        gunicorn core.wsgi:application --bind 0.0.0.0:8000 & #replace core.wsgi:application with your path
+        gunicorn project_name.wsgi:application --bind 0.0.0.0:8000 --workers 5 --log-level debug &
     - name: Run Locust Performance Tests (Easy)
       run: |
         locust -f locust_tests.py --headless --host=http://localhost:8000 -u 50 -r 4 --run-time 20s
