@@ -6,7 +6,7 @@ I'm making this for fun, it's not finished but feel free to use it, don't questi
 1. Clone the repository to your local machine:
 ```bash
 git clone https://github.com/smattymatty/Base-Django-HTMX-Tailwind
-cd base-django-app
+cd Base-Django-HTMX-Tailwind
 ```
 2. Create a virtual environment (recommended):
 ```bash
@@ -19,7 +19,7 @@ venv\Scripts\activate  # Activate it (Windows)
 ```bash
 pip install -r requirements.txt
 ```
-4. Create Credentials in your root directory:
+4. Create Credentials in your project's root:
 - IMPORTANT: NEVER commit the credentials.py file to version control (e.g., Git). It contains sensitive information.
 
 ```python
