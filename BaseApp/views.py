@@ -13,7 +13,7 @@ class BaseView(TemplateView):
     template_name = 'BaseApp/base.html'
     title = "Base"
 
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+    def get_context_data(self, **kwargs: Any) -> dict:
         context = super().get_context_data(**kwargs)
         context['title'] = self.title
         return context
