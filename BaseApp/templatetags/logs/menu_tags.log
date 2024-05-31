@@ -9274,3 +9274,5 @@
 	 navbar_items: {'Documentation': [Blog (/blog/), Home (/base/home/), Home (/base/home/)], 'Components': [User Interface (/base/ui-elements/), Home (/base/home/)], 'Tools': [Home (/base/home/)]}
 2024-05-30T16:51:34.204785-0400 -- DEBUG -- top_navbar_buttons -- line 17
 	 navbar_items: {'Documentation': [Blog (/blog/), Home (/base/home/), Home (/base/home/)], 'Components': [User Interface (/base/ui-elements/), Home (/base/home/)], 'Tools': [Home (/base/home/)]}
+2024-05-30T21:20:15.625707-0400 -- DEBUG -- top_navbar_buttons -- line 17
+	 navbar_items: {'Documentation': [Blog (/blog/), Home (/base/home/), Home (/base/home/)], 'Components': [User Interface (/base/ui-elements/), Home (/base/home/)], 'Tools': [Home (/base/home/)]}
