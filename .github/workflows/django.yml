@@ -48,3 +48,6 @@ jobs:
     - name: Run Locust Performance Tests (Hard)
       run: |
         locust -f locust_tests.py --headless --host=http://localhost:8000 -u 200 -r 16 --run-time 20s
+    - name: Run Locust Performance Tests (Impossible)
+      run: |
+        locust -f locust_tests.py --headless --host=http://localhost:8000 -u 1000 -r 64 --run-time 20s
