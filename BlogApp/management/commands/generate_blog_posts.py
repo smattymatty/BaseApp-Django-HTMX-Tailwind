@@ -65,7 +65,6 @@ class Command(BaseCommand):
             category_name = fake.unique.bs()  # Get a unique "bs" (business buzzword)
             category = BlogCategory.objects.create(
                 name=category_name,
-                slug=category_name.lower().replace(" ", "-")  # Simple slug generation
             )
             categories.append(category)
 
