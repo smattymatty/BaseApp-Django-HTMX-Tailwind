@@ -1,0 +1,465 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  a {
+    @apply text-violet-400/40 hover:text-purple-300/50 visited:hover:text-purple-300/50 visited:text-violet-400/40;
+  }
+
+  .button-active {
+    @apply bg-violet-400/50 hover:bg-purple-300/50 visited:hover:bg-purple-300/50 visited:bg-violet-400/50;
+  }
+  /* Colors */
+  .background-color {
+    @apply bg-zinc-900 border-zinc-800;
+  }
+
+  .background-color-2 {
+    @apply bg-zinc-950 border-zinc-800;
+  }
+
+  .background-color-3 {
+    @apply bg-black border-zinc-900;
+  }
+
+  .object-color {
+    @apply bg-slate-800 border-slate-700;
+  }
+
+  .object-color-2 {
+    @apply bg-slate-900 border-slate-800;
+  }
+
+  .object-color-3 {
+    @apply bg-slate-950 border-slate-900;
+  }
+
+  .primary-color {
+    @apply bg-gradient-to-r from-blue-700 to-blue-800;
+  }
+
+  .secondary-color {
+    @apply bg-gradient-to-r from-gray-50 to-gray-300 text-gray-700;
+  }
+
+  .font-color {
+    @apply text-white;
+  }
+
+  .font-color-2 {
+    @apply text-white/50;
+  }
+
+  .font-color-reverse {
+    @apply text-black
+  }
+
+  .font-color-reverse-2 {
+    @apply text-black/50
+  }
+
+  /* Layout */
+  .main-content-container {
+    @apply flex-grow 
+       min-h-[94vh] p-4
+       background-color border-x-8 border-zinc-950
+       rounded-3xl;
+  }
+
+  .grid-container {
+    @apply grid gap-4 w-full sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+  }
+  
+  .grid-item {
+    @apply p-4;
+  }
+
+  .navbar-container {
+    @apply flex-grow
+        min-h-[3rem] max-h-[5vh] px-2
+        flex justify-center text-center 
+        background-color-2;
+  }
+
+  
+
+  .navbar-dropdown {
+    @apply transition-all duration-200 ease-linear font-color-2 
+    absolute top-full left-0 w-full flex flex-col background-color-2 border-x
+    rounded-b-md shadow-md shadow-black
+    hover:[&>a]:bg-black/50 hover:[&>a]:text-white
+
+  }
+
+  .footer-container {
+    @apply flex-grow
+        min-h-[5vh]
+        flex justify-center text-center 
+        background-color-2;
+  }
+  /* Typography */
+  .base-font {
+    @apply font-sans font-color;
+  }
+
+  .item-title {
+    @apply text-xl font-bold mb-3;
+  }
+  
+  .item-element {
+    @apply text-base;
+  }
+.header-1 {
+  @apply text-4xl font-bold leading-tight;
+}
+
+.header-2 {
+  @apply text-3xl font-semibold leading-snug;
+}
+
+.header-3 {
+  @apply text-2xl font-medium leading-normal;
+}
+
+.body-large {
+  @apply text-lg leading-relaxed;
+}
+
+.body-base {
+  @apply text-base leading-normal;
+}
+
+.body-small {
+  @apply text-sm leading-snug;
+}
+
+.caption {
+  @apply text-xs leading-tight;
+}
+
+.overline {
+  @apply text-xs uppercase tracking-widest ;
+}
+
+.subtitle {
+  @apply text-2xl opacity-60 font-light leading-normal;
+}
+
+.btn {
+  @apply focus:outline-none focus:ring-2 border-x-2;
+}
+
+.btn-primary {
+  @apply btn primary-color text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out hover:from-blue-600 hover:to-blue-700 border-blue-600 hover:border-blue-200 focus:border-blue-200 active:text-opacity-60;
+} 
+
+.btn-secondary {
+  @apply btn secondary-color font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out hover:from-gray-200 hover:to-gray-400 border-gray-300 hover:border-gray-400 focus:border-gray-400 active:text-opacity-60;
+}
+.navbar-button {
+  @apply transition-all duration-200 ease-linear font-color-2
+  my-2 pt-1 border-x rounded-md background-color-2
+  hover:background-color-3 hover:font-color hover:cursor-pointer
+  hover:border-x-4 hover:rounded-lg hover:my-0 hover:pt-3
+}
+
+.btn-side-nav-menu {
+  @apply transition-all duration-200 ease-linear font-color-2
+    py-2 border-y rounded-md background-color-2 border-white/20
+    hover:background-color-3 hover:font-color hover:cursor-pointer
+    hover:border-y-4 hover:rounded-lg hover:py-3;
+}
+
+.calculator-button {
+  @apply bg-blue-950/10 hover:bg-blue-700/10 text-white font-bold py-2 px-4 rounded border-2 border-gray-300/20;
+}
+
+/* ...add the .btn class to all other button types... */
+  
+  .btn-quirky::before {
+    content: '';
+    @apply absolute;
+    @apply w-4 h-4 bg-white border-2 border-blue-600 rounded-full;
+    @apply -top-1 -left-1;
+  }
+
+  /* Cards */
+  .card {
+    @apply object-color border rounded-lg shadow-md overflow-hidden;
+  }
+  
+  .card-header {
+    @apply object-color-2 px-5 py-3 border-b;
+  }
+  
+  .card-title {
+    @apply text-xl font-semibold text-white;
+  }
+  
+  .card-body {
+    @apply p-5;
+  }
+  
+  .card-text {
+    @apply text-white text-base;
+  }
+  
+  .card-footer {
+    @apply px-5 py-3 object-color-2;
+  }
+  
+
+  .profile-card {
+  @apply object-color border rounded-lg overflow-hidden shadow-lg text-center;
+}
+
+.profile-image {
+  @apply w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto my-4 object-cover
+  border-4 object-color;
+}
+
+.profile-info {
+  @apply p-4 object-color-2 border-t-2;
+}
+
+.profile-name {
+  @apply text-xl font-semibold;
+}
+
+.profile-job-title {
+  @apply text-sm opacity-50  mb-4;
+}
+
+.profile-social-links {
+  @apply flex justify-center items-center mt-2;
+}
+
+.social-link {
+  @apply mx-2;
+  @apply w-6 h-6;
+}
+
+.product-card {
+  @apply object-color rounded-lg border  shadow-md overflow-hidden;
+}
+
+.product-image {
+  @apply w-full h-48 object-cover object-color rounded-lg rounded-b-none;
+}
+
+.product-info {
+  @apply p-4 object-color-2 border-t-2;
+}
+
+.product-title {
+  @apply text-lg font-semibold mb-1;
+}
+
+.product-price {
+  @apply text-base opacity-50 mb-3;
+}
+
+.add-to-cart-btn {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out;
+}
+
+.testimonial-card {
+  @apply object-color border rounded-lg shadow-lg overflow-hidden mx-auto p-6;
+}
+
+.testimonial-header {
+  @apply flex justify-center -mt-4 mb-4;
+}
+
+.testimonial-avatar {
+  @apply inline-block border-4 object-color rounded-full;
+}
+
+.testimonial-body {
+  @apply text-center;
+}
+
+.testimonial-quote {
+  @apply text-base md:text-lg font-medium italic;
+}
+
+.testimonial-rating {
+  @apply text-yellow-400 text-xl mb-2;
+}
+
+.testimonial-author {
+  @apply text-sm font-semibold opacity-50;
+}
+
+.article-card {
+  @apply max-w-sm object-color rounded-lg border shadow-md overflow-hidden;
+}
+
+.article-image {
+  @apply w-full h-56 object-cover;
+}
+
+.article-content {
+  @apply p-5 object-color-2 border;
+}
+
+.article-title {
+  @apply text-xl font-semibold mb-3;
+}
+
+.article-summary {
+  @apply text-base mb-4;
+}
+
+.dashboard-card {
+  @apply object-color rounded-lg border p-6 shadow-md;
+}
+
+.metric {
+  @apply flex flex-col items-center justify-center;
+}
+
+.metric-title {
+  @apply text-lg font-medium;
+}
+
+.metric-value {
+  @apply text-3xl font-bold my-2;
+}
+
+.metric-detail {
+  @apply text-sm;
+}
+
+.metric-percentage {
+  @apply font-bold;
+}
+
+.metric-footer {
+  @apply mt-4;
+}
+
+.event-card {
+  @apply max-w-md object-color rounded-lg border shadow-lg overflow-hidden;
+}
+
+.event-image {
+  @apply w-full h-56 object-cover;
+}
+
+.event-info {
+  @apply p-4 object-color-2 border-t-2;
+}
+
+.event-title {
+  @apply text-xl font-semibold mb-1;
+}
+
+.event-date-time {
+  @apply text-base opacity-30;
+}
+
+.event-location {
+  @apply text-base opacity-50 mb-4;
+}
+
+.cta-card {
+  @apply primary-color text-white text-center py-8 px-4 rounded-lg shadow-md;
+}
+
+.cta-content {
+  @apply mx-auto max-w-md;
+}
+
+.cta-title {
+  @apply text-2xl font-bold mb-2;
+}
+
+.cta-description {
+  @apply mb-4 text-lg;
+}
+
+
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.crazy-card {
+  @apply relative bg-gradient-to-br from-green-300 via-pink-500 to-purple-400 rounded-xl p-6 max-w-md mx-auto my-10 text-center shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-110;
+}
+
+.crazy-card:hover .wacky-avatar {
+  animation: slow-spin 3s linear infinite;
+}
+
+.crazy-card:hover .wacky-bg {
+  animation: wobble 0.5s ease-in-out infinite;
+}
+
+.wacky-bg {
+  @apply p-6 rounded-xl bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg;
+}
+
+.wacky-name {
+  @apply inline-block text-4xl text-yellow-400 font-extrabold mb-4 animate-pulse;
+}
+
+.wacky-avatar {
+  @apply w-32 h-32 rounded-full mx-auto mb-6 border-4 border-dashed border-red-300;
+}
+
+.wacky-title {
+  @apply text-xl italic text-purple-800 mb-6;
+}
+
+.wacky-socials {
+  @apply text-5xl;
+}
+
+/* Modals */
+.modal-container {
+  @apply fixed inset-0 z-50 items-center justify-center p-4 transition-all duration-300 ease-in-out;
+}
+
+.modal-backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-40 transition-all duration-100
+  ease-in-out;
+}
+
+.modal {
+  @apply base-font object-color-2 rounded-lg shadow-lg p-6 w-full max-w-md;
+}
+
+.modal-header {
+  @apply flex justify-end;
+}
+
+.modal-close-button {
+  @apply text-lg leading-none;
+}
+
+.calculator-container {
+  @apply p-4 rounded-lg shadow max-w-md mx-auto my-8;
+}
+
+.calculator-display {
+  @apply bg-gray-200 rounded text-gray-800;
+}
+
+
+}

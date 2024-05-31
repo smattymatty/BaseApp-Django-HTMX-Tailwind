@@ -1,0 +1,28 @@
+<div id="profile-modal-backdrop"
+     class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden transition-all duration-200 ease-linear">
+    <div id="profile-modal"
+         class="transition-all duration-200 ease-linear bg-gradient-to-b from-blue-500/20 via-gray-950 to-blue-500/20 border-y-blue-500 border-y from-5% via-95% to-100% rounded-lg shadow-lg max-w-[90vw] sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[60vw] xl:max-w-[50vw] w-full">
+        {% comment %} HEADER {% endcomment %}
+        <div class="flex items-start justify-between">
+            <h3 class="text-2xl text-start ml-8 py-2 px-2 w-full text-white/50 font-semibold">Profile</h3>
+            <button id="profile-modal-close" class="text-gray-500 hover:text-gray-700">
+                <svg class="h-fit w-6 mt-3 mx-2"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        {% comment %} CONTENT {% endcomment %}
+        <div class="flex md:flex-row flex-col items-start justify-start w-full bg-gradient-to-b from-gray-700/30 via-gray-950 to-gray-700/20 border-y-blue-500 border-t from-5% via-95% to-100%">
+            {% comment %} SIDEBAR MENU {% endcomment %}
+            {% include "UsersApp/sections/profile_modal_sidebar_menu.html" %}
+            {% comment %} MAIN AREA {% endcomment %}
+            <div class="flex flex-col flex-grow items-start justify-start w-full border">
+                <div class="flex flex-row items-center justify-start w-full">2</div>
+            </div>
+        </div>
+    </div>
+</div>

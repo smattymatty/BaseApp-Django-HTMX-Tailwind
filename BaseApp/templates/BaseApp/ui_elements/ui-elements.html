@@ -1,0 +1,23 @@
+{% extends 'BaseApp/base.html' %}
+{% block content %}
+    <h2 class="base-font text-2xl w-full text-center font-bold py-2 -mt-2 rounded-t-lg bg-gradient-to-r from-black/20 from-10% via-blue-300/10 via-50% to-black/20 to-90% border-b-4 border-white/10">
+        User Interface Elements
+    </h2>
+    <div id="ui-elements-button-bar"
+         class="flex gap-4 py-2 w-full justify-evenly border-b-4 border-white/10 rounded-b-lg">
+        <button hx-get="{% url 'BaseApp:buttons-examples' %}"
+                hx-target="#ui-elements-content-target"
+                hx-swap="innerHTML"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buttons</button>
+        <button class="border border-transparent hover:border-blue-500 text-blue-700 font-semibold py-2 px-4 rounded-full">
+            Forms
+        </button>
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+            Typography
+        </button>
+    </div>
+    <div id="ui-elements-content-target"
+         class="flex flex-col space-y-4 w-full">
+        {% include 'BaseApp/ui_elements/sections/buttons_examples.html' %}
+    </div>
+{% endblock content %}

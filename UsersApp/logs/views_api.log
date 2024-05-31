@@ -1,0 +1,1773 @@
+2024-01-09T15:28:43.811396-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 1
+2024-01-09T15:29:57.174034-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 3
+2024-01-09T15:29:57.286428-0500 -- ERROR -- get -- line 38
+	 Error retrieving profile for user_id: 3: No Profile matches the given query.
+2024-01-09T15:31:39.496842-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 5
+2024-01-09T15:31:39.500840-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 6
+2024-01-09T15:31:40.823729-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 9
+2024-01-09T15:31:42.126437-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 10
+2024-01-09T15:35:50.894039-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 3
+2024-01-09T15:35:51.014427-0500 -- ERROR -- get -- line 38
+	 Error retrieving profile for user_id: 3: No Profile matches the given query.
+2024-01-09T15:45:52.369605-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 5
+2024-01-09T15:45:52.373601-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 6
+2024-01-09T15:45:53.752371-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 9
+2024-01-09T15:45:55.179130-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 10
+2024-01-09T15:50:24.559674-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 5
+2024-01-09T15:50:24.565668-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 6
+2024-01-09T15:50:25.854060-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 9
+2024-01-09T15:50:27.202780-0500 -- DEBUG -- get -- line 29
+	 Attempting to retrieve profile for user_id: 10
+2024-01-10T12:31:04.432541-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:31:04.437535-0500 -- DEBUG -- post -- line 28
+	 serializer: ProjectSerializer(data=<QueryDict: {}>):
+    id = UUIDField(help_text='The unique identifier for this project.', read_only=True)
+    name = CharField(label='Project Name', max_length=100)
+    description = CharField(max_length=500, style={'base_template': 'textarea.html'})
+    created_by = PrimaryKeyRelatedField(allow_null=True, help_text='The user who created this project.', label='Created By', read_only=True)
+    access_key = CharField(help_text='A unique key for external API interactions, e.g with a ChatGPT Interface.', label='Access Key', read_only=True)
+    created_at = DateTimeField(label='Created At', read_only=True)
+    updated_at = DateTimeField(label='Updated At', read_only=True), <class 'TasksApp.serializers.ProjectSerializer'>
+2024-01-10T12:31:04.455517-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project'], 'description': ['A test project']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:31:04.458514-0500 -- DEBUG -- post -- line 28
+	 serializer: ProjectSerializer(data=<QueryDict: {'name': ['New Project'], 'description': ['A test project']}>):
+    id = UUIDField(help_text='The unique identifier for this project.', read_only=True)
+    name = CharField(label='Project Name', max_length=100)
+    description = CharField(max_length=500, style={'base_template': 'textarea.html'})
+    created_by = PrimaryKeyRelatedField(allow_null=True, help_text='The user who created this project.', label='Created By', read_only=True)
+    access_key = CharField(help_text='A unique key for external API interactions, e.g with a ChatGPT Interface.', label='Access Key', read_only=True)
+    created_at = DateTimeField(label='Created At', read_only=True)
+    updated_at = DateTimeField(label='Updated At', read_only=True), <class 'TasksApp.serializers.ProjectSerializer'>
+2024-01-10T12:31:04.461511-0500 -- ERROR -- post -- line 36
+	 Failed to create new project: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x000002007731E8F0>": "Project.created_by" must be a "User" instance., <class 'ValueError'>
+2024-01-10T12:31:04.672860-0500 -- DEBUG -- post -- line 53
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:31:04.673859-0500 -- DEBUG -- post -- line 57
+	 serializer: TaskSerializer(data=<QueryDict: {'title': ['']}>):
+    id = IntegerField(label='ID', read_only=True)
+    title = CharField(max_length=100)
+    description = CharField(max_length=500, style={'base_template': 'textarea.html'})
+    due_date = DateField(allow_null=True, label='Due Date', required=False)
+    status = ChoiceField(choices=[('PENDING', 'Pending'), ('ACTIVE', 'Active'), ('COMPLETED', 'Completed')], required=False)
+    project = PrimaryKeyRelatedField(help_text='The project this task belongs to.', queryset=Project.objects.all(), required=False), <class 'TasksApp.serializers.TaskSerializer'>
+2024-01-10T12:31:04.684275-0500 -- DEBUG -- post -- line 53
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['13726028-0ae3-4b5a-9076-84fb0c32e96c'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:31:04.686272-0500 -- DEBUG -- post -- line 57
+	 serializer: TaskSerializer(data=<QueryDict: {'title': ['New Task'], 'project': ['13726028-0ae3-4b5a-9076-84fb0c32e96c'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>):
+    id = IntegerField(label='ID', read_only=True)
+    title = CharField(max_length=100)
+    description = CharField(max_length=500, style={'base_template': 'textarea.html'})
+    due_date = DateField(allow_null=True, label='Due Date', required=False)
+    status = ChoiceField(choices=[('PENDING', 'Pending'), ('ACTIVE', 'Active'), ('COMPLETED', 'Completed')], required=False)
+    project = PrimaryKeyRelatedField(help_text='The project this task belongs to.', queryset=Project.objects.all(), required=False), <class 'TasksApp.serializers.TaskSerializer'>
+2024-01-10T12:32:59.948057-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:32:59.951065-0500 -- DEBUG -- post -- line 28
+	 serializer: ProjectSerializer(data=<QueryDict: {}>):
+    id = UUIDField(help_text='The unique identifier for this project.', read_only=True)
+    name = CharField(label='Project Name', max_length=100)
+    description = CharField(max_length=500, style={'base_template': 'textarea.html'})
+    created_by = PrimaryKeyRelatedField(allow_null=True, help_text='The user who created this project.', label='Created By', read_only=True)
+    access_key = CharField(help_text='A unique key for external API interactions, e.g with a ChatGPT Interface.', label='Access Key', read_only=True)
+    created_at = DateTimeField(label='Created At', read_only=True)
+    updated_at = DateTimeField(label='Updated At', read_only=True), <class 'TasksApp.serializers.ProjectSerializer'>
+2024-01-10T12:32:59.955050-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:32:59.957062-0500 -- DEBUG -- post -- line 28
+	 serializer: ProjectSerializer(data=<QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>):
+    id = UUIDField(help_text='The unique identifier for this project.', read_only=True)
+    name = CharField(label='Project Name', max_length=100)
+    description = CharField(max_length=500, style={'base_template': 'textarea.html'})
+    created_by = PrimaryKeyRelatedField(allow_null=True, help_text='The user who created this project.', label='Created By', read_only=True)
+    access_key = CharField(help_text='A unique key for external API interactions, e.g with a ChatGPT Interface.', label='Access Key', read_only=True)
+    created_at = DateTimeField(label='Created At', read_only=True)
+    updated_at = DateTimeField(label='Updated At', read_only=True), <class 'TasksApp.serializers.ProjectSerializer'>
+2024-01-10T12:32:59.959046-0500 -- ERROR -- post -- line 36
+	 Failed to create new project: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x00000286D5297520>": "Project.created_by" must be a "User" instance., <class 'ValueError'>
+2024-01-10T12:33:00.091915-0500 -- DEBUG -- post -- line 53
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:33:00.093914-0500 -- DEBUG -- post -- line 57
+	 serializer: TaskSerializer(data=<QueryDict: {'title': ['']}>):
+    id = IntegerField(label='ID', read_only=True)
+    title = CharField(max_length=100)
+    description = CharField(max_length=500, style={'base_template': 'textarea.html'})
+    due_date = DateField(allow_null=True, label='Due Date', required=False)
+    status = ChoiceField(choices=[('PENDING', 'Pending'), ('ACTIVE', 'Active'), ('COMPLETED', 'Completed')], required=False)
+    project = PrimaryKeyRelatedField(help_text='The project this task belongs to.', queryset=Project.objects.all(), required=False), <class 'TasksApp.serializers.TaskSerializer'>
+2024-01-10T12:33:00.102905-0500 -- DEBUG -- post -- line 53
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['9fa17b45-34d9-48c7-9662-422481c11606'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:33:00.105902-0500 -- DEBUG -- post -- line 57
+	 serializer: TaskSerializer(data=<QueryDict: {'title': ['New Task'], 'project': ['9fa17b45-34d9-48c7-9662-422481c11606'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>):
+    id = IntegerField(label='ID', read_only=True)
+    title = CharField(max_length=100)
+    description = CharField(max_length=500, style={'base_template': 'textarea.html'})
+    due_date = DateField(allow_null=True, label='Due Date', required=False)
+    status = ChoiceField(choices=[('PENDING', 'Pending'), ('ACTIVE', 'Active'), ('COMPLETED', 'Completed')], required=False)
+    project = PrimaryKeyRelatedField(help_text='The project this task belongs to.', queryset=Project.objects.all(), required=False), <class 'TasksApp.serializers.TaskSerializer'>
+2024-01-10T12:33:44.363561-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:33:44.369555-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:33:44.370554-0500 -- ERROR -- post -- line 33
+	 Failed to create new project: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x0000021F6B736D70>": "Project.created_by" must be a "User" instance., <class 'ValueError'>
+2024-01-10T12:33:44.508085-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:33:44.515078-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['eb90d613-7518-4dca-b150-b998c3775a41'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:35:36.594098-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:35:36.595096-0500 -- ERROR -- post -- line 33
+	 Failed to create new project: Field name `created_by` is not valid for model `Project`., <class 'django.core.exceptions.ImproperlyConfigured'>
+2024-01-10T12:35:36.633077-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:35:36.635055-0500 -- ERROR -- post -- line 33
+	 Failed to create new project: Field name `created_by` is not valid for model `Project`., <class 'django.core.exceptions.ImproperlyConfigured'>
+2024-01-10T12:35:36.744961-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:35:36.750955-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['f4874ef9-be59-4a76-b500-82d64a4b5846'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:35:58.270208-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:35:58.275199-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:35:58.282193-0500 -- ERROR -- post -- line 33
+	 Failed to create new project: Got a `TypeError` when calling `Project.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Project.objects.create()`. You may need to make the field read-only, or override the ProjectSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\Mathew\Documents\Development\base-django-master\venv\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\Mathew\Documents\Development\base-django-master\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Mathew\Documents\Development\base-django-master\venv\lib\site-packages\django\db\models\query.py", line 656, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Mathew\Documents\Development\base-django-master\venv\lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Project() got unexpected keyword arguments: 'created_by'
+, <class 'TypeError'>
+2024-01-10T12:35:58.426501-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:35:58.433495-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['cca877bb-6b91-4eee-a5c8-5bae007fa2b5'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:42:44.400647-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:42:44.406707-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:42:44.410703-0500 -- ERROR -- post -- line 33
+	 Failed to create new project: Project() got unexpected keyword arguments: 'created_by', <class 'TypeError'>
+2024-01-10T12:42:44.554064-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:42:44.560059-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['9423f1cd-1427-4a76-a9ba-eef1752e66ac'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:49:05.033075-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:49:05.040069-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:49:05.044064-0500 -- ERROR -- post -- line 33
+	 Failed to create new project: `create()` did not return an object instance., <class 'AssertionError'>
+2024-01-10T12:49:05.178365-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:49:05.185358-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['0d66b7b7-bef6-46ae-be59-97564787504c'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:57:29.197008-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:57:29.204519-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:57:29.205500-0500 -- ERROR -- post -- line 33
+	 Failed to create new project: ProjectSerializer.create() missing 1 required positional argument: 'validated_data', <class 'TypeError'>
+2024-01-10T12:57:29.346910-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:57:29.353903-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['e57c707b-76c1-4b66-b4a4-8c865f304bcc'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:58:32.310300-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:58:32.315295-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:58:32.410708-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T12:58:32.415705-0500 -- DEBUG -- post -- line 50
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['c212ecd6-5d75-4b27-a7ed-29ffd8a0e2b4'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:00:45.781437-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:00:45.783435-0500 -- ERROR -- post -- line 32
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:00:45.787431-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:00:45.895065-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:00:45.897063-0500 -- ERROR -- post -- line 62
+	 Failed to validate new project: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:00:45.902058-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['0495606b-da50-4aa0-bc77-c18c509384a7'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:00:45.907054-0500 -- ERROR -- post -- line 62
+	 Failed to validate new project: {'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:01:22.112371-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:01:22.113368-0500 -- ERROR -- post -- line 32
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:01:22.117365-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:01:22.227107-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:01:22.228106-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:01:22.234099-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['bfaed584-7245-47aa-ae7b-925afd622b3a'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:01:22.238096-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:02:08.849441-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:02:08.851437-0500 -- ERROR -- post -- line 32
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:02:08.857432-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:02:08.957915-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:02:08.958925-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:02:08.963923-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['47fcce8f-21e6-47d6-8473-9c2094f994f4'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:04:14.270198-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:04:14.272194-0500 -- ERROR -- post -- line 32
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:04:14.276190-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:04:14.374496-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:04:14.375512-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:04:14.380490-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['573a1416-1978-4bfe-aeeb-bad6ec89585d'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:08:10.428346-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:08:10.430344-0500 -- ERROR -- post -- line 32
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:08:10.436131-0500 -- DEBUG -- post -- line 24
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:08:10.576496-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T13:08:10.578493-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T13:08:10.584299-0500 -- DEBUG -- post -- line 54
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['d47258b8-b56b-4e3c-8112-1029a0f34ef9'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:18:01.479057-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:18:01.483052-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:18:01.488049-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:18:01.596891-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:18:01.598889-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:18:01.605254-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['19cc574f-b298-40ff-916a-c00077e03949'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:18:01.917880-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:19:32.494336-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:19:32.496336-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:19:32.504326-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:19:32.603588-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:19:32.605585-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:19:32.611579-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['3e96735c-5c53-410a-8b5e-b6f43e856ca4'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:19:32.909484-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:19:57.050714-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:19:57.051713-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:19:57.057706-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:19:57.161645-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:19:57.164643-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:19:57.169664-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['1a085ece-97fe-4b92-ba3e-006d34d75503'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:19:57.521555-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:20:34.998190-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:20:35.000189-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:20:35.004379-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:20:35.110025-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:20:35.112024-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:20:35.118017-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['fb15be1d-59a8-472e-9adf-8da30a83d45d'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:20:35.424810-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:20:35.436799-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:31:30.065143-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:32:40.650458-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:34:06.926057-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:34:06.928055-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:34:06.934048-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:34:07.033968-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:34:07.035957-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:34:07.041952-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['eb294c46-df3c-4f48-9ec5-4555f316ca2c'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:34:48.425645-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:34:48.428642-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:34:48.433638-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:34:48.569253-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:34:48.570253-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:34:48.576247-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['2155cf1a-4eec-48c6-8cba-9e51f3117069'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:34:48.893376-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:34:48.903366-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:34:57.348916-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:37:59.133860-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:37:59.135858-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:37:59.140855-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:37:59.243084-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:37:59.245069-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:37:59.249064-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['1549323e-40ca-4c68-8586-7a2b10617b6e'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:37:59.557249-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:37:59.565880-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:40:49.219978-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:40:49.223338-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:40:49.228345-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:40:49.328046-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:40:49.330044-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:40:49.334042-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['122def59-14dd-40bb-8ef4-69ca2d0e5ec9'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:40:49.634595-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:40:49.645584-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:40:49.655079-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:41:14.960443-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:41:14.963440-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:41:14.967599-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:41:15.079896-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:41:15.081894-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:41:15.085888-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['d49b2cb2-807d-4884-97b9-a82d4273e9ee'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:41:15.401895-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:41:15.412884-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:41:15.422874-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:45:53.804119-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:45:53.806118-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:45:53.810113-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:45:53.917945-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:45:53.919943-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:45:53.925938-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['d95db331-89e7-4dc8-aae7-6055016bbfc0'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:45:54.248360-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:45:54.259354-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:45:54.270343-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:54:42.564408-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:54:42.567406-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:54:42.571400-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:54:42.666810-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:54:42.667808-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T14:54:42.672805-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['719d14db-5d9f-4c69-8bf9-a4751269fb50'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T14:54:42.960323-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:54:42.969822-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:54:42.979813-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T14:54:43.219027-0500 -- DEBUG -- patch -- line 111
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T14:54:43.227526-0500 -- DEBUG -- patch -- line 111
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T14:54:43.236678-0500 -- DEBUG -- patch -- line 111
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T15:00:21.617918-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:00:21.619916-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T15:00:21.623912-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:00:21.728817-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:00:21.729816-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T15:00:21.734812-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['a48875be-1210-4000-882f-1708da9d1d35'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:00:22.029408-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:00:22.039398-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:00:22.049387-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:00:22.256196-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T15:00:22.264188-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T15:00:22.270181-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T15:52:25.501083-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:52:25.505078-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T15:52:25.510073-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:52:25.647933-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:52:25.649930-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T15:52:25.655924-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['72311595-75a6-49f0-9b3e-3354690efb4f'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:52:25.988342-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:52:26.000331-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:52:26.013317-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:52:26.260063-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T15:52:26.273051-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T15:52:26.280044-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T15:57:17.772873-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:57:17.773873-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T15:57:17.777868-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:57:17.893749-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:57:17.894748-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T15:57:17.900743-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['c449f776-dbb2-43a9-a692-0e9a9e0598f2'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T15:57:18.223432-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:57:18.235490-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:57:18.247478-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T15:57:18.466255-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T15:57:18.475245-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T15:57:18.480239-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T15:57:18.481239-0500 -- ERROR -- patch -- line 125
+	 Failed to update task status: 'status', <class 'KeyError'>
+2024-01-10T16:33:35.182111-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:33:35.185108-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:33:35.190122-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:33:35.303493-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:33:35.313485-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:33:35.318479-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['782aad69-2691-4191-ad72-b7b1407635b7'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:33:35.639095-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:33:35.649084-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:33:35.662070-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:33:35.876850-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T16:33:35.880846-0500 -- DEBUG -- patch -- line 114
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T16:37:32.429904-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:37:32.431902-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:37:32.434899-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:37:32.541870-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:37:32.543868-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:37:32.547863-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['33111d3f-b7c1-4174-a5bb-c3aadf73ad09'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:37:32.868931-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:37:32.880247-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:37:32.891236-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:37:33.117011-0500 -- DEBUG -- patch -- line 112
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T16:37:33.118010-0500 -- ERROR -- patch -- line 125
+	 Failed to update task status: 'str' object has no attribute 'HTTP_400_BAD_REQUEST', <class 'AttributeError'>
+2024-01-10T16:37:33.192949-0500 -- DEBUG -- patch -- line 112
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T16:37:33.192949-0500 -- ERROR -- patch -- line 125
+	 Failed to update task status: 'NoneType' object has no attribute 'HTTP_400_BAD_REQUEST', <class 'AttributeError'>
+2024-01-10T16:41:49.688974-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:41:49.690971-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:41:49.695965-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:41:49.802570-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:41:49.804569-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:41:49.810383-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['895cde08-531d-4757-93b2-b19f064bce73'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:41:50.180064-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:41:50.192052-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:41:50.208036-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:41:50.413143-0500 -- DEBUG -- patch -- line 112
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T16:41:50.421136-0500 -- DEBUG -- patch -- line 112
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T16:41:50.429127-0500 -- DEBUG -- patch -- line 112
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T16:43:00.713910-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:43:00.714910-0500 -- ERROR -- post -- line 33
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:43:00.719905-0500 -- DEBUG -- post -- line 25
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:43:00.826795-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:43:00.828793-0500 -- ERROR -- post -- line 62
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:43:00.833788-0500 -- DEBUG -- post -- line 55
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['6a0ebb2e-80ae-459d-a4b9-2ea7e71a6cd7'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:43:01.241372-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:43:01.249364-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:43:01.264349-0500 -- DEBUG -- get -- line 81
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:43:01.488626-0500 -- DEBUG -- patch -- line 112
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T16:43:01.496618-0500 -- DEBUG -- patch -- line 112
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T16:43:01.504611-0500 -- DEBUG -- patch -- line 112
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T16:43:34.532842-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:43:34.534841-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:43:34.539835-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:43:34.642731-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:43:34.644728-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:43:34.650722-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['3df05193-e928-4e0b-a18a-c101ba6d4bf4'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:43:34.976896-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:43:34.988884-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:43:34.999872-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:43:35.212671-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T16:43:35.219665-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T16:43:35.225657-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T16:45:28.643719-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:45:28.644718-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:45:28.648713-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:45:28.755627-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:45:28.757624-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T16:45:28.762618-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['19d2aa7c-e99e-4464-8d13-697e03466858'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T16:45:29.102896-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:45:29.113766-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:45:29.129750-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T16:45:29.380009-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T16:45:29.387003-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T16:45:29.392996-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:06:29.255127-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:06:29.257106-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:06:29.260999-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:06:29.389376-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:06:29.391374-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:06:29.397366-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['a1f79d88-cead-4700-b9dd-1d7a211a9ebf'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:06:29.720389-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:06:29.729891-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:06:29.740876-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:06:29.940415-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:06:29.949406-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:06:29.955400-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:09:32.095537-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:09:32.097535-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:09:32.101532-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:09:32.200828-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:09:32.202827-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:09:32.207822-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['a244f8a6-71ef-48bf-9fa0-ce0c0da6d6e6'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:09:32.531896-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:09:32.542886-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:09:32.553893-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:09:32.753569-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:09:32.762561-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:09:32.763559-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:09:32.768555-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:09:32.769554-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:10:18.678547-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:10:18.680545-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:10:18.684554-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:10:18.789939-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:10:18.791937-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:10:18.797492-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['7605cc38-a030-4300-b3ab-af10bb94a819'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:10:19.092752-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:10:19.101744-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:10:19.113731-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:10:19.329884-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:10:19.330873-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:10:19.339619-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:10:19.340607-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:10:19.346601-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:10:19.347601-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:10:57.945352-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:10:57.948347-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:10:57.952342-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:10:58.096195-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:10:58.098193-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:10:58.106185-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['1c34ee40-30d4-415d-9ba6-0bce86eb5fcd'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:10:58.482586-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:10:58.492575-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:10:58.505562-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:10:58.712237-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:10:58.713235-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:10:58.717246-0500 -- DEBUG -- patch -- line 122
+	 Updated task: None
+2024-01-10T17:10:58.723244-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:10:58.723244-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:10:58.729219-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:10:58.729219-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:12:24.040892-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:12:24.042891-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:12:24.046888-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:12:24.162768-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:12:24.163767-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:12:24.168762-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['0a9cadb9-594a-4f28-8454-d294d080604a'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:12:24.530476-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:12:24.539464-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:12:24.553451-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:12:24.753992-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:12:24.754991-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:12:24.758988-0500 -- DEBUG -- patch -- line 122
+	 Updated task: None
+2024-01-10T17:12:24.764681-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:12:24.765680-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:12:24.772181-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:12:24.773180-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:13:19.289760-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:13:19.291753-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:13:19.296749-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:13:19.394650-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:13:19.396648-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:13:19.401647-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['e647866a-9fb4-4d39-a16f-a349b0e789d6'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:13:19.722868-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:13:19.732862-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:13:19.743851-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:13:19.936901-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:13:19.936901-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:13:19.940896-0500 -- DEBUG -- patch -- line 122
+	 Updated task: None
+2024-01-10T17:13:19.948775-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:13:19.949768-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:13:19.954765-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:13:19.955763-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:14:26.123727-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:14:26.124727-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:14:26.129719-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:14:26.230225-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:14:26.232223-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:14:26.237218-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['9be4e4a1-e847-4ff0-96f8-70c1d1c5f0db'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:14:26.591514-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:14:26.600503-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:14:26.610493-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:14:26.798959-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:14:26.799958-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:14:26.802955-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:14:26.845912-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:14:26.846911-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:14:26.850907-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:14:26.851905-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:16:52.819083-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:16:52.821070-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:16:52.826067-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:16:52.930781-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:16:52.932778-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:16:52.938772-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['f9d4cc8e-1d5f-4b40-9ce4-bac98b04a183'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:16:53.236312-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:16:53.246302-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:16:53.257292-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:16:53.449494-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:16:53.450492-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:16:53.453491-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:16:53.508003-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:16:53.509003-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:16:53.512998-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: 7e6cbe03-899a-44b7-a089-f9f95f664c90, <class 'str'>
+2024-01-10T17:16:53.513997-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: 'str' object has no attribute 'get', <class 'AttributeError'>
+2024-01-10T17:17:16.016533-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:17:16.018532-0500 -- ERROR -- post -- line 34
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:17:16.024526-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:17:16.126441-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:17:16.128439-0500 -- ERROR -- post -- line 63
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:17:16.132434-0500 -- DEBUG -- post -- line 56
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['15a8c87b-0c3a-4fb5-bb15-c2c74654acd9'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:17:16.444526-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:17:16.455795-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:17:16.467782-0500 -- DEBUG -- get -- line 82
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:17:16.667457-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:17:16.668455-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:17:16.672960-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:17:16.720432-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:17:16.721428-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:17:16.727421-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:17:16.728420-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:19:13.021052-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:19:13.022050-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:19:13.027061-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:19:13.071999-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:19:13.073998-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:19:13.079549-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:19:13.080550-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:20:05.535889-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:20:05.536887-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:20:05.541882-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:20:05.581856-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:20:05.582859-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:20:05.589834-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:20:05.591553-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:22:46.584488-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:22:46.586487-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:22:46.590592-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:22:46.631546-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:22:46.632563-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:22:46.636540-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:22:46.637539-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:22:46.642535-0500 -- DEBUG -- patch -- line 122
+	 Updated task: None
+2024-01-10T17:23:04.658458-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:23:04.659457-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:23:04.663689-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:23:04.707996-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:23:04.708995-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:23:04.713989-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {}, <class 'dict'>
+2024-01-10T17:23:04.714988-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:25:49.208812-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:25:49.209812-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:25:49.212808-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:25:49.254800-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:25:49.256797-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:25:49.261790-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:25:49.261790-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:25:49.265786-0500 -- DEBUG -- patch -- line 122
+	 Updated task: None
+2024-01-10T17:26:25.290819-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:26:25.291818-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: ACTIVE
+2024-01-10T17:26:25.296813-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:26:25.344010-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:26:25.345009-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:26:25.350004-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:26:25.351003-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:26:25.354997-0500 -- DEBUG -- patch -- line 122
+	 Updated task: None
+2024-01-10T17:27:51.626589-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:27:51.628587-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: ACTIVE
+2024-01-10T17:27:51.631584-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:27:51.674545-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:27:51.675544-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:27:51.680539-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:27:51.680539-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:27:51.684534-0500 -- DEBUG -- patch -- line 122
+	 Updated task: None
+2024-01-10T17:28:30.616797-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:28:30.617795-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: ACTIVE
+2024-01-10T17:28:30.621791-0500 -- ERROR -- patch -- line 127
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:28:30.664747-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:28:30.665746-0500 -- ERROR -- patch -- line 117
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:28:30.670251-0500 -- DEBUG -- patch -- line 113
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:28:30.672249-0500 -- DEBUG -- patch -- line 119
+	 Updating task status: COMPLETED
+2024-01-10T17:28:30.676244-0500 -- DEBUG -- patch -- line 122
+	 Updated task: OrderedDict([('id', 'a90eebeb-628f-4a37-a9b2-82b32cc5340d'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('2d07c3c9-5876-4f4c-8a0f-a1a0bbea9ba1'))])
+2024-01-10T17:29:42.116240-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:29:42.117239-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:29:42.121235-0500 -- ERROR -- patch -- line 131
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:29:42.162057-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:29:42.163041-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:29:42.167047-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:29:42.168051-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-10T17:29:42.173031-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '933221cf-0914-4d33-ba5a-1d96facb747f'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('fa976fc8-9ccb-4ba4-bbaf-36e9b385eaa1'))])
+2024-01-10T17:29:42.174030-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '933221cf-0914-4d33-ba5a-1d96facb747f'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('fa976fc8-9ccb-4ba4-bbaf-36e9b385eaa1'))])
+
+2024-01-10T17:31:39.755479-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:31:39.756477-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:31:39.761473-0500 -- ERROR -- patch -- line 131
+	 Failed to update task status: Task does not Exist, <class 'TasksApp.models.Task.DoesNotExist'>
+2024-01-10T17:32:44.955572-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:32:44.956571-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:32:44.959568-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: 597c34d4-0512-4db2-a12f-2d5069c9980c
+2024-01-10T17:32:53.695604-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:32:53.697602-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:32:53.702603-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:32:53.709590-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-10T17:32:53.800028-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:32:53.802033-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:32:53.807035-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['61fe0205-27cb-4b91-b8f1-524a9b57f68e'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:32:53.815016-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('61fe0205-27cb-4b91-b8f1-524a9b57f68e')}
+
+2024-01-10T17:32:54.097942-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:32:54.107953-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:32:54.112454-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', 'a4314765-7308-47a2-aed1-8a67b213f8e0'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('b0347c8c-0538-4568-8cbe-bbaa439d19ad'))]), OrderedDict([('id', '094172ab-65e2-4d23-ae2f-abe8897b43a2'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('b0347c8c-0538-4568-8cbe-bbaa439d19ad'))])]
+
+2024-01-10T17:32:54.119449-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:32:54.122899-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-10T17:32:54.320458-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:32:54.320458-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:32:54.324626-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: 01cb60e0-06ae-44f6-a51b-3f05f278c4af
+2024-01-10T17:32:54.329603-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:32:54.330602-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:32:54.335595-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:32:54.336613-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-10T17:32:54.342589-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '67cf747b-df77-46ed-b1ed-8d22deeb1495'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('87b026f8-1080-483f-bb2f-cfe192e56e0a'))])
+2024-01-10T17:32:54.344587-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '67cf747b-df77-46ed-b1ed-8d22deeb1495'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('87b026f8-1080-483f-bb2f-cfe192e56e0a'))])
+
+2024-01-10T17:33:03.707203-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:33:03.709202-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:33:03.712733-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:33:03.718728-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-10T17:33:03.810607-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:33:03.811606-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:33:03.816600-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['548d1480-b194-4740-8bbe-a296f1e47113'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:33:03.824593-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('548d1480-b194-4740-8bbe-a296f1e47113')}
+
+2024-01-10T17:33:04.099577-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:33:04.108567-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:33:04.112069-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', 'a5877b91-54bc-41b7-a7ae-4969ece5a5dd'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('dec83571-b569-4f24-be48-0c283c0e677f'))]), OrderedDict([('id', '6409dca2-7c3d-4f24-a5a4-1eab4aaaa027'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('dec83571-b569-4f24-be48-0c283c0e677f'))])]
+
+2024-01-10T17:33:04.120061-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:33:04.124057-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-10T17:33:04.309734-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:33:04.310732-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:33:04.314729-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: ca77dc40-c623-4068-8010-d301cd2002b6
+2024-01-10T17:33:04.320742-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:33:04.321722-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:33:04.327729-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:33:04.328713-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-10T17:33:04.332726-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '6525a191-243e-4f49-aad6-d53c1ee93279'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('8eb586b8-0a8d-46e6-97b2-8578c029edc8'))])
+2024-01-10T17:33:04.333710-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '6525a191-243e-4f49-aad6-d53c1ee93279'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('8eb586b8-0a8d-46e6-97b2-8578c029edc8'))])
+
+2024-01-10T17:39:25.417519-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:39:25.419517-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:39:25.423513-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:39:25.430932-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-10T17:39:25.543575-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:39:25.545573-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:39:25.552566-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['36da570e-7d6e-4d57-95a4-79ee6a7f19c5'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:39:25.563554-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('36da570e-7d6e-4d57-95a4-79ee6a7f19c5')}
+
+2024-01-10T17:39:25.575542-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ["<script>alert('xss')</script>"], 'project': ['c3309f63-5873-40bb-88ea-35c4ab0afb3b']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:39:25.584533-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': "<script>alert('xss')</script>", 'description': None, 'due_date': None, 'project': UUID('c3309f63-5873-40bb-88ea-35c4ab0afb3b')}
+
+2024-01-10T17:39:25.948316-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:39:25.960305-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:39:25.965300-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '59f703c4-48dc-4484-a437-67aa3c95463f'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('6d3cc19f-20c4-4070-a9cd-903f43bc82ff'))]), OrderedDict([('id', 'a4ce4565-ba9b-4817-b608-65f4e9a851b5'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('6d3cc19f-20c4-4070-a9cd-903f43bc82ff'))])]
+
+2024-01-10T17:39:25.974645-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:39:25.977642-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-10T17:39:26.185561-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:39:26.186561-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:39:26.191556-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '4c555d56-ad61-4d18-9133-97992f07a46a'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('f892b03c-f582-4626-b171-c2331abd9b77'))])
+2024-01-10T17:39:26.192554-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '4c555d56-ad61-4d18-9133-97992f07a46a'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('f892b03c-f582-4626-b171-c2331abd9b77'))])
+
+2024-01-10T17:39:26.194552-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:39:26.195551-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-10T17:39:26.199548-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '4c555d56-ad61-4d18-9133-97992f07a46a'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('f892b03c-f582-4626-b171-c2331abd9b77'))])
+2024-01-10T17:39:26.201545-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '4c555d56-ad61-4d18-9133-97992f07a46a'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('f892b03c-f582-4626-b171-c2331abd9b77'))])
+
+2024-01-10T17:39:26.208538-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:39:26.209537-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:39:26.213533-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: 1fc966c9-fc5a-443e-928c-0fe10901464b
+2024-01-10T17:39:26.220526-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:39:26.222525-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:39:26.227518-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:39:26.228517-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-10T17:39:26.233513-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '47cd2ba5-21d3-4a7b-b78d-9a9edb6c3b4e'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('af57bbb6-813a-4c0a-b964-484812d2247a'))])
+2024-01-10T17:39:26.234512-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '47cd2ba5-21d3-4a7b-b78d-9a9edb6c3b4e'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('af57bbb6-813a-4c0a-b964-484812d2247a'))])
+
+2024-01-10T17:47:08.981630-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:47:08.984629-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:47:08.989622-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:47:09.025584-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-10T17:47:09.150457-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:47:09.152455-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:47:09.159447-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['7cc916dc-9e19-4efe-9428-ba87583a72bd'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:47:09.169946-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('7cc916dc-9e19-4efe-9428-ba87583a72bd')}
+
+2024-01-10T17:47:56.171496-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:47:56.173495-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:47:56.178488-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:47:56.208474-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-10T17:47:56.304364-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:47:56.306362-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-10T17:47:56.311356-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['b865eea8-ce6d-4c04-a01d-39cf43097965'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-10T17:47:56.321347-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('b865eea8-ce6d-4c04-a01d-39cf43097965')}
+
+2024-01-10T17:47:56.630323-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:47:56.643310-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:47:56.650303-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '466ae6fc-3cf0-4e06-8439-4b510a84fc53'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('31a76613-57b6-47cd-aed7-0699fbaa649d'))]), OrderedDict([('id', 'cdd819bf-df18-46ce-82f2-cc0fbdfb09c1'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('31a76613-57b6-47cd-aed7-0699fbaa649d'))])]
+
+2024-01-10T17:47:56.662667-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-10T17:47:56.668654-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-10T17:47:56.883618-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:47:56.884615-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:47:56.890609-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '79785d14-bcbb-4c9b-9145-236e0910c448'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('ff2ca2b4-2f82-4dff-92f0-0a6e6c6adda9'))])
+2024-01-10T17:47:56.891608-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '79785d14-bcbb-4c9b-9145-236e0910c448'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('ff2ca2b4-2f82-4dff-92f0-0a6e6c6adda9'))])
+
+2024-01-10T17:47:56.893606-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:47:56.894605-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-10T17:47:56.900598-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '79785d14-bcbb-4c9b-9145-236e0910c448'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('ff2ca2b4-2f82-4dff-92f0-0a6e6c6adda9'))])
+2024-01-10T17:47:56.902597-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '79785d14-bcbb-4c9b-9145-236e0910c448'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('ff2ca2b4-2f82-4dff-92f0-0a6e6c6adda9'))])
+
+2024-01-10T17:47:56.911587-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-10T17:47:56.912586-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-10T17:47:56.916583-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: 62d28349-e22c-4ece-86af-dc0cf0fbff40
+2024-01-10T17:47:56.923577-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-10T17:47:56.924575-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-10T17:47:56.932567-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-10T17:47:56.934565-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-10T17:47:56.941079-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '475b1d8f-9309-4734-a42c-3f2a2f580555'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('c93ab36e-ec70-41a4-b3cb-5e70cea0945a'))])
+2024-01-10T17:47:56.942066-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '475b1d8f-9309-4734-a42c-3f2a2f580555'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('c93ab36e-ec70-41a4-b3cb-5e70cea0945a'))])
+
+2024-01-11T00:15:14.226040-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-11T00:15:14.230036-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T00:15:14.233033-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-11T00:15:14.265001-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-11T00:15:14.376019-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T00:15:14.378017-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T00:15:14.385010-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['bb14089e-d9cc-4266-990b-1c84b1563d2a'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T00:15:14.394001-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('bb14089e-d9cc-4266-990b-1c84b1563d2a')}
+
+2024-01-11T00:15:14.774616-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T00:15:14.787553-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T00:15:14.793546-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '39349fbc-3f4a-43c2-9f26-a2faef483266'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('20b95720-9a74-4758-9f2b-eb330e4873f2'))]), OrderedDict([('id', '236bbe17-6297-4a8c-9a8b-4d8936d5eed6'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('20b95720-9a74-4758-9f2b-eb330e4873f2'))])]
+
+2024-01-11T00:15:14.806533-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T00:15:14.811528-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-11T00:15:15.052702-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T00:15:15.053701-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T00:15:15.059696-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '01eb87e1-4eef-4483-98b2-097b9eb77532'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('e03023b6-1c8a-42d9-b674-517ed2067933'))])
+2024-01-11T00:15:15.060695-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '01eb87e1-4eef-4483-98b2-097b9eb77532'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('e03023b6-1c8a-42d9-b674-517ed2067933'))])
+
+2024-01-11T00:15:15.063693-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T00:15:15.064691-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T00:15:15.070078-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '01eb87e1-4eef-4483-98b2-097b9eb77532'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('e03023b6-1c8a-42d9-b674-517ed2067933'))])
+2024-01-11T00:15:15.071077-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '01eb87e1-4eef-4483-98b2-097b9eb77532'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('e03023b6-1c8a-42d9-b674-517ed2067933'))])
+
+2024-01-11T00:15:15.081580-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T00:15:15.082577-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T00:15:15.085574-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: 67f0f241-9db5-40e3-8b68-e1f5cdce0051
+2024-01-11T00:15:15.093567-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-11T00:15:15.094566-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-11T00:15:15.102557-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T00:15:15.103556-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T00:15:15.108552-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', 'd0f5d904-8454-4185-a568-3267e38f906a'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('e694ebf1-082a-4a35-955b-b1b5e3118582'))])
+2024-01-11T00:15:15.110549-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', 'd0f5d904-8454-4185-a568-3267e38f906a'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('e694ebf1-082a-4a35-955b-b1b5e3118582'))])
+
+2024-01-11T00:17:33.472273-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T00:17:33.479266-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '1'), ('title', 'make api'), ('description', 'Make a simple task/project management api with unique IDs so users can re-visit their project without having to make an account'), ('due_date', '2024-01-14'), ('status', 'ACTIVE'), ('project', UUID('2870e758-e52a-4eff-93f2-12c39e28214b'))]), OrderedDict([('id', '2'), ('title', 'learn docker'), ('description', ''), ('due_date', '2024-01-16'), ('status', 'PENDING'), ('project', UUID('2870e758-e52a-4eff-93f2-12c39e28214b'))])]
+
+2024-01-11T00:25:39.767834-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T00:25:39.775826-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '1'), ('title', 'make api'), ('description', 'Make a simple task/project management api with unique IDs so users can re-visit their project without having to make an account'), ('due_date', '2024-01-14'), ('status', 'ACTIVE'), ('project', UUID('2870e758-e52a-4eff-93f2-12c39e28214b'))]), OrderedDict([('id', '2'), ('title', 'learn docker'), ('description', ''), ('due_date', '2024-01-16'), ('status', 'PENDING'), ('project', UUID('2870e758-e52a-4eff-93f2-12c39e28214b'))])]
+
+2024-01-11T00:37:01.147039-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-11T00:37:01.149037-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T00:37:01.154032-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-11T00:37:01.185000-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-11T00:37:01.305388-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T00:37:01.307386-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T00:37:01.314378-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['5eee507c-6369-413f-a19b-00017facb623'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T00:37:01.325213-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('5eee507c-6369-413f-a19b-00017facb623')}
+
+2024-01-11T00:37:01.677019-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T00:37:01.688824-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T00:37:01.694818-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '4543a8e0-c285-474f-8bc3-337a29b196c6'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('ec8089c4-19ee-4450-8f0d-1a6f3e463391'))]), OrderedDict([('id', '82ecdbf9-a0a4-481e-9412-c99c3f625d15'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('ec8089c4-19ee-4450-8f0d-1a6f3e463391'))])]
+
+2024-01-11T00:37:01.705807-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T00:37:01.708802-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-11T00:37:01.929474-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T00:37:01.930473-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T00:37:01.940462-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', 'd74ba50d-9772-497d-8399-2256c20f48ab'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('8c35c0d0-5b09-4f9c-99be-fac3fdf54b56'))])
+2024-01-11T00:37:01.942460-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', 'd74ba50d-9772-497d-8399-2256c20f48ab'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('8c35c0d0-5b09-4f9c-99be-fac3fdf54b56'))])
+
+2024-01-11T00:37:01.944458-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T00:37:01.946457-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T00:37:01.954447-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', 'd74ba50d-9772-497d-8399-2256c20f48ab'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('8c35c0d0-5b09-4f9c-99be-fac3fdf54b56'))])
+2024-01-11T00:37:01.955446-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', 'd74ba50d-9772-497d-8399-2256c20f48ab'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('8c35c0d0-5b09-4f9c-99be-fac3fdf54b56'))])
+
+2024-01-11T00:37:01.967435-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T00:37:01.969433-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T00:37:01.973428-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: 936a7085-5659-463a-affc-63fdd427ac3f
+2024-01-11T00:37:01.983419-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-11T00:37:01.984418-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-11T00:37:01.995406-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T00:37:01.996405-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T00:37:02.003907-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', 'd8a0a386-bb77-44f1-9cc0-a0ab1c8eaa96'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('2e75b2dc-e656-4e51-bc57-a3d423ba555a'))])
+2024-01-11T00:37:02.004906-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', 'd8a0a386-bb77-44f1-9cc0-a0ab1c8eaa96'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('2e75b2dc-e656-4e51-bc57-a3d423ba555a'))])
+
+2024-01-11T14:56:38.256217-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:56:38.258215-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T14:56:38.264210-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:56:38.286185-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-11T14:56:38.399166-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:56:38.401163-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T14:56:38.407157-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['8ce281d0-9875-4124-ae87-9d68887389ce'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:56:38.416147-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('8ce281d0-9875-4124-ae87-9d68887389ce')}
+
+2024-01-11T14:56:38.703091-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:56:38.713369-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:56:38.718365-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '00c99a71-86fb-4f3b-b609-12555742eec5'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('7b17ea24-e69d-4a0f-ac6a-fbf81658e378'))]), OrderedDict([('id', '9724b836-54a9-4708-8a9e-46ca20aff196'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('7b17ea24-e69d-4a0f-ac6a-fbf81658e378'))])]
+
+2024-01-11T14:56:38.728374-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:56:38.731366-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-11T14:56:39.021690-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T14:56:39.021690-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T14:56:39.026684-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', 'e82225d2-4f97-4425-8137-600aa6f829fa'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('6aa9cea5-307e-49f6-8109-e3084f57e07b'))])
+2024-01-11T14:56:39.027683-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', 'e82225d2-4f97-4425-8137-600aa6f829fa'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('6aa9cea5-307e-49f6-8109-e3084f57e07b'))])
+
+2024-01-11T14:56:39.029681-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T14:56:39.029681-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T14:56:39.034116-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', 'e82225d2-4f97-4425-8137-600aa6f829fa'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('6aa9cea5-307e-49f6-8109-e3084f57e07b'))])
+2024-01-11T14:56:39.035115-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', 'e82225d2-4f97-4425-8137-600aa6f829fa'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('6aa9cea5-307e-49f6-8109-e3084f57e07b'))])
+
+2024-01-11T14:56:39.043106-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T14:56:39.044105-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T14:56:39.048102-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: adced746-23bd-4b81-b18c-90ae1ce7f030
+2024-01-11T14:56:39.054111-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-11T14:56:39.055101-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-11T14:56:39.061087-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T14:56:39.062087-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T14:56:39.068081-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '0ece646a-2d4f-4270-9ec6-c6ffdd8d9fee'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('a5a3f6f0-e5dc-4e16-9118-65f3b1278648'))])
+2024-01-11T14:56:39.069099-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '0ece646a-2d4f-4270-9ec6-c6ffdd8d9fee'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('a5a3f6f0-e5dc-4e16-9118-65f3b1278648'))])
+
+2024-01-11T14:57:55.344507-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:57:55.345505-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T14:57:55.350499-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:57:55.375092-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-11T14:57:55.477961-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:57:55.479555-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T14:57:55.484525-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['194f708f-3ddd-4e05-8fa9-2be176cfe558'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:57:55.493517-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('194f708f-3ddd-4e05-8fa9-2be176cfe558')}
+
+2024-01-11T14:57:55.813890-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:57:55.827883-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:57:55.832878-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '033cad56-ce06-4dd1-9833-a6ff4b01cf7c'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('b59b795d-9deb-40a8-8eb0-eae38dfe5abb'))]), OrderedDict([('id', 'cf25d27c-4a9d-4be2-8de3-fc8de81d188d'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('b59b795d-9deb-40a8-8eb0-eae38dfe5abb'))])]
+
+2024-01-11T14:57:55.846864-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:57:55.850859-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-11T14:57:56.220030-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T14:57:56.221029-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T14:57:56.228022-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '28dcb22c-08ce-417e-ba19-045ec0565b07'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('87ad9ded-8a9a-4588-9407-1ce65de5f5fc'))])
+2024-01-11T14:57:56.229021-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '28dcb22c-08ce-417e-ba19-045ec0565b07'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('87ad9ded-8a9a-4588-9407-1ce65de5f5fc'))])
+
+2024-01-11T14:57:56.232020-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T14:57:56.233018-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T14:57:56.237013-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '28dcb22c-08ce-417e-ba19-045ec0565b07'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('87ad9ded-8a9a-4588-9407-1ce65de5f5fc'))])
+2024-01-11T14:57:56.239011-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '28dcb22c-08ce-417e-ba19-045ec0565b07'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('87ad9ded-8a9a-4588-9407-1ce65de5f5fc'))])
+
+2024-01-11T14:57:56.248003-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T14:57:56.249518-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T14:57:56.252506-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: f506c2a6-76ad-4999-ad99-09060242983b
+2024-01-11T14:57:56.259500-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-11T14:57:56.260498-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-11T14:57:56.267491-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T14:57:56.268489-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T14:57:56.275486-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '9999aba6-d5d0-455b-8488-d9bcac8a01bb'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('0acbd2a2-4837-4c0c-ae29-f5ff101ea40a'))])
+2024-01-11T14:57:56.276482-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '9999aba6-d5d0-455b-8488-d9bcac8a01bb'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('0acbd2a2-4837-4c0c-ae29-f5ff101ea40a'))])
+
+2024-01-11T14:58:56.381037-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:58:56.383036-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T14:58:56.388030-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:58:56.421812-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-11T14:58:56.518220-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:58:56.520218-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T14:58:56.526213-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['62830228-a489-45d7-a54e-22e50c04c18d'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:58:56.534204-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('62830228-a489-45d7-a54e-22e50c04c18d')}
+
+2024-01-11T14:58:56.838030-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:58:56.850018-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:58:56.856012-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', 'cabf3e2b-eb8d-4bf1-a455-3bab84a1b520'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('ebb06b3e-3201-4e85-be48-d99e76307c1c'))]), OrderedDict([('id', 'b874ac77-7268-44d5-a874-ba4a5e24d3a0'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('ebb06b3e-3201-4e85-be48-d99e76307c1c'))])]
+
+2024-01-11T14:58:56.866001-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:58:56.868998-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-11T14:58:57.196975-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T14:58:57.196975-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T14:58:57.202045-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '87007f72-52df-4ff2-b39a-b06d7930a33c'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('74673413-5ce7-4ba6-9337-9933fba82d69'))])
+2024-01-11T14:58:57.203044-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '87007f72-52df-4ff2-b39a-b06d7930a33c'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('74673413-5ce7-4ba6-9337-9933fba82d69'))])
+
+2024-01-11T14:58:57.205042-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T14:58:57.206040-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T14:58:57.212226-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '87007f72-52df-4ff2-b39a-b06d7930a33c'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('74673413-5ce7-4ba6-9337-9933fba82d69'))])
+2024-01-11T14:58:57.213219-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '87007f72-52df-4ff2-b39a-b06d7930a33c'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('74673413-5ce7-4ba6-9337-9933fba82d69'))])
+
+2024-01-11T14:58:57.220211-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T14:58:57.221211-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T14:58:57.225207-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: 49dc05af-fb66-4799-8148-fd7db1010e00
+2024-01-11T14:58:57.231200-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-11T14:58:57.231200-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-11T14:58:57.237194-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T14:58:57.238193-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T14:58:57.244187-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', 'ce138153-9b8c-4b82-b396-3624c7d3f0c8'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('6459c090-d9a9-42a2-9822-568f65978341'))])
+2024-01-11T14:58:57.245185-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', 'ce138153-9b8c-4b82-b396-3624c7d3f0c8'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('6459c090-d9a9-42a2-9822-568f65978341'))])
+
+2024-01-11T14:59:47.110756-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:59:47.112749-0500 -- ERROR -- post -- line 35
+	 Failed to validate new project: {'name': [ErrorDetail(string='This field is required.', code='required')], 'description': [ErrorDetail(string='This field is required.', code='required')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T14:59:47.117744-0500 -- DEBUG -- post -- line 26
+	 Received request to create new project: <QueryDict: {'name': ['New Project to test Success'], 'description': ["A test project for Success Testing! Let's see what happens!"]}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:59:47.153725-0500 -- SUCCESS -- post -- line 32
+	 Created new project: {'name': 'New Project to test Success', 'description': "A test project for Success Testing! Let's see what happens!"}
+
+2024-01-11T14:59:47.372673-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:59:47.374672-0500 -- ERROR -- post -- line 65
+	 Failed to validate new task: {'title': [ErrorDetail(string='This field may not be blank.', code='blank')]}, <class 'rest_framework.utils.serializer_helpers.ReturnDict'>
+2024-01-11T14:59:47.382638-0500 -- DEBUG -- post -- line 57
+	 Received request to create new task: <QueryDict: {'title': ['New Task'], 'project': ['c4328a12-6cf3-44ba-a360-4db5f66f684b'], 'due_date': ['2023-01-01'], 'status': ['PENDING']}>, <class 'django.http.request.QueryDict'>
+2024-01-11T14:59:47.392627-0500 -- SUCCESS -- post -- line 63
+	 Created new task: {'title': 'New Task', 'description': None, 'due_date': '2023-01-01', 'status': 'PENDING', 'project': UUID('c4328a12-6cf3-44ba-a360-4db5f66f684b')}
+
+2024-01-11T14:59:47.730745-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:59:47.745729-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:59:47.751723-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '8334cdc1-2c3c-49b5-88ba-ea06b23e64a0'), ('title', 'Test Task 1'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('0450ee72-15f9-418b-a40b-906039d04edd'))]), OrderedDict([('id', '9a2bf939-3937-4a5b-bcfc-6ebd38655da5'), ('title', 'Test Task 2'), ('description', None), ('due_date', None), ('status', 'PENDING'), ('project', UUID('0450ee72-15f9-418b-a40b-906039d04edd'))])]
+
+2024-01-11T14:59:47.760713-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T14:59:47.763711-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: []
+
+2024-01-11T14:59:48.125303-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T14:59:48.126299-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T14:59:48.131296-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '314d16da-2da1-46d7-962f-fe2a1779ab04'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('f11e5c6b-5ef1-4788-8f06-ba8fcb74f6d3'))])
+2024-01-11T14:59:48.132293-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '314d16da-2da1-46d7-962f-fe2a1779ab04'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'ACTIVE'), ('project', UUID('f11e5c6b-5ef1-4788-8f06-ba8fcb74f6d3'))])
+
+2024-01-11T14:59:48.134310-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T14:59:48.135291-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T14:59:48.139288-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '314d16da-2da1-46d7-962f-fe2a1779ab04'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('f11e5c6b-5ef1-4788-8f06-ba8fcb74f6d3'))])
+2024-01-11T14:59:48.140287-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '314d16da-2da1-46d7-962f-fe2a1779ab04'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('f11e5c6b-5ef1-4788-8f06-ba8fcb74f6d3'))])
+
+2024-01-11T14:59:48.149278-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'ACTIVE'}, <class 'dict'>
+2024-01-11T14:59:48.149956-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: ACTIVE
+2024-01-11T14:59:48.152947-0500 -- ERROR -- patch -- line 130
+	 Task does not Exist: 42e0b274-a204-4045-9ba3-4595894f40ea
+2024-01-11T14:59:48.159937-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'INVALID_STATUS'}, <class 'dict'>
+2024-01-11T14:59:48.160940-0500 -- ERROR -- patch -- line 120
+	 Invalid status. Try ['PENDING', 'ACTIVE', 'COMPLETED']
+2024-01-11T14:59:48.166932-0500 -- DEBUG -- patch -- line 116
+	 Received request to update task status: {'status': 'COMPLETED'}, <class 'dict'>
+2024-01-11T14:59:48.167929-0500 -- DEBUG -- patch -- line 122
+	 Updating task status: COMPLETED
+2024-01-11T14:59:48.173581-0500 -- DEBUG -- patch -- line 125
+	 Updated task: OrderedDict([('id', '2a6e5535-ae04-478b-8101-fbfebceac24e'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('a7fd63a4-5150-4499-ba45-fb109ffff78c'))])
+2024-01-11T14:59:48.174580-0500 -- SUCCESS -- patch -- line 127
+	 Updated task: OrderedDict([('id', '2a6e5535-ae04-478b-8101-fbfebceac24e'), ('title', 'Test Task for update task status'), ('description', None), ('due_date', None), ('status', 'COMPLETED'), ('project', UUID('a7fd63a4-5150-4499-ba45-fb109ffff78c'))])
+
+2024-01-11T20:45:36.669516-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>
+2024-01-11T20:45:36.678719-0500 -- SUCCESS -- get -- line 90
+	 Retrieved project: [OrderedDict([('id', '1'), ('title', 'make api'), ('description', 'Make a simple task/project management api with unique IDs so users can re-visit their project without having to make an account'), ('due_date', '2024-01-14'), ('status', 'ACTIVE'), ('project', UUID('2870e758-e52a-4eff-93f2-12c39e28214b'))]), OrderedDict([('id', '2'), ('title', 'learn docker'), ('description', ''), ('due_date', '2024-01-16'), ('status', 'PENDING'), ('project', UUID('2870e758-e52a-4eff-93f2-12c39e28214b'))])]
+
+2024-01-18T22:45:50.010479-0500 -- DEBUG -- get -- line 84
+	 Received request to retrieve project: {}, <class 'dict'>

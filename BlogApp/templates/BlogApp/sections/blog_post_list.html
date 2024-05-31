@@ -1,0 +1,15 @@
+{% for post in blog_posts %}
+    {% include 'BlogApp/partials/blog_card.html' with post=post %}
+{% endfor %}
+{% comment %} INFINITE SCROLL {% endcomment %}
+{% if has_next %}
+    <form>
+        <input name="page" value="{{ blog_posts.next_page_number }}" hidden>
+        <div hx-trigger="intersect once"
+             hx-post="{% url 'BlogApp:blog-post-list' %}"
+             hx-target="#blog-page-main"
+             hx-swap="beforeend"
+             hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+             hx-include="#blog-search-form"></div>
+    </form>
+{% endif %}

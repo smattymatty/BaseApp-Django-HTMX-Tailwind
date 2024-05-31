@@ -1,0 +1,26 @@
+{% extends 'BaseApp/base.html' %}
+{% block content %}
+    <h1 class="base-font text-2xl w-full text-center font-bold py-2 -mt-2 rounded-t-lg bg-gradient-to-r from-black/20 from-10% via-blue-300/10 via-50% to-black/20 to-90% border-b-4 border-white/10">
+        Blog
+    </h1>
+    <div hx-trigger="load"
+         hx-post="{% url 'BlogApp:blog-post-list' %}"
+         hx-target="#blog-page-main"
+         hx-swap="innerHTML"
+         hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+         hx-indicator="#blog-page-main-indicator"
+         class="bg-black/30 py-2 border-b-2 border-black/50 shadow-lg">
+        <p class="text-center text-lg py-2 prose w-full mx-auto text-white/40">
+            Welcome to my blog where I will be sharing my thoughts and experiences on various topics related to web development.
+        </p>
+    </div>
+    {% include 'BlogApp/sections/blog_listing_top_bar.html' %}
+    <div id="blog-page-main"
+         class="flex flex-col lg:flex-row flex-wrap justify-center items-center px-4 lg:px-0 mt-2 gap-x-4">
+        <div id="blog-page-main-indicator"
+             class="bg-black/10 text-center bg-gradient-to-b from-black/20 from-0% via-blue-300/5 via-5% to-black/20 to-50% htmx-indicator flex flex-col opacity-0 items-center justify-center py-4 w-full border-y-2 border-white/10 rounded-b-lg shadow-lg">
+            Loading...
+        </div>
+    </div>
+    <div class="my-2 mt-4 border-t-2 border-white/10 rounded-t-lg shadow-lg "></div>
+{% endblock content %}

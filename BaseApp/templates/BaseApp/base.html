@@ -1,0 +1,35 @@
+{% load static tailwind_tags django_htmx %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% tailwind_css %}
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+        <meta charset="UTF-8" />
+        <title>
+            {% block title %}{{ title }}{% endblock %}
+        </title>
+        <script src="{% static 'BaseApp/htmx.min.js' %}" defer></script>
+        {% django_htmx_script %}
+    </head>
+    {% include "BaseApp/tailwind_dummy.html" %}
+    {% include 'BaseApp/ui_elements/messages.html' %}
+    {% include 'UsersApp/modals/profile_modal_main.html' %}
+    <body class="background-color-2 text-white/50">
+        <div class="flex flex-col">
+            <!--Navbar-->
+            {% include "BaseApp/navigation/top_navbar.html" %}
+            <div class="main-content-container">
+                {% block content %}<!-- Child templates will insert content here -->{% endblock %}
+            </div>
+            <div class="footer-container">03</div>
+        </div>
+    </body>
+    <script src="{% static 'BaseApp/utils.js' %}"></script>
+    <script type="module">
+        import { Modal } from "{% static 'BaseApp/modal_handler.mjs' %}";
+        document.addEventListener('DOMContentLoaded', Modal.initAll);
+    </script>
+    {% block extra_js %}{% endblock %}
+</html>

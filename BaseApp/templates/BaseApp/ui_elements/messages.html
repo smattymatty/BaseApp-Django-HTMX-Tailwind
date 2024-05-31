@@ -1,0 +1,26 @@
+{% if messages %}
+    <div id="message-container"
+         class="fixed inset-0 flex flex-col items-center justify-start pt-12 space-y-4">
+        {% for message in messages %}
+            <div id="message-{{ message.id }}"
+                 class="max-w-lg w-full shadow-lg rounded-md p-4 border-x-4 {% if message.tags == 'error' %} border-red-500 bg-red-800/70 {% elif message.tags == 'success' %} border-green-500 bg-green-800/70 {% elif message.tags == 'info' %} border-blue-500 bg-blue-800/70 {% elif message.tags == 'warning' %} border-yellow-500 bg-yellow-800/70 {% endif %}">
+                <div class="flex justify-between items-center [&>svg]:min-w-[1.2rem] [&>svg]:max-h-[1.5rem] [&>svg]:fill-white/50 [&>svg]:my-auto">
+                    {% if message.tags == 'error' %}
+                        {% include 'BaseApp/svgs/error-icon.html' %}
+                    {% elif message.tags == 'success' %}
+                        {% include 'BaseApp/svgs/success-icon.html' %}
+                    {% elif message.tags == 'info' %}
+                        {% include 'BaseApp/svgs/info-icon.html' %}
+                    {% elif message.tags == 'warning' %}
+                        {% include 'BaseApp/svgs/warning-icon.html' %}
+                    {% endif %}
+                    <div class="text-base font-bold text-center flex-grow">{{ message }}</div>
+                    <button class="close-message ml-4 text-white/50 hover:text-white"
+                            onclick="apply_hidden_to_element('message-{{ message.id }}', 'message-container')">
+                        X
+                    </button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,30 @@
+<div class="w-full lg:w-[calc(50%-2rem)] bg-gradient-to-t from-white/5 to-black/10 border-t-8 border-t-black/50 flex flex-col items-start justify-center px-4 pb-2 my-2 hover:my-4 rounded-lg shadow-md hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-linear {% include 'BaseApp/snippets/shadow_color_based_on_model.html' with post=post %}">
+    <div class="flex items-end justify-center py-4 w-full">
+        <div class="w-[7rem] h-[7rem] lg:w-[8rem] lg:h-[8rem] mr-2 rounded-md {% include 'BaseApp/snippets/bg_color_based_on_model.html' with post=post %}">
+            <div class="w-full h-full"></div>
+        </div>
+        {% comment %} CONTENT {% endcomment %}
+        <div class="flex-1 text-center w-full">
+            {% comment %} TITLE {% endcomment %}
+            <div class="flex flex-col mx-2 text-violet-100/60 hover:text-violet-100/80 items-end justify-end overflow-hidden">
+                <div class="font-bold mx-auto align-text-bottom {% if post.title_length > 32 %} text-xl {% elif post.title_length > 16 %} text-2xl {% else %} text-3xl {% endif %}">
+                    {{ post.title }}
+                </div>
+            </div>
+            {% comment %} DESCRIPTION {% endcomment %}
+            <div class="text-sm text-gray-500">
+                <a href="">{{ post.author.username }}</a>
+                <span class="mx-1">•</span>
+                {{ post.created_at|date:"d M Y" }}
+                <span class="mx-1">•</span>
+                {{ post.category.name }}
+            </div>
+            {% comment %} INTRO {% endcomment %}
+            <div class="h-[3rem] overflow-hidden line-clamp-2 text-center w-full text-white/40 {% if post.intro_length > 64 %} text-[0.9rem] {% elif post.intro_length > 32 %} text-base {% else %} text-lg {% endif %}">
+                {{ post.intro }}
+            </div>
+        </div>
+    </div>
+    <div class="w-full min-h-[0.5rem] mb-1 rounded-b-md -mt-2 {% include 'BaseApp/snippets/bg_color_based_on_model.html' with post=post %}">
+    </div>
+</div>

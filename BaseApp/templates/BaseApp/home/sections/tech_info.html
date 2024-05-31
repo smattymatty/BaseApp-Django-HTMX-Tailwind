@@ -1,0 +1,36 @@
+<div hx-get="{% url 'BaseApp:django-info' %}"
+     hx-target="#home-tech-info-output"
+     hx-swap="innerHTML"
+     hx-trigger="load"
+     class="hidden"></div>
+<div class="bg-black/10 text-center bg-gradient-to-b from-black/20 from-0% via-blue-300/5 via-5% to-black/20 to-50%">
+    <span class="text-sm text-white/30">Click to learn more about technologies used on this website</span>
+    <div id="tech-info-buttons-container"
+         class="flex gap-4 py-2 w-full justify-evenly">
+        <button id="django-info-button"
+                hx-get="{% url 'BaseApp:django-info' %}"
+                hx-target="#home-tech-info-output"
+                hx-swap="innerHTML"
+                class="text-sm md:text-base lg:text-lg px-4 sm:px-4 md:px-8 lg:px-12 py-2 md:py-4 border-x border-white/10 rounded-md transition-all duration-300 ease-linear bg-black/20  hover:bg-black/30">
+            Django
+        </button>
+        <button id="tailwind-info-button"
+                hx-get="{% url 'BaseApp:tailwind-info' %}"
+                hx-target="#home-tech-info-output"
+                hx-swap="innerHTML"
+                class="text-sm md:text-base lg:text-lg px-4 sm:px-4 md:px-8 lg:px-12 py-4 border-x border-white/10 rounded-md transition-all duration-300 ease-linear bg-black/20  hover:bg-black/30">
+            TailwindCSS
+        </button>
+        <button id="htmx-info-button"
+                hx-get="{% url 'BaseApp:htmx-info' %}"
+                hx-target="#home-tech-info-output"
+                hx-swap="innerHTML"
+                class="text-sm md:text-base lg:text-lg px-4 sm:px-4 md:px-8 lg:px-12 py-2 md:py-4 border-x border-white/10 rounded-md transition-all duration-300 ease-linear bg-black/20  hover:bg-black/30">
+            HTMX
+        </button>
+    </div>
+    <div class="border-b-4 border-white/10 rounded-b-lg pb-4 text-center w-full">
+        <div class="prose transition-all duration-300 ease-linear h-auto text-white/40 w-full mx-auto"
+             id="home-tech-info-output"></div>
+    </div>
+</div>

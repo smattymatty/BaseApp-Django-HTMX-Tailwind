@@ -1,0 +1,25 @@
+<div class="flex flex-row gap-4 items-center justify-between p-4 border-b-4 border-white/10 bg-black/10 text-center bg-gradient-to-b from-black/20 from-0% via-blue-300/5 via-5% to-black/20 to-50% rounded-b-md">
+    <!-- SEARCH -->
+    <form id="blog-search-form" class="flex flex-grow">
+        <div class="w-full flex flex-grow">
+            <input id="blog-search-input"
+                   type="text"
+                   name="search_query"
+                   hx-post="{% url 'BlogApp:blog-post-list' %}"
+                   hx-target="#blog-page-main"
+                   hx-trigger="keyup changed delay:250ms"
+                   hx-swap="innerHTML"
+                   hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+                   hx-indicator="#blog-page-main-indicator"
+                   placeholder="Search Blog Posts..."
+                   class="w-full px-4 py-2 rounded-md bg-black/10 focus:bg-black/20 hover:bg-black/30 active:bg-black/40 text-white/70 focus:text-white/80 hover:text-white/90 active:text-white/100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div class="w-1/3 flex flex-grow text-right">
+            <button id="blog-top-settings-button"
+                    type="button"
+                    class="bg-black/20 text-white/70 hover:bg-black/30 px-4 py-2 rounded-md w-full [&_p]:text-white/100 [&_p]:hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <p>Settings</p>
+            </button>
+        </div>
+    </form>
+</div>
