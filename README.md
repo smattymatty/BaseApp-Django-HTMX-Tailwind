@@ -18,17 +18,18 @@ There is a lot to re-do, and a lot of docs to write, especially for navigation a
 
 ## Installation and Setup
 
-1. Clone the repository: `git clone https://github.com/smattymatty/Base-Django-HTMX-Tailwind`
-2. Change into the project directory: `cd Base-Django-HTMX-Tailwind`
-3. Create/activate a virtual environment and install dependencies:
+1. **Clone the repository**: `git clone https://github.com/smattymatty/Base-Django-HTMX-Tailwind`
+2. **Change into the project directory**: `cd Base-Django-HTMX-Tailwind`
+3. **Create/activate a virtual environment and install dependencies**:
 ```bash
 python -m venv venv  
 source venv/bin/activate  # Linux/macOS
 .\venv\Scripts\activate  # Windows (Note: Use `.\` instead of `source`)
 pip install -r requirements.txt
 ```
-4. Create Credentials in your project's root:
+4. **Create Credentials in your project's root**:
 - IMPORTANT: NEVER commit the credentials.py file to version control (e.g., Git). It contains sensitive information.
+- This project includes a sample credentials_example.py file. Rename it to credentials.py and replace the placeholders with your actual credentials.
 
 ```python
 # credentials.py
@@ -52,20 +53,20 @@ DATABASE = {
 # API_KEY = 'your_api_key'
 ```
 
-`SECRET_KEY`: Replace the placeholder SECRET_KEY = '' with a strong, unique secret key for your Django project. You can generate one using: `python -c "import secrets; print(secrets.token_urlsafe(50))`
-`DATABASE`: Replace the placeholder with your actual database settings (e.g., PostgreSQL).
+- `SECRET_KEY`: Replace the placeholder SECRET_KEY = '' with a strong, unique secret key for your Django project. You can generate one using: `python -c "import secrets; print(secrets.token_urlsafe(50))"`
+- `DATABASE`: Replace the placeholder with your actual database settings (e.g., PostgreSQL), or use the sample SQLite configuration for initial setup and testing.
 
-5. Run Migrations:
+5. **Run Migrations**:
 ```bash
 python manage.py migrate
 ```
 
-6. Create Superuser:
+6. **Create Superuser**:
 ```bash
 python manage.py createsuperuser
 ```
 
-7. Run Server:
+7. **Run Server**:
 ```bash
 python manage.py runserver
 # or
