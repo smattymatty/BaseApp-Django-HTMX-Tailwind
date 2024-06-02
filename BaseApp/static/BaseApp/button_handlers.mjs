@@ -18,6 +18,8 @@ export class ToggledButtonGroup {
     }
     this.initialActive = initialActive;
 
+    this.htmxHandlers = {};
+
     this.setInitialActiveButton();
 
     this.init();
@@ -37,10 +39,12 @@ export class ToggledButtonGroup {
       this.activeClass = "active";
     }
     // When button is clicked, set active class
-    this.buttons.forEach((button) => {
-      button.addEventListener("mousedown", () => {
+    this.container.addEventListener("mousedown", (event) => {
+      const button = event.target.closest("button"); // Find the clicked button
+      if (button && Array.from(this.buttons).includes(button)) {
+        // Check if it's a valid button in the group
         this.setActiveButton(button);
-      });
+      }
     });
   }
 
@@ -53,11 +57,7 @@ export class ToggledButtonGroup {
       );
       return;
     }
-    // Set initial active button
-    const initialButton = strategy(this.buttons, this.initialActive);
-    if (initialButton) {
-      this.setActiveButton(initialButton);
-    }
+    this.setupHTMXHandlers();
   }
 
   setActiveButton(button) {
@@ -80,6 +80,29 @@ export class ToggledButtonGroup {
       classesToRemove.forEach((className) => {
         button.classList.remove(className);
       });
+    });
+  }
+
+  setupHTMXHandlers() {
+    // Create htmxHandlers object (modified)
+    Array.from(this.buttons).forEach((button, index) => {
+      this.htmxHandlers[index] = {};
+      // Convert to array for indexing
+      let hasHxAttribute = false;
+      const buttonText = button.textContent.trim() || `button-${index}`;
+      for (const attr of button.attributes) {
+        console.log(`Button ${button.id} has attribute ${attr.name}`);
+        if (attr.name.startsWith("hx-")) {
+          hasHxAttribute = true;
+          this.htmxHandlers[index]["name"] = buttonText;
+          this.htmxHandlers[index][attr.name] = attr.value;
+        }
+      }
+
+      if (hasHxAttribute) {
+        console.log(`Found button with hx- attribute: ${button.id}`);
+        console.log(this.htmxHandlers[index]); // Log using the key
+      }
     });
   }
 }

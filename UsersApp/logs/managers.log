@@ -4670,3 +4670,246 @@ DETAIL:  Key (email)=(test1@example.com) already exists.
 	 Creating user with username: testuser and email: test@example.com
 2024-05-31T00:20:44.278219-0400 -- SUCCESS -- create_user -- line 63
 	 User testuser created successfully.
+2024-06-02T00:26:33.903642-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser4 and email: test@example.com
+2024-06-02T00:26:34.349336-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser4 created successfully.
+2024-06-02T00:26:34.382808-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser3 and email: test@example.com
+2024-06-02T00:26:34.774138-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser3 created successfully.
+2024-06-02T00:26:34.880499-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: test@example.com
+2024-06-02T00:26:35.296298-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser created successfully.
+2024-06-02T00:26:35.313933-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser2 and email: test@example.com
+2024-06-02T00:26:35.703452-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser2 created successfully.
+2024-06-02T00:26:35.807756-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: admin and email: admin@example.com
+2024-06-02T00:26:36.207423-0400 -- SUCCESS -- create_user -- line 63
+	 User admin created successfully.
+2024-06-02T00:26:36.212418-0400 -- ERROR -- create_superuser -- line 124
+	 Uncaught Error on creating superuser: current transaction is aborted, commands ignored until end of transaction block
+
+2024-06-02T00:26:36.318474-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser5 and email: test@example.com
+2024-06-02T00:26:36.718788-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser5 created successfully.
+2024-06-02T00:26:36.743750-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser5 and email: test@example.com
+2024-06-02T00:26:37.133352-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser5 created successfully.
+2024-06-02T00:26:37.278842-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: None
+2024-06-02T00:26:37.279841-0400 -- ERROR -- create_user -- line 69
+	 Value Error on creating user: Users must have an email address
+2024-06-02T00:26:37.281840-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: None and email: email@email.com
+2024-06-02T00:26:37.281840-0400 -- ERROR -- create_user -- line 69
+	 Value Error on creating user: Users must have a username
+2024-06-02T00:26:37.390400-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser1 and email: test_edge_password1@example.com
+2024-06-02T00:26:37.809250-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser1 created successfully.
+2024-06-02T00:26:37.810265-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser2 and email: test_edge_password2@example.com
+2024-06-02T00:26:37.812250-0400 -- ERROR -- create_user -- line 79
+	 Uncaught Error on creating user: current transaction is aborted, commands ignored until end of transaction block
+
+2024-06-02T00:26:37.812250-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser3 and email: test_edge_password3@example.com
+2024-06-02T00:26:37.814266-0400 -- ERROR -- create_user -- line 79
+	 Uncaught Error on creating user: current transaction is aborted, commands ignored until end of transaction block
+
+2024-06-02T00:26:37.820241-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: user&%$#@example.com
+2024-06-02T00:26:37.823237-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Invalid email format']
+2024-06-02T00:26:37.825236-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: same and email: same@example.com
+2024-06-02T00:26:37.827235-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Your password should NOT be the same as your username or email!']
+2024-06-02T00:26:37.830232-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: admin and email: test_reserved_users1@example.com
+2024-06-02T00:26:37.832228-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['admin has been reserved! Pick another one!']
+2024-06-02T00:26:37.834226-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: null and email: test_reserved_users2@example.com
+2024-06-02T00:26:37.837233-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['null has been reserved! Pick another one!']
+2024-06-02T00:26:37.838224-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: undefined and email: test_reserved_users3@example.com
+2024-06-02T00:26:37.841220-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['undefined has been reserved! Pick another one!']
+2024-06-02T00:26:37.843217-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa and email: testedge@example.com
+2024-06-02T00:26:38.235881-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: {'username': ['Ensure this value has at most 30 characters (it has 255).']}
+2024-06-02T00:26:38.238871-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: user!@# and email: test_username_special_chars1@example.com
+2024-06-02T00:26:38.240882-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-02T00:26:38.241867-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: user name and email: test_username_special_chars2@example.com
+2024-06-02T00:26:38.243865-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-02T00:26:38.244864-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: 😊👍 and email: test_username_special_chars3@example.com
+2024-06-02T00:26:38.246863-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-02T00:26:38.248861-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser_for_unusual_email1 and email: user+something@example.com
+2024-06-02T00:26:38.650543-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser_for_unusual_email1 created successfully.
+2024-06-02T00:26:38.652231-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser_for_unusual_email2 and email: user@subdomain.example.com
+2024-06-02T00:26:38.652738-0400 -- ERROR -- create_user -- line 79
+	 Uncaught Error on creating user: current transaction is aborted, commands ignored until end of transaction block
+
+2024-06-02T00:26:38.656740-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com
+2024-06-02T00:26:39.054534-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: {'email': ['Ensure this value has at most 50 characters (it has 262).']}
+2024-06-02T00:26:39.163464-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: testuser@example.com
+2024-06-02T00:26:39.564415-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser created successfully.
+2024-06-02T00:26:39.663131-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser1 and email: test1@example.com
+2024-06-02T00:26:40.081059-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser1 created successfully.
+2024-06-02T00:26:40.082058-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser2 and email: test1@example.com
+2024-06-02T00:26:40.083072-0400 -- ERROR -- create_user -- line 79
+	 Uncaught Error on creating user: current transaction is aborted, commands ignored until end of transaction block
+
+2024-06-02T00:26:40.086409-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: invalidemail
+2024-06-02T00:26:40.089360-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Invalid email format']
+2024-06-02T00:26:40.091356-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: test@example.com
+2024-06-02T00:26:40.478758-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser created successfully.
+2024-06-02T00:28:09.609031-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: admin and email: admin@admin.com
+2024-06-02T00:28:10.012140-0400 -- SUCCESS -- create_user -- line 63
+	 User admin created successfully.
+2024-06-02T00:28:22.731756-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser4 and email: test@example.com
+2024-06-02T00:28:23.156160-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser4 created successfully.
+2024-06-02T00:28:23.162145-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser3 and email: test@example.com
+2024-06-02T00:28:23.548265-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser3 created successfully.
+2024-06-02T00:28:23.642351-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: test@example.com
+2024-06-02T00:28:24.064306-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser created successfully.
+2024-06-02T00:28:24.067311-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser2 and email: test@example.com
+2024-06-02T00:28:24.458215-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser2 created successfully.
+2024-06-02T00:28:24.584261-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: admin and email: admin@example.com
+2024-06-02T00:28:24.989938-0400 -- SUCCESS -- create_user -- line 63
+	 User admin created successfully.
+2024-06-02T00:28:25.088974-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser5 and email: test@example.com
+2024-06-02T00:28:25.496711-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser5 created successfully.
+2024-06-02T00:28:25.894502-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser5 and email: test@example.com
+2024-06-02T00:28:26.281731-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser5 created successfully.
+2024-06-02T00:28:26.755166-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: None
+2024-06-02T00:28:26.756164-0400 -- ERROR -- create_user -- line 69
+	 Value Error on creating user: Users must have an email address
+2024-06-02T00:28:26.758162-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: None and email: email@email.com
+2024-06-02T00:28:26.759163-0400 -- ERROR -- create_user -- line 69
+	 Value Error on creating user: Users must have a username
+2024-06-02T00:28:26.912192-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser1 and email: test_edge_password1@example.com
+2024-06-02T00:28:27.322313-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser1 created successfully.
+2024-06-02T00:28:27.322984-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser2 and email: test_edge_password2@example.com
+2024-06-02T00:28:27.711725-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser2 created successfully.
+2024-06-02T00:28:27.712723-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser3 and email: test_edge_password3@example.com
+2024-06-02T00:28:28.125209-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser3 created successfully.
+2024-06-02T00:28:28.129190-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: user&%$#@example.com
+2024-06-02T00:28:28.131202-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Invalid email format']
+2024-06-02T00:28:28.134185-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: same and email: same@example.com
+2024-06-02T00:28:28.136181-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Your password should NOT be the same as your username or email!']
+2024-06-02T00:28:28.139179-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: admin and email: test_reserved_users1@example.com
+2024-06-02T00:28:28.141187-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['admin has been reserved! Pick another one!']
+2024-06-02T00:28:28.142176-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: null and email: test_reserved_users2@example.com
+2024-06-02T00:28:28.145172-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['null has been reserved! Pick another one!']
+2024-06-02T00:28:28.146171-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: undefined and email: test_reserved_users3@example.com
+2024-06-02T00:28:28.148170-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['undefined has been reserved! Pick another one!']
+2024-06-02T00:28:28.151168-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa and email: testedge@example.com
+2024-06-02T00:28:28.533759-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: {'username': ['Ensure this value has at most 30 characters (it has 255).']}
+2024-06-02T00:28:28.535741-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: user!@# and email: test_username_special_chars1@example.com
+2024-06-02T00:28:28.537740-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-02T00:28:28.539738-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: user name and email: test_username_special_chars2@example.com
+2024-06-02T00:28:28.541750-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-02T00:28:28.542733-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: 😊👍 and email: test_username_special_chars3@example.com
+2024-06-02T00:28:28.545732-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-02T00:28:28.547729-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser_for_unusual_email1 and email: user+something@example.com
+2024-06-02T00:28:28.944684-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser_for_unusual_email1 created successfully.
+2024-06-02T00:28:28.945681-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser_for_unusual_email2 and email: user@subdomain.example.com
+2024-06-02T00:28:29.335473-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser_for_unusual_email2 created successfully.
+2024-06-02T00:28:29.337466-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com
+2024-06-02T00:28:29.715333-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: {'email': ['Ensure this value has at most 50 characters (it has 262).']}
+2024-06-02T00:28:29.818954-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: testuser@example.com
+2024-06-02T00:28:30.213096-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser created successfully.
+2024-06-02T00:28:30.321278-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser1 and email: test1@example.com
+2024-06-02T00:28:30.726382-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser1 created successfully.
+2024-06-02T00:28:30.727369-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser2 and email: test1@example.com
+2024-06-02T00:28:30.729367-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Email already Exists: test1@example.com']
+2024-06-02T00:28:30.732390-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: invalidemail
+2024-06-02T00:28:30.734370-0400 -- ERROR -- create_user -- line 74
+	 Validation Error on creating user: ['Invalid email format']
+2024-06-02T00:28:30.736374-0400 -- DEBUG -- create_user -- line 43
+	 Creating user with username: testuser and email: test@example.com
+2024-06-02T00:28:31.141418-0400 -- SUCCESS -- create_user -- line 63
+	 User testuser created successfully.

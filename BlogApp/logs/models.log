@@ -1,2 +1,118 @@
 2024-05-22T23:43:16.664108-0400 -- DEBUG -- get_blog_post_list -- line 31
 	 Request: <WSGIRequest: POST '/blog/blog-post-list/'>
+2024-06-02T00:26:34.311349-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser4
+2024-06-02T00:26:34.315506-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:34.770142-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser3
+2024-06-02T00:26:34.772140-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:35.291656-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser
+2024-06-02T00:26:35.295297-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:35.699467-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser2
+2024-06-02T00:26:35.702459-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:36.204412-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for admin
+2024-06-02T00:26:36.206410-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:36.714777-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser5
+2024-06-02T00:26:36.716775-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:37.130756-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser5
+2024-06-02T00:26:37.132753-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:37.805587-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser1
+2024-06-02T00:26:37.808584-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:38.647559-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser_for_unusual_email1
+2024-06-02T00:26:38.649544-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:39.560416-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser
+2024-06-02T00:26:39.563416-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:40.077065-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser1
+2024-06-02T00:26:40.080062-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:26:40.475749-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser
+2024-06-02T00:26:40.477747-0400 -- ERROR -- create_user_profile -- line 66
+	 Error creating Profile: column UsersApp_profile.created_at does not exist
+LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
+                                                             ^
+
+2024-06-02T00:28:10.007145-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for admin
+2024-06-02T00:28:23.135403-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser4
+2024-06-02T00:28:23.545272-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser3
+2024-06-02T00:28:24.060323-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser
+2024-06-02T00:28:24.455219-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser2
+2024-06-02T00:28:24.986941-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for admin
+2024-06-02T00:28:25.492335-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser5
+2024-06-02T00:28:26.278724-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser5
+2024-06-02T00:28:27.318330-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser1
+2024-06-02T00:28:27.707727-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser2
+2024-06-02T00:28:28.122195-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser3
+2024-06-02T00:28:28.940688-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser_for_unusual_email1
+2024-06-02T00:28:29.332454-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser_for_unusual_email2
+2024-06-02T00:28:30.209097-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser
+2024-06-02T00:28:30.721363-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser1
+2024-06-02T00:28:31.137965-0400 -- DEBUG -- create_user_profile -- line 63
+	 Creating Profile for testuser
