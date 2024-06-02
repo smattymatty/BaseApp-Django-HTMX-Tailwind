@@ -2162,3 +2162,33 @@
 	 page_number=2, search_query=''
 2024-06-01T23:05:10.455415-0400 -- DEBUG -- get_blog_post_list -- line 36
 	 page_number=3, search_query=''
+2024-06-01T23:07:03.901792-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-01T23:07:27.317903-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-01T23:07:29.955563-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:31.429557-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:32.543145-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:33.613447-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:34.573725-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:35.258608-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:35.842738-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:36.494290-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:37.132135-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:37.699880-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:38.316437-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:38.889033-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-01T23:07:39.479220-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
