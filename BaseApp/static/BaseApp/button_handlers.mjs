@@ -88,9 +88,19 @@ ToggledButtonGroup.initAll = function (groupFilter = "") {
   // Use this to Initialize all button groups
   // with an empty string, it will check for all elements with the ID ending in "-button-group"
   // given a string as argument, it will only check for elements with the ID ending in "-button-group" and the string
+  // if the string includes spaces, it will split the string and call itself recursively
   let selector = "[id$='-button-group']";
   if (groupFilter) {
-    selector = `#${groupFilter}-button-group`;
+    if (groupFilter.includes(" ")) {
+      //split into an array of strings
+      const groupFilterList = groupFilter.split(" ");
+      groupFilterList.forEach((groupFilter) => {
+        // call self recursively
+        ToggledButtonGroup.initAll(groupFilter);
+      });
+    } else {
+      selector = `#${groupFilter}-button-group`;
+    }
   }
   // ERROR CHECKING
   const groups = document.querySelectorAll(selector);

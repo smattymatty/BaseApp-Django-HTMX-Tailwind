@@ -30,9 +30,16 @@ class User(AbstractUser):
 
 
 class Profile(models.Model):
+    """
+    Stores further information about a user that is not needed for authentication
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     history = models.JSONField(default=dict)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.user.username}'s profile id: {self.id}"
