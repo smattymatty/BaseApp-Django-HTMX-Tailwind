@@ -1,14 +1,17 @@
 import { initialActiveStrategies } from "./strategies.mjs";
-// Strategies for initial active button
-// ( first, last, none, random, 0-100, etc. )
+import { HtmxHandler } from "./htmx_handlers.mjs";
+
+const DEBUG = true;
 export class ToggledButtonGroup {
-  constructor(groupId, activeClass = "active", initialActive = "none") {
-    this.groupId = groupId;
-    this.container = document.getElementById(`${groupId}-button-group`);
+  constructor(config) {
+    this.groupId = config.groupId;
+    this.container = document.getElementById(`${this.groupId}-button-group`);
     this.buttons = this.container
       ? this.container.querySelectorAll("button")
-      : []; // Get buttons inside
-    this.activeClass = activeClass;
+      : [];
+    this.activeClass = config.activeClass || "active";
+    this.initialActive = config.initialActive || "none";
+    this.htmxHandlers = {};
     // ERROR CHECKING
     if (!this.container) {
       console.error(
@@ -16,12 +19,10 @@ export class ToggledButtonGroup {
       );
       return; // Exit constructor since we can't proceed without a container.
     }
-    this.initialActive = initialActive;
-
-    this.htmxHandlers = {};
-
     this.setInitialActiveButton();
-
+    if (DEBUG) {
+      console.log(`htmxHandlers = ${JSON.stringify(this.htmxHandlers)}`);
+    }
     this.init();
   }
 
@@ -50,12 +51,21 @@ export class ToggledButtonGroup {
 
   setInitialActiveButton() {
     const strategy = initialActiveStrategies[this.initialActive];
+    // DEBUG
+    if (DEBUG) {
+      console.log(`Initial active button strategy: ${strategy}`);
+    }
     // ERROR CHECKING
     if (!strategy) {
       console.error(
         `Error: Invalid initial_active option "${this.initialActive}".`
       );
       return;
+    }
+    // Set initial active button
+    const initialButton = strategy(this.buttons, this.initialActive);
+    if (initialButton) {
+      this.setActiveButton(initialButton);
     }
     this.setupHTMXHandlers();
   }
@@ -91,19 +101,19 @@ export class ToggledButtonGroup {
       let hasHxAttribute = false;
       const buttonText = button.textContent.trim() || `button-${index}`;
       for (const attr of button.attributes) {
-        console.log(`Button ${button.id} has attribute ${attr.name}`);
         if (attr.name.startsWith("hx-")) {
+          const new_HTMXHandler = new HtmxHandler(button);
           hasHxAttribute = true;
-          this.htmxHandlers[index]["name"] = buttonText;
-          this.htmxHandlers[index][attr.name] = attr.value;
+          this.htmxHandlers[index] = new_HTMXHandler;
         }
       }
-
-      if (hasHxAttribute) {
-        console.log(`Found button with hx- attribute: ${button.id}`);
-        console.log(this.htmxHandlers[index]); // Log using the key
-      }
     });
+  }
+  triggerHtmxEvent(button) {
+    const handler = this.htmxHandlers[button.textContent.trim()];
+    if (handler) {
+      handler.triggerHtmxRequest(); // Call the triggerHtmxRequest method on the appropriate handler
+    }
   }
 }
 
@@ -142,10 +152,12 @@ ToggledButtonGroup.initAll = function (groupFilter = "") {
   // Initialize all button groups
   document.querySelectorAll(selector).forEach((group) => {
     console.log(`Initializing ToggledButtonGroup with ID "${group.id}"`);
-    const groupId = group.id.replace("-button-group", "");
-    const activeClass = group.dataset.activeClass || "active";
-    const initialActive = group.dataset.initialActive || "none";
+    const config = {
+      groupId: group.id.replace("-button-group", ""),
+      activeClass: group.dataset.activeClass || "active",
+      initialActive: group.dataset.initialActive || "none",
+    };
     // Create new class instance
-    new ToggledButtonGroup(groupId, activeClass, initialActive);
+    new ToggledButtonGroup(config);
   });
 };

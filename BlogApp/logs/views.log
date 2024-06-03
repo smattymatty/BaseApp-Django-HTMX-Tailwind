@@ -2200,3 +2200,11 @@
 	 get_tailwind_info
 2024-06-02T11:08:55.562640-0400 -- DEBUG -- get_tailwind_info -- line 36
 	 get_tailwind_info
+2024-06-03T12:57:42.847945-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-03T12:58:52.420807-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T13:05:46.074455-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-03T13:05:53.168057-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
