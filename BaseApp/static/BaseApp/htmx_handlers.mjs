@@ -21,13 +21,12 @@ export class HtmxHandler {
       console.log(`Triggering HTMX request for button ${this.button.id}`);
       console.log(`HTMX attributes: ${JSON.stringify(this.htmxAttributes)}`);
     }
-
+    const hasValidRequestAttribute =
+      this.htmxAttributes["hx-get"] ||
+      this.htmxAttributes["hx-post"] ||
+      this.htmxAttributes["hx-boost"];
     // ERROR CHECKING
-    if (
-      !this.button ||
-      !this.htmxAttributes ||
-      !this.htmxAttributes["hx-get"]
-    ) {
+    if (!this.button || !this.htmxAttributes || !hasValidRequestAttribute) {
       console.error(
         `Error: Button ${
           this.button ? this.button.id : "unknown"

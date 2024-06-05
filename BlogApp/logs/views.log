@@ -2208,3 +2208,143 @@
 	 page_number=1, search_query=''
 2024-06-03T13:05:53.168057-0400 -- DEBUG -- get_tailwind_info -- line 36
 	 get_tailwind_info
+2024-06-03T23:44:32.797436-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:37.112230-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:46.895176-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:47.499137-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:48.007190-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:48.518106-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:49.016612-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:50.101722-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:50.688793-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:51.339856-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:51.927611-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:52.519770-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:53.014381-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:53.511578-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:54.053062-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:54.592401-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:55.169638-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:44:55.758751-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:45:03.450783-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:45:05.032236-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:45:06.010217-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-03T23:45:06.959704-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:04:15.813532-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:08:48.264144-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:08:59.222907-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:09:08.801481-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:09:10.087170-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:09:18.020396-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:21:43.372118-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:24:49.429562-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:24:54.959554-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:27:06.353560-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:40:53.314938-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:40:58.691068-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:40:59.721042-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:41:08.790962-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:47:35.359649-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-04T00:47:40.530058-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T00:48:24.858295-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:17.615242-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:19.820413-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:24.089581-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:25.521331-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:26.353311-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:27.242341-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:28.057647-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:28.778247-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:29.478114-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:30.145626-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:31.991282-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:36.083455-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:37.523018-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:38.195455-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:15:38.870910-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:21:03.020965-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:21:04.167208-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:21:05.372096-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:21:09.148760-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:21:31.082769-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-04T12:22:22.029920-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:22:26.082494-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T12:22:46.171857-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T22:49:40.815984-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T22:49:52.487895-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T22:49:55.797817-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-04T22:49:58.338365-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-05T11:29:54.012962-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-05T11:30:56.822426-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-05T11:31:23.635641-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-05T11:31:25.169598-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info

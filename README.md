@@ -237,3 +237,23 @@ ToggledButtonGroup.initAll();
 ToggledButtonGroup.initAll("myButtonGroup"); 
 // Initializes only the group with ID "myButtonGroup-button-group"
 ```
+#### HTMX Integration
+The `ToggledButtonGroup` class seamlessly integrates with HTMX, a powerful library for building modern, interactive user interfaces with less JavaScript. You can easily use HTMX to update portions of your page in response to button clicks within your toggled button group.
+
+- **HTMX Library:** Ensure that you have included the HTMX library in your HTML.
+
+- **HTMX Attributes:** Add HTMX attributes to the buttons within your button group container. The most common attributes you'll use are:
+    - `hx-get`: Specifies the URL to fetch when the button is clicked.
+    - `hx-target`: Specifies the element on the page to update with the content returned by the HTMX request.
+    - `hx-swap`: Specifies how the returned content should be swapped into the target element (e.g., "innerHTML", "outerHTML", "beforeend").
+- **Example**
+```html
+<div id="myButtonGroup-button-group">
+    <button hx-get="/get-content-1" hx-target="#contentArea">Button 1</button>
+    <button hx-get="/get-content-2" hx-target="#contentArea">Button 2</button>
+    <button hx-get="/get-content-3" hx-target="#contentArea">Button 3</button>
+</div>
+
+<div id="contentArea"></div>
+```
+In this example, clicking each button will trigger an HTMX request to the specified URL and update the contents of the `div` with the ID `contentArea`.
