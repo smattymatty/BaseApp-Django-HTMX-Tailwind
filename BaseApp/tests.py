@@ -1,8 +1,5 @@
-from django.core.management import call_command
-from django.test import TestCase, RequestFactory, SimpleTestCase
-from django.template import Context, Template
+from django.test import SimpleTestCase
 
-from BaseApp.styles import TailwindStyle, register_style
 from BaseApp.utils import get_parent_folder, get_module_logger, bleach_clean_value, join_paths
 
 import os

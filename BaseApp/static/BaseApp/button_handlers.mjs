@@ -11,7 +11,7 @@ const DEBUG = false;
  *   1. Create a button group container element in your HTML with an ID ending in "-button-group".
  *   2. Add "button" elements inside the container.
  *   3. (Optional) Set `data-active-class` on the container to customize the active class (default is "active").
- *   4. (Optional) Set `data-initial-active` on the container to define the initially active button (options: "first", "last", "none", or a number for the button index).
+ *   4. (Optional) Set `data-initial-active` on the container to define the initially active button (options: "first", "last", "none", "random" or a number for the button index).
  *   5. (Optional) Add HTMX attributes (e.g., `hx-get`, `hx-target`) to buttons to trigger HTMX requests.
  *   6. Call `ToggledButtonGroup.initAll()` to initialize all button groups on the page.
  */
