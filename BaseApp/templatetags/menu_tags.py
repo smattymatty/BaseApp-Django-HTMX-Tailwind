@@ -9,7 +9,7 @@ logger = get_module_logger("menu_tags", __file__)
 register = template.Library()
 
 
-@register.inclusion_tag('BaseApp/ui_elements/nav_dropdown_buttons.html')
+@register.inclusion_tag('BaseApp/navigation/nav_dropdown_buttons.html')
 def top_navbar_buttons():
     """
     Returns a dictionary of nav items

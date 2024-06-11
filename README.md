@@ -182,12 +182,10 @@ This project includes JavaScript modules to add interactive features to your Dja
 
 Check the console for warnings and errors that should guide you through the process in case you are stuck.
 
-## button_handlers.mjs
-Button Handlers are a set of classes that allow you to create interactive button groups.
 ### ToggledButtonGroup
 Visit [BaseApp/button_examples.html](BaseApp/templates/BaseApp//ui_elements/sections/buttons_examples.html) for an example.
 ![Gif of buttons changing](https://i.imgur.com/lfe5AWF.gif)
-The ToggledButtonGroup class allows you to create interactive button groups where only one button can be active at a time. Clicking a button toggles its active state. You can customize the appearance of active buttons, choose the initially active button, and easily manage multiple button groups on your page.
+The `ToggledButtonGroup` class allows you to create interactive button groups where only one button can be active at a time. Clicking a button toggles its active state. You can customize the appearance of active buttons, choose the initially active button, and easily manage multiple button groups on your page.
 
 #### Basic Usage
 
@@ -236,6 +234,8 @@ ToggledButtonGroup.initAll();
 ```javascript
 ToggledButtonGroup.initAll("myButtonGroup"); 
 // Initializes only the group with ID "myButtonGroup-button-group"
+ToggledButtonGroup.initAll("example1 example2 example3"); 
+// Initializes three button groups with IDs "example1-button-group", "example2-button-group", and "example3-button-group"
 ```
 #### HTMX Integration
 The `ToggledButtonGroup` class seamlessly integrates with HTMX, a powerful library for building modern, interactive user interfaces with less JavaScript. You can easily use HTMX to update portions of your page in response to button clicks within your toggled button group.
@@ -248,12 +248,25 @@ The `ToggledButtonGroup` class seamlessly integrates with HTMX, a powerful libra
     - `hx-swap`: Specifies how the returned content should be swapped into the target element (e.g., "innerHTML", "outerHTML", "beforeend").
 - **Example**
 ```html
-<div id="myButtonGroup-button-group">
-    <button hx-get="/get-content-1" hx-target="#contentArea">Button 1</button>
-    <button hx-get="/get-content-2" hx-target="#contentArea">Button 2</button>
-    <button hx-get="/get-content-3" hx-target="#contentArea">Button 3</button>
+<div id="myButtonGroup-button-group"
+     data-initial-active="random">
+    <button hx-get="/get-content-1" 
+            hx-target="#contentArea"
+            hx-trigger="mousedown">
+            Button 1
+    </button>
+    <button hx-get="/get-content-2" 
+            hx-target="#contentArea"
+            hx-trigger="mousedown">
+            Button 2
+    </button>
+    <button hx-get="/get-content-3" 
+            hx-target="#contentArea"
+            hx-trigger="mousedown">
+            Button 3
+    </button>
 </div>
 
 <div id="contentArea"></div>
 ```
-In this example, clicking each button will trigger an HTMX request to the specified URL and update the contents of the `div` with the ID `contentArea`.
+In this example, the initial active button is randomly selected, and will automatically perform the first HTMX request when the page loads.

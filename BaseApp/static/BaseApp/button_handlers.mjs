@@ -11,8 +11,7 @@ const DEBUG = false;
  *   1. Create a button group container element in your HTML with an ID ending in "-button-group".
  *   2. Add "button" elements inside the container.
  *   3. (Optional) Set `data-active-class` on the container to customize the active class (default is "active").
- *   4. (Optional) Set `data-initial-active` on the container to define the initially active button
- *      (options: "first", "last", "none", or a number for the button index).
+ *   4. (Optional) Set `data-initial-active` on the container to define the initially active button (options: "first", "last", "none", or a number for the button index).
  *   5. (Optional) Add HTMX attributes (e.g., `hx-get`, `hx-target`) to buttons to trigger HTMX requests.
  *   6. Call `ToggledButtonGroup.initAll()` to initialize all button groups on the page.
  */
@@ -73,7 +72,9 @@ export class ToggledButtonGroup {
   init() {
     // ERROR CHECKING
     if (!this.buttons.length) {
-      console.error(`Button group with ID "${this.groupId}" not found.`);
+      console.error(
+        `[ToggledButtonGroup Error] Button group with ID "${this.groupId}" has no buttons.`
+      );
       return;
     }
     // WARNING CHECKING
@@ -175,26 +176,26 @@ export class ToggledButtonGroup {
 ToggledButtonGroup.initAll = function (groupFilter = "") {
   // Use this to Initialize all button groups
   // with an empty string, it will check for all elements with the ID ending in "-button-group"
-  // given a string as argument, it will only check for elements with the ID ending in "-button-group" and the string
+  // given a string as argument, it will only check for elements with the ID starting with the string and ending in "-button-group"
   // if the string includes spaces, it will split the string and call itself recursively
   const initializedGroups = new Set();
 
   const initializeGroup = (groupId) => {
     if (initializedGroups.has(groupId)) return; // Skip if already initialized
 
-    const group = document.getElementById(`${groupId}-button-group`);
-    if (!group) {
+    const groupElement = document.getElementById(`${groupId}-button-group`);
+    if (!groupElement) {
       console.error(
         `[ToggledButtonGroup Error] Button group container with ID "${groupId}-button-group" not found.`
       );
       return;
     }
 
-    console.log(`Initializing ToggledButtonGroup with ID "${group.id}"`);
+    console.log(`Initializing ToggledButtonGroup with ID "${groupElement.id}"`);
     const config = {
       groupId,
-      activeClass: group.dataset.activeClass || "active",
-      initialActive: group.dataset.initialActive || "none",
+      activeClass: groupElement.dataset.activeClass || "active",
+      initialActive: groupElement.dataset.initialActive || "none",
     };
     new ToggledButtonGroup(config);
     initializedGroups.add(groupId); // Mark as initialized
@@ -209,8 +210,10 @@ ToggledButtonGroup.initAll = function (groupFilter = "") {
     }
   } else {
     // Initialize all groups if no filter is provided
-    document.querySelectorAll('[id$="-button-group"]').forEach((group) => {
-      initializeGroup(group.id.replace("-button-group", ""));
-    });
+    document
+      .querySelectorAll('[id$="-button-group"]')
+      .forEach((groupElement) => {
+        initializeGroup(groupElement.id.replace("-button-group", ""));
+      });
   }
 };

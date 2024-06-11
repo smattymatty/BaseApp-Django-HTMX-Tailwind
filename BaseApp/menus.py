@@ -1,20 +1,14 @@
 from django.urls import reverse
 
-from .styles import BasicButtonStyle, DerangedButtonStyle, DerangedDropdownStyle, BasicDropdownStyle
-
 
 class DropdownNavItem:
     """
     NavItem class representing a single nav item in the nav dropdown
     """
 
-    def __init__(self, name, url,
-                 button_style=BasicButtonStyle,
-                 dropdown_style=BasicDropdownStyle,):
+    def __init__(self, name, url):
         self.name = name
         self.url = url
-        self.button_style: str = button_style.classes
-        self.dropdown_style: str = dropdown_style.classes
 
     def __str__(self):
         return f"{self.name} ({self.url})"

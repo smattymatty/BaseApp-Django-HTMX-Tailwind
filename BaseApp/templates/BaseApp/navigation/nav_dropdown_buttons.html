@@ -1,0 +1,16 @@
+{% for button_name, dropdown_navbar_item in navbar_items.items %}
+    {% comment %} Button {% endcomment %}
+    <div id="nav-button-{{ forloop.counter }}"
+         class="flex-1 relative transition-all duration-200 ease-linear text-white/50 my-2 bg-black/80 pt-1 border-x rounded-md md:text-base text-sm border-white/20 hover:bg-black hover:border-white/80 hover:text-white hover:font-bold hover:cursor-pointer hover:border-x-4 hover:rounded-lg hover:my-0 hover:pt-3">
+        <button class="w-full">
+            <p class="overflow-hidden truncate overflow-ellipsis">{{ button_name }}</p>
+        </button>
+        {% comment %} Dropdown {% endcomment %}
+        <div id="nav-dropdown-{{ forloop.counter }}"
+             class="hidden opacity-0 font-normal transition-all duration-200 ease-linear text-white/50 absolute top-full left-0 w-full flex flex-col border-x-2 rounded-b-md bg-black border-zinc-800 [&>a]:text-white/50 hover:[&>a]:text-white hover:[&>a]:cursor-pointer [&>a]:bg-zinc-950 hover:[&>a]:bg-black shadow-md shadow-black">
+            {% for item in dropdown_navbar_item %}
+                <a href="{{ item.url }}" class="flex-1 text-center text-white/50">{{ item.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}

@@ -13,23 +13,29 @@
         <script src="{% static 'BaseApp/htmx.min.js' %}" defer></script>
         {% django_htmx_script %}
     </head>
-    {% include "BaseApp/tailwind_dummy.html" %}
     {% include 'BaseApp/ui_elements/messages.html' %}
     {% include 'UsersApp/modals/profile_modal_main.html' %}
-    <body class="background-color-2 text-white/50">
+    <body class="bg-black text-white/50">
         <div class="flex flex-col">
             <!--Navbar-->
             {% include "BaseApp/navigation/top_navbar.html" %}
-            <div class="main-content-container">
+            <!-- Main Content -->
+            <div class="flex-grow min-h-[94vh] p-4 background-color border-x-8 border-zinc-950 rounded-3xl bg-zinc-900">
                 {% block content %}<!-- Child templates will insert content here -->{% endblock %}
             </div>
-            <div class="footer-container">03</div>
-        </div>
-    </body>
-    <script src="{% static 'BaseApp/utils.js' %}"></script>
-    <script type="module">
+            <!-- Footer -->
+            <div class="flex flex-col space-y-2">
+                <div class="flex flex-grow w-full justify-center">Footer</div>
+                <div class="flex flex-grow w-full justify-center">1</div>
+                <div class="flex flex-grow w-full justify-center">2</div>
+                <div class="flex flex-grow w-full justify-center">3</div>
+            </div>
+        </body>
+        <script src="{% static 'BaseApp/utils.js' %}"></script>
+        <script type="module">
         import { Modal } from "{% static 'BaseApp/modal_handler.mjs' %}";
         document.addEventListener('DOMContentLoaded', Modal.initAll);
-    </script>
-    {% block extra_js %}{% endblock %}
-</html>
+        </script>
+        {% block extra_js %}
+        {% endblock %}
+    </html>

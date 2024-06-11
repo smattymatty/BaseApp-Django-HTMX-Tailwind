@@ -64,6 +64,14 @@ def get_buttons_examples(request):
     return HttpResponse(template.render(context, request))
 
 
+def get_menu_examples(request):
+    template = loader.get_template(
+        'BaseApp/ui_elements/sections/menu_examples.html')
+    context = {
+    }
+    return HttpResponse(template.render(context, request))
+
+
 class ComponentsView(BaseView):
     template_name = 'BaseApp/components.html'
     title = "Components"
