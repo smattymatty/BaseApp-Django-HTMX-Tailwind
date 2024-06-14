@@ -177,10 +177,16 @@ module_logger.debug(f"Creating user with username: {username} and email: {email}
 ```
 In this example, module_logger logs a debug message when a new user is being created. This helps you track user creation activities.
 
-# JavaScript Modules for Enhanced Interactivity
-This project includes JavaScript modules to add interactive features to your Django templates.
+# Modules for Enhanced Frontend Interactivity
 
-Check the console for warnings and errors that should guide you through the process in case you are stuck.
+This project provides a collection of JavaScript modules designed to supercharge your Django templates with interactive features,
+**without the need for any custom JavaScript code**.
+Simply load the corresponding template tags, add some data attributes to your HTML elements, and let the magic happen!
+
+- Seamless Django Integration: The modules are built to work effortlessly with Django's templating system.
+- Zero JavaScript Overhead: You don't need to write or manage any custom JavaScript code.
+- Enhanced User Experience: Add rich interactivity to your web pages with minimal effort.
+- Customizable: Tailor the modules to your specific design and functionality needs using intuitive data attributes.
 
 ## ToggledButtonGroup
 Visit [BaseApp/button_examples.html](BaseApp/templates/BaseApp//ui_elements/sections/buttons_examples.html) for an example.
@@ -220,11 +226,11 @@ The `ToggledButtonGroup` class allows you to create interactive button groups wh
 `data-active-class`: Specifies the CSS class(es) to apply to the active button. You can include multiple classes separated by spaces (e.g., bg-blue-500 text-white).
 
 `data-initial-active`: Determines which button should be active when the page loads. It can be:
-"none": No button is active initially. (DEFAULT)
-"first": Activates the first button.
-"last": Activates the last button.
-"random": A random button is activated.
-"0", "1", "2", etc.: Activates the button at the specified index.
+- "none": No button is active initially. (DEFAULT)
+- "first": Activates the first button.
+- "last": Activates the last button.
+- "random": A random button is activated.
+- "0", "1", "2", etc.: Activates the button at the specified index.
 
 3. **Initialize with the Django Template Tag**:
 
@@ -238,15 +244,13 @@ The `ToggledButtonGroup` class allows you to create interactive button groups wh
 - You can initialize all button groups on the page with `{% init_button_groups %}` or you can initialize a specific button groups with `{% init_button_groups "name1" "name2" "name3" %}`.
 
 ### HTMX Integration (GET)
-The `ToggledButtonGroup` class seamlessly integrates with HTMX, a powerful library for building modern, interactive user interfaces with less JavaScript. You can easily use HTMX to update portions of your page in response to button clicks within your toggled button group.
-
-- **HTMX Library:** Ensure that you have included the HTMX library in your HTML.
+The `ToggledButtonGroup` class seamlessly integrates with HTMX. If your buttons have the `hx-get` attribute, the `ToggledButtonGroup` class will automatically update the page based on the `data-initial-active` attribute.
 
 - **HTMX Attributes:** Add HTMX attributes to the buttons within your button group container. The most common attributes you'll use are:
     - `hx-get`: Specifies the URL to fetch when the button is clicked.
     - `hx-target`: Specifies the element on the page to update with the content returned by the HTMX request.
     - `hx-swap`: Specifies how the returned content should be swapped into the target element (e.g., "innerHTML", "outerHTML", "beforeend").
-- **Example**
+**Example:**
 ```html
 <div id="myButtonGroup-button-group"
      data-initial-active="random">
