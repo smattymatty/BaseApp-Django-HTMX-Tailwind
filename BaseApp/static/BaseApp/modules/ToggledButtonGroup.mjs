@@ -1,8 +1,6 @@
 import { initialActiveStrategies } from "./strategies.mjs";
-import { HtmxHandler } from "./htmx_handlers.mjs";
-
+import { HtmxHandler } from "./HtmxHandler.mjs";
 const DEBUG = false;
-
 /**
  * A class to manage a group of buttons that toggle an 'active' class
  * and optionally trigger HTMX requests.
@@ -47,7 +45,7 @@ export class ToggledButtonGroup {
       "last",
       "none",
       "random",
-      ...Array.from({ length: this.buttons.length }, (_, i) => i),
+      ...Array.from({ length: this.buttons.length }, (_, i) => i.toString()),
     ];
     if (!validInitialActiveValues.includes(this.initialActive)) {
       console.error(
@@ -68,7 +66,6 @@ export class ToggledButtonGroup {
     }
     this.init();
   }
-
   init() {
     // ERROR CHECKING
     if (!this.buttons.length) {
@@ -94,11 +91,7 @@ export class ToggledButtonGroup {
     });
     this.setupHTMXHandlers();
     this.setInitialActiveButton();
-    if (DEBUG) {
-      console.log(`htmxHandlers = ${JSON.stringify(this.htmxHandlers)}`);
-    }
   }
-
   setInitialActiveButton() {
     // strategy is a function that returns the button to be active
     const strategy = initialActiveStrategies[this.initialActive];
@@ -117,21 +110,13 @@ export class ToggledButtonGroup {
     const initialButton = strategy(this.buttons, this.initialActive);
     if (initialButton) {
       this.setActiveButton(initialButton);
-      // Trigger HTMX request if handler exists for the initial button
-      const buttonText = initialButton.textContent.trim();
-      const handlerIndex = Array.from(this.buttons).findIndex(
-        (btn) => btn.textContent.trim() === buttonText
-      );
-      if (
-        handlerIndex !== -1 &&
-        this.htmxHandlers[handlerIndex] instanceof HtmxHandler
-      ) {
-        // Check if handler exists
-        this.htmxHandlers[handlerIndex].triggerHtmxRequest();
+      // **New: Explicitly trigger the HTMX request for the initial active button**
+      const buttonIndex = Array.from(this.buttons).indexOf(initialButton);
+      if (buttonIndex !== -1 && this.htmxHandlers[buttonIndex]) {
+        this.htmxHandlers[buttonIndex].triggerHtmxRequest();
       }
     }
   }
-
   setActiveButton(button) {
     const classesToAdd = this.activeClass.split(" ").filter(Boolean);
     // Split and into an array of classes, filter out empty strings
@@ -144,7 +129,6 @@ export class ToggledButtonGroup {
       });
     }
   }
-
   deactivateAllButtons() {
     const classesToRemove = this.activeClass.split(" ").filter(Boolean);
     // Split and into an array of classes, filter out empty strings
@@ -154,7 +138,6 @@ export class ToggledButtonGroup {
       });
     });
   }
-
   setupHTMXHandlers() {
     // Create htmxHandlers object (modified)
     Array.from(this.buttons).forEach((button, index) => {
@@ -172,17 +155,14 @@ export class ToggledButtonGroup {
     });
   }
 }
-
 ToggledButtonGroup.initAll = function (groupFilter = "") {
   // Use this to Initialize all button groups
   // with an empty string, it will check for all elements with the ID ending in "-button-group"
   // given a string as argument, it will only check for elements with the ID starting with the string and ending in "-button-group"
   // if the string includes spaces, it will split the string and call itself recursively
   const initializedGroups = new Set();
-
   const initializeGroup = (groupId) => {
     if (initializedGroups.has(groupId)) return; // Skip if already initialized
-
     const groupElement = document.getElementById(`${groupId}-button-group`);
     if (!groupElement) {
       console.error(
@@ -190,7 +170,6 @@ ToggledButtonGroup.initAll = function (groupFilter = "") {
       );
       return;
     }
-
     console.log(`Initializing ToggledButtonGroup with ID "${groupElement.id}"`);
     const config = {
       groupId,
@@ -200,7 +179,6 @@ ToggledButtonGroup.initAll = function (groupFilter = "") {
     new ToggledButtonGroup(config);
     initializedGroups.add(groupId); // Mark as initialized
   };
-
   if (groupFilter) {
     if (groupFilter.includes(" ")) {
       const groupFilterList = groupFilter.split(" ");

@@ -8,8 +8,8 @@ export const initialActiveStrategies = {
     console.error("No random item found"),
 };
 // Dynamically generate strategies for specific indices
-for (let i = 1; i <= 100; i++) {
+for (let i = 0; i <= 100; i++) {
   initialActiveStrategies[i] = (items) =>
-    items[i - 1] || console.error(`No button at index ${i} found`);
+    items[i] || console.error(`No button at index ${i} found`);
   // TODO: add strategy to search for button by text content
 }

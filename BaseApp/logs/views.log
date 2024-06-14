@@ -408,3 +408,933 @@
 	 page_number=1, search_query=''
 2024-06-11T09:57:51.753697-0400 -- DEBUG -- get_tailwind_info -- line 36
 	 get_tailwind_info
+2024-06-13T14:34:06.934583-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-13T14:35:46.122514-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-13T14:35:49.675028-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-13T14:35:51.923206-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-13T14:35:53.963595-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-13T14:35:54.998549-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-13T14:35:56.224483-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-13T14:46:12.400728-0400 -- DEBUG -- get_tailwind_info -- line 36
+	 get_tailwind_info
+2024-06-13T14:58:54.964404-0400 -- INFO -- display_number -- line 104
+	 Number: None
+2024-06-13T15:01:44.343276-0400 -- INFO -- display_number -- line 109
+	 Received number: None
+2024-06-13T15:01:44.981799-0400 -- INFO -- display_number -- line 109
+	 Received number: None
+2024-06-13T15:02:09.924933-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {}>
+2024-06-13T15:02:09.925931-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:04:40.864350-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {}>
+2024-06-13T15:04:40.865347-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:05:00.482182-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:05:00.483181-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:05:01.007863-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:05:01.008862-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:05:01.163755-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:05:01.164751-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:05:17.424986-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {}>
+2024-06-13T15:05:17.425984-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:07:38.485558-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:07:38.490553-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:07:57.153331-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:07:57.154330-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:08:01.928035-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:08:01.929033-0400 -- INFO -- display_number -- line 110
+	 Received number: None
+2024-06-13T15:08:45.095649-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:08:45.096654-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:08:48.794212-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:08:48.795221-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:10:10.240770-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:10:10.241767-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:10:10.806298-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:10:10.807296-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:10:11.365185-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:10:11.366165-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T15:10:11.804395-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T15:10:11.805396-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T15:10:12.325048-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T15:10:12.327046-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T15:10:15.088621-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:10:15.089621-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:10:15.528696-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:10:15.529712-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:10:15.943045-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:10:15.944044-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T15:10:16.293679-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T15:10:16.294679-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T15:10:16.625097-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T15:10:16.626110-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T15:10:23.898921-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:10:23.898921-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:10:25.094958-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:10:25.095957-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:11:20.185977-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:11:20.186979-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:13:47.243100-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:13:47.245113-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:13:52.038811-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:13:52.040810-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:13:55.795277-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:13:55.796276-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:14:02.131810-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:14:02.132809-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:16:30.334174-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:16:30.335174-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:16:30.820072-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:16:30.821079-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:16:31.282994-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:16:31.283992-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T15:16:31.687268-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T15:16:31.688267-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T15:16:32.219680-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T15:16:32.221675-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T15:16:32.698502-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T15:16:32.699501-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T15:16:33.167935-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:16:33.168933-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T15:16:33.622848-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:16:33.623846-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:16:34.101543-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:16:34.102543-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:18:41.128514-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:18:41.129513-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:18:41.794023-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:18:41.795011-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:18:42.353687-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:18:42.354687-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:19:41.192181-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:19:41.193173-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:19:43.129704-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:19:43.130703-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:19:46.449962-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:19:46.451961-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:50:15.474536-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:50:15.476533-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:50:19.406464-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:50:19.407464-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:50:20.299876-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:50:20.301874-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T15:50:21.176153-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T15:50:21.177479-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T15:50:22.091530-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T15:50:22.092527-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T15:50:23.088595-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:50:23.089595-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T15:50:25.760686-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T15:50:25.762683-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T15:50:26.875613-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:50:26.877613-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:50:27.296349-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:50:27.298347-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:50:28.042523-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:50:28.043522-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:50:28.558798-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:50:28.559797-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T15:50:28.964728-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T15:50:28.966727-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T15:50:29.448489-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T15:50:29.449488-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T15:50:31.286508-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:50:31.287507-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:50:31.727675-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:50:31.727675-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:50:33.087416-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:50:33.089414-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:50:33.873752-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:50:33.874749-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:50:34.372697-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:50:34.373686-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T15:50:34.724557-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T15:50:34.726554-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T15:50:35.012420-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T15:50:35.013419-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T15:50:37.450498-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:50:37.451495-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:50:45.898503-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:50:45.900500-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:50:52.139379-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T15:50:52.141379-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T15:50:57.365403-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T15:50:57.366402-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T15:50:58.277347-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T15:50:58.278345-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T16:01:32.531433-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:01:32.532414-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:01:36.945135-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:01:36.946134-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:01:38.821075-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:01:38.822077-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:01:43.100080-0400 -- DEBUG -- get_tailwind_info -- line 38
+	 get_tailwind_info
+2024-06-13T16:06:29.988643-0400 -- DEBUG -- get_tailwind_info -- line 38
+	 get_tailwind_info
+2024-06-13T16:06:37.013722-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:06:37.015718-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:06:40.127862-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-13T16:06:41.829950-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:06:41.830950-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:06:43.094943-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:06:43.095943-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:06:45.720324-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-13T16:06:50.886156-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-13T16:06:52.771244-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:06:52.778237-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:07:52.317717-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:07:52.319716-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:07:52.933467-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T16:07:52.934465-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T16:07:53.454873-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T16:07:53.456871-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T16:07:54.047265-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T16:07:54.048263-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T16:07:54.738822-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T16:07:54.739819-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T16:07:55.447810-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T16:07:55.448809-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T16:07:55.917862-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:07:55.918873-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:07:56.397408-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:07:56.398385-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:07:56.871818-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:07:56.873817-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:07:57.301538-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T16:07:57.302537-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T16:07:57.768197-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T16:07:57.769195-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T16:07:58.249753-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:07:58.250764-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:07:58.882552-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T16:07:58.883551-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T16:07:59.555725-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T16:07:59.556724-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T16:07:59.940931-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T16:07:59.941930-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T16:08:00.343248-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:08:00.344247-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:08:00.772612-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:08:00.773610-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:08:01.144854-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:08:01.145853-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:08:01.539737-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T16:08:01.540736-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T16:08:01.901974-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T16:08:01.902958-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T16:08:02.288570-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:08:02.290570-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:08:02.588160-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T16:08:02.589158-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T16:08:02.887871-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:08:02.888871-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-13T16:08:03.196863-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:08:03.197860-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:08:03.953878-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-13T16:08:03.954879-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-13T16:08:04.175341-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-13T16:08:04.177340-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-13T16:08:04.435760-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-13T16:08:04.436758-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-13T16:09:09.087018-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-13T16:09:09.088018-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-13T16:09:11.136690-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-13T16:09:11.137692-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:01:31.673624-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-14T17:03:42.252013-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-14T17:03:45.834517-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query='f'
+2024-06-14T17:03:52.560204-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query='fa'
+2024-06-14T17:04:08.325484-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-14T17:04:09.779256-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-14T17:04:14.837410-0400 -- DEBUG -- get_blog_post_list -- line 36
+	 page_number=1, search_query=''
+2024-06-14T17:06:47.947292-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-14T17:06:47.948296-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:06:51.005445-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-14T17:06:51.007445-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:06:51.468380-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-14T17:06:51.470377-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:06:51.816551-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-14T17:06:51.817551-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:06:52.262184-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-14T17:06:52.263181-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:06:52.844897-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-14T17:06:52.845897-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:06:53.817760-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['2']}>
+2024-06-14T17:06:53.819758-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:06:54.176800-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['3']}>
+2024-06-14T17:06:54.201284-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:06:54.502111-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['4']}>
+2024-06-14T17:06:54.504109-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:06:54.851565-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['5']}>
+2024-06-14T17:06:54.852565-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:06:55.557914-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-14T17:06:55.558913-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:06:57.560672-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-14T17:06:57.561668-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:07:36.017896-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'number': ['1']}>
+2024-06-14T17:07:36.019891-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:09:59.114274-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['rzDbUta6xYnRLo02oWJMD34BYP2FJGZBDzGqzFpmKTTOoKfMlPVB0Xo1Azuhff8w'], 'number': ['1']}>
+2024-06-14T17:09:59.115272-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:10:00.346007-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['rzDbUta6xYnRLo02oWJMD34BYP2FJGZBDzGqzFpmKTTOoKfMlPVB0Xo1Azuhff8w'], 'number': ['2']}>
+2024-06-14T17:10:00.347006-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:10:00.816930-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['rzDbUta6xYnRLo02oWJMD34BYP2FJGZBDzGqzFpmKTTOoKfMlPVB0Xo1Azuhff8w'], 'number': ['1']}>
+2024-06-14T17:10:00.819928-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:10:02.426042-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['056QQk6TGIC5JiInvTZ9wqEgcWrxBk9Mc595vwl9TD82mEX7sMbYTkYGOGT97TiH'], 'number': ['1']}>
+2024-06-14T17:10:02.428039-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:10:03.298914-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['056QQk6TGIC5JiInvTZ9wqEgcWrxBk9Mc595vwl9TD82mEX7sMbYTkYGOGT97TiH'], 'number': ['2']}>
+2024-06-14T17:10:03.299913-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:19:27.015520-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['056QQk6TGIC5JiInvTZ9wqEgcWrxBk9Mc595vwl9TD82mEX7sMbYTkYGOGT97TiH'], 'number': ['3']}>
+2024-06-14T17:19:27.021513-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:19:27.570457-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['056QQk6TGIC5JiInvTZ9wqEgcWrxBk9Mc595vwl9TD82mEX7sMbYTkYGOGT97TiH'], 'number': ['4']}>
+2024-06-14T17:19:27.572456-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:19:28.300991-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['056QQk6TGIC5JiInvTZ9wqEgcWrxBk9Mc595vwl9TD82mEX7sMbYTkYGOGT97TiH'], 'number': ['1']}>
+2024-06-14T17:19:28.301990-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:19:37.111429-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['MUoq3cjmwAA6BuPKKfrjXB9xe0iJpDvAYUrFIoyCJv63eQ4uH8D8kvtXQKKlVcEv'], 'number': ['1']}>
+2024-06-14T17:19:37.127412-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:19:40.252073-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['MUoq3cjmwAA6BuPKKfrjXB9xe0iJpDvAYUrFIoyCJv63eQ4uH8D8kvtXQKKlVcEv'], 'number': ['2']}>
+2024-06-14T17:19:40.253072-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:19:40.712019-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['MUoq3cjmwAA6BuPKKfrjXB9xe0iJpDvAYUrFIoyCJv63eQ4uH8D8kvtXQKKlVcEv'], 'number': ['3']}>
+2024-06-14T17:19:40.714232-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:19:41.247206-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['MUoq3cjmwAA6BuPKKfrjXB9xe0iJpDvAYUrFIoyCJv63eQ4uH8D8kvtXQKKlVcEv'], 'number': ['1']}>
+2024-06-14T17:19:41.248205-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:19:41.717352-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['MUoq3cjmwAA6BuPKKfrjXB9xe0iJpDvAYUrFIoyCJv63eQ4uH8D8kvtXQKKlVcEv'], 'number': ['4']}>
+2024-06-14T17:19:41.719349-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:19:42.101753-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['MUoq3cjmwAA6BuPKKfrjXB9xe0iJpDvAYUrFIoyCJv63eQ4uH8D8kvtXQKKlVcEv'], 'number': ['5']}>
+2024-06-14T17:19:42.103752-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:21:51.429091-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['Dj8g0dM28bLT0bxl6jPjNtFvO6nj53oaPjbvFp1il6hQDxM53c18anZVqQPVBCx5'], 'number': ['1']}>
+2024-06-14T17:21:51.431087-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:21:51.439079-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['Dj8g0dM28bLT0bxl6jPjNtFvO6nj53oaPjbvFp1il6hQDxM53c18anZVqQPVBCx5'], 'number': ['1']}>
+2024-06-14T17:21:51.440077-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:21:59.612744-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['wBuAPH0gr3hiL2jSImwvlxUtwm7FsbENIBxPuTfwEYNfooyCFfIkIreT86zhYKNI'], 'number': ['1']}>
+2024-06-14T17:21:59.613742-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:21:59.619737-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['wBuAPH0gr3hiL2jSImwvlxUtwm7FsbENIBxPuTfwEYNfooyCFfIkIreT86zhYKNI'], 'number': ['1']}>
+2024-06-14T17:21:59.620736-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:22:12.598871-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['v1g1pTd2BdajHeC0RzkMKx4kdp7BfEWLH1jg45siO8GgkARKOswB7roKP9zdLd5G'], 'number': ['1']}>
+2024-06-14T17:22:12.601866-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['v1g1pTd2BdajHeC0RzkMKx4kdp7BfEWLH1jg45siO8GgkARKOswB7roKP9zdLd5G'], 'number': ['1']}>
+2024-06-14T17:22:12.602864-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:22:12.603864-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:22:20.777580-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['v1g1pTd2BdajHeC0RzkMKx4kdp7BfEWLH1jg45siO8GgkARKOswB7roKP9zdLd5G'], 'number': ['1']}>
+2024-06-14T17:22:20.779578-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:22:21.359091-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['v1g1pTd2BdajHeC0RzkMKx4kdp7BfEWLH1jg45siO8GgkARKOswB7roKP9zdLd5G'], 'number': ['4']}>
+2024-06-14T17:22:21.360091-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:22:22.004326-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['v1g1pTd2BdajHeC0RzkMKx4kdp7BfEWLH1jg45siO8GgkARKOswB7roKP9zdLd5G'], 'number': ['5']}>
+2024-06-14T17:22:22.005324-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:22:45.196162-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['IgMiBON0IONqNqfTbQAsbIcqkbWCyZ2SUgPxg02gVJjnqMuD8JMhyCwQWVoe4ybN'], 'number': ['1']}>
+2024-06-14T17:22:45.200148-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['IgMiBON0IONqNqfTbQAsbIcqkbWCyZ2SUgPxg02gVJjnqMuD8JMhyCwQWVoe4ybN'], 'number': ['1']}>
+2024-06-14T17:22:45.200148-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:22:45.202146-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:22:46.646150-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['IgMiBON0IONqNqfTbQAsbIcqkbWCyZ2SUgPxg02gVJjnqMuD8JMhyCwQWVoe4ybN'], 'number': ['5']}>
+2024-06-14T17:22:46.647149-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:22:47.240005-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['IgMiBON0IONqNqfTbQAsbIcqkbWCyZ2SUgPxg02gVJjnqMuD8JMhyCwQWVoe4ybN'], 'number': ['1']}>
+2024-06-14T17:22:47.241004-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:22:47.972892-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['IgMiBON0IONqNqfTbQAsbIcqkbWCyZ2SUgPxg02gVJjnqMuD8JMhyCwQWVoe4ybN'], 'number': ['4']}>
+2024-06-14T17:22:47.974891-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:22:48.410923-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['IgMiBON0IONqNqfTbQAsbIcqkbWCyZ2SUgPxg02gVJjnqMuD8JMhyCwQWVoe4ybN'], 'number': ['1']}>
+2024-06-14T17:22:48.411923-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:23:09.922994-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['4aWmwJvo5IJZSDJJK0eYoNy5oixdHekBgaZBbVKEiDfWvZYtHTqNLHSv02ZPdNtw'], 'number': ['1']}>
+2024-06-14T17:23:09.924994-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:23:09.950964-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['4aWmwJvo5IJZSDJJK0eYoNy5oixdHekBgaZBbVKEiDfWvZYtHTqNLHSv02ZPdNtw'], 'number': ['1']}>
+2024-06-14T17:23:09.951963-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:23:36.656457-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['QmYx9UxBJrMmecuJNAOZlTbKtlnLHWvm2m1MO6MRWmijRyJtKt0OINva55PndvEh'], 'number': ['1']}>
+2024-06-14T17:23:36.685428-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:23:36.708404-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['QmYx9UxBJrMmecuJNAOZlTbKtlnLHWvm2m1MO6MRWmijRyJtKt0OINva55PndvEh'], 'number': ['1']}>
+2024-06-14T17:23:36.712401-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:23:41.975544-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['g7AhLIUAHLF6Gdt0IZ6qNLzRknL5hQwZs7DwqU9QUGb3jzIKFSifaFThW7dHNpFU'], 'number': ['1']}>
+2024-06-14T17:23:41.977543-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:23:41.984535-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['g7AhLIUAHLF6Gdt0IZ6qNLzRknL5hQwZs7DwqU9QUGb3jzIKFSifaFThW7dHNpFU'], 'number': ['1']}>
+2024-06-14T17:23:41.985533-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:24:22.569707-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['l1WZBq1SSjX9S3muGmDGQj8z83BmR3flx1ZegCg85et6vpBeDfPvddsZKN3YnCog'], 'number': ['1']}>
+2024-06-14T17:24:22.571704-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:24:22.581694-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['l1WZBq1SSjX9S3muGmDGQj8z83BmR3flx1ZegCg85et6vpBeDfPvddsZKN3YnCog'], 'number': ['1']}>
+2024-06-14T17:24:22.583691-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:24:27.098281-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['l1WZBq1SSjX9S3muGmDGQj8z83BmR3flx1ZegCg85et6vpBeDfPvddsZKN3YnCog'], 'number': ['1']}>
+2024-06-14T17:24:27.099279-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:24:27.853978-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['l1WZBq1SSjX9S3muGmDGQj8z83BmR3flx1ZegCg85et6vpBeDfPvddsZKN3YnCog'], 'number': ['2']}>
+2024-06-14T17:24:27.855975-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:24:28.928572-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['l1WZBq1SSjX9S3muGmDGQj8z83BmR3flx1ZegCg85et6vpBeDfPvddsZKN3YnCog'], 'number': ['1']}>
+2024-06-14T17:24:28.929570-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:24:29.278301-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['l1WZBq1SSjX9S3muGmDGQj8z83BmR3flx1ZegCg85et6vpBeDfPvddsZKN3YnCog'], 'number': ['4']}>
+2024-06-14T17:24:29.279300-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:24:30.118938-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['l1WZBq1SSjX9S3muGmDGQj8z83BmR3flx1ZegCg85et6vpBeDfPvddsZKN3YnCog'], 'number': ['1']}>
+2024-06-14T17:24:30.120935-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:24:31.465184-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['cncC7CD0T00dXmfukAK6bTszlIF9bnvyonfRMOSg6VwaAIuehtWVyNMZXs7LHWEt'], 'number': ['1']}>
+2024-06-14T17:24:31.468182-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:24:31.474176-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['cncC7CD0T00dXmfukAK6bTszlIF9bnvyonfRMOSg6VwaAIuehtWVyNMZXs7LHWEt'], 'number': ['1']}>
+2024-06-14T17:24:31.476174-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:25:10.405068-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['11zoUbDQDhmBuZ4pdDF3puWyzKwCHYXTd1CDznS6QcSy7lj9awRSMogYbuYedx6O'], 'number': ['1']}>
+2024-06-14T17:25:10.407066-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:25:22.231404-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['4fATSDhp6hfo8ca5V0FqlWUliAWDAj1fgfD8xPwFjcLlLypPSTRfIQeLUkof6Saa'], 'number': ['1']}>
+2024-06-14T17:25:22.235399-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:25:26.140650-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['pp0pm8iMlopbesUG2qBRyxewPpdHH5YkBp3E1kx2yjV8RO9qZjNGVryWr9FjdE7f'], 'number': ['1']}>
+2024-06-14T17:25:26.142647-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:25:26.149641-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['pp0pm8iMlopbesUG2qBRyxewPpdHH5YkBp3E1kx2yjV8RO9qZjNGVryWr9FjdE7f'], 'number': ['1']}>
+2024-06-14T17:25:26.151640-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:28:56.235604-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['y7PXIa3S8OS6nzJD724lDwCj9S1n2xrvK7Scnmi8lJo30VYn4Vga0qWJLCtZy6Aq'], 'number': ['1']}>
+2024-06-14T17:28:56.236602-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:28:56.247592-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['y7PXIa3S8OS6nzJD724lDwCj9S1n2xrvK7Scnmi8lJo30VYn4Vga0qWJLCtZy6Aq'], 'number': ['1']}>
+2024-06-14T17:28:56.249591-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:29:22.331525-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['kg9ppAsiO7395sQHykj90crhkZ0KFPOtwgcE4MHy12z6IO5rvdvYn6LHWJsmboXo'], 'number': ['5']}>
+2024-06-14T17:29:22.335519-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['kg9ppAsiO7395sQHykj90crhkZ0KFPOtwgcE4MHy12z6IO5rvdvYn6LHWJsmboXo'], 'number': ['3']}>
+2024-06-14T17:29:22.336518-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:29:22.337518-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:29:26.712032-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['E3HeXQSTL0QhPfUFKiz8WSOHHOAfd2cFQ3KtC279YVmesB9pHbLXjM87jy2RJBlA'], 'number': ['5']}>
+2024-06-14T17:29:26.714030-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:29:26.717028-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['E3HeXQSTL0QhPfUFKiz8WSOHHOAfd2cFQ3KtC279YVmesB9pHbLXjM87jy2RJBlA'], 'number': ['3']}>
+2024-06-14T17:29:26.719026-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:29:28.077805-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['E3HeXQSTL0QhPfUFKiz8WSOHHOAfd2cFQ3KtC279YVmesB9pHbLXjM87jy2RJBlA'], 'number': ['1']}>
+2024-06-14T17:29:28.079801-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:29:28.640035-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['E3HeXQSTL0QhPfUFKiz8WSOHHOAfd2cFQ3KtC279YVmesB9pHbLXjM87jy2RJBlA'], 'number': ['4']}>
+2024-06-14T17:29:28.641035-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:29:57.235018-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['DdINSwhm4f8hUOFHRylm7BhKPOLOcSefPdL2xIwChaEexaUrOrxbuvBarydqIrna'], 'number': ['5']}>
+2024-06-14T17:29:57.236578-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:31:47.487871-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['U4Nhoepb5V7craxmISDRiKDn9lCb4in164Qw3qEriQD94wM6FLPGFEXNL54NARwW'], 'number': ['3']}>
+2024-06-14T17:31:47.488869-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:31:53.353461-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['vKuQPCleldRVWRBuAseIz3XdaDoltsIAHKx5uOAuy8nSzdQexlqxWXhDMnQXZ1Rv'], 'number': ['2']}>
+2024-06-14T17:31:53.354460-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:32:03.593856-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['d5Q1OQncVpeAzRga17mpGWQxT4mEWi82p5Tgt2Cs8kKxcdvUY0ye3QaXvOOgsRhX'], 'number': ['3']}>
+2024-06-14T17:32:03.596853-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:32:04.979916-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['d5Q1OQncVpeAzRga17mpGWQxT4mEWi82p5Tgt2Cs8kKxcdvUY0ye3QaXvOOgsRhX'], 'number': ['1']}>
+2024-06-14T17:32:04.985910-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:32:13.085184-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['mcjhy37UlifE1k2pYs3VPJSNQvmlOAEyycmwdfmaydLBEGh9VlfKcDcdsfOXk9Nt'], 'number': ['2']}>
+2024-06-14T17:32:13.088178-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:32:18.515466-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['IqRmgKywBvqJI0Il0oIab9sdpdcSGYMVUqUBVWNMOqWGlmX5XhUZy3MD1XEucxVQ'], 'number': ['5']}>
+2024-06-14T17:32:18.517465-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:32:24.255969-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['RnWyuyXvb4XJOrvqIZ1MLjRvLIyhVox53nZN9KcLoZtGrNKaFSdB8dbVns0TrXG0'], 'number': ['3']}>
+2024-06-14T17:32:24.257967-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:32:32.190515-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['f191JQrUL4slF30xfNlD4en0yANmnnrYr1cgo2GaYZYiipfhcGxsr8HqakfYTWAT'], 'number': ['2']}>
+2024-06-14T17:32:32.192511-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:33:53.759468-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['NjEWHrC05Qd99BBWJLc6uHS226cVOICrZjHbmDRgiLJ6MXQGGEoVRBcsEQExkhLm'], 'number': ['2']}>
+2024-06-14T17:33:53.761465-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:35:01.242538-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['hV85drUc7bBMlCUKaIs4D0Q1dRUDmLsItVbkSD9sk67JYY9u7BET0UarPBmfSkBD'], 'number': ['1']}>
+2024-06-14T17:35:01.245535-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:35:09.931827-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['un6Iz8PavBjvisryTNZAtY2PyS4woeOSGn9Xek4qIwPsVOGiQGbpQSmfaCw8UNXN'], 'number': ['2']}>
+2024-06-14T17:35:09.933825-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:35:29.605581-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['h3WJFuJXO1Hh8jSaQRH1gv5bnlLhZubmt3ZYkGYd1WdeLF7UNKTQDppBZ5dTv3kh'], 'number': ['2']}>
+2024-06-14T17:35:29.606581-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:35:38.086658-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['m0VD5EGK4BCaKwxW2r75XHJVVCmD3nq9y0YSKQV0hw87nSMGZkjUkB3lxmOfzWz4'], 'number': ['2']}>
+2024-06-14T17:35:38.088656-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:35:45.774006-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['GjSCGz7C9MsHGTcTwzpecxDVjb66u3sLSjVRlLmSmHYEjfrDtsB3zrXlVVyI0CBG'], 'number': ['3']}>
+2024-06-14T17:35:45.775005-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:35:57.854414-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['0q0TEcUy5MX3Wp119Mw6wy5WXemBhfMpcq38jo9OiHt0zLgL6FIVTspmzYOdNOVk'], 'number': ['1']}>
+2024-06-14T17:35:57.855412-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:36:02.904342-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['2AYRH0C0sZ1Vupau7qqmndacz7tDJBvLeA16mcRgFUxS7Lpe4jCbK7uCbRVffaEG'], 'number': ['2']}>
+2024-06-14T17:36:02.906339-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:36:07.163945-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['yRgU9CNJ8Z6EXdofgmPjACJc7tLsxGj3KRj9OO2ZlUCBAzDZdf18Xw3CJdd43fsY'], 'number': ['3']}>
+2024-06-14T17:36:07.186921-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:36:11.084179-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['PBsfWYrwfzPgKkRR8aFh80KoBjwR2MUK1BvuBaGMsuldnG6B53R6vU4Od3Ytyl3F'], 'number': ['4']}>
+2024-06-14T17:36:11.123223-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:36:15.041384-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['YrDLeZezHVIt2FKboj2rXembBJNiBxYzarG0TbtPUQeqF1ZVlcegk8GBdtfU767u'], 'number': ['5']}>
+2024-06-14T17:36:15.043381-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:36:22.515432-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['e4leVYGlSfYdPeeXaS8B0ALTnEdaanHmq4otAaVB5auasAtH7Lkqnu5jZoFMGWQh'], 'number': ['5']}>
+2024-06-14T17:36:22.516431-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:36:34.124407-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['VXViiTP8olNZhhqVovI1RHpxYfF19mQd7XYxX54oBgjWUDFFloUQeBJXAZ7DFVZ8'], 'number': ['4']}>
+2024-06-14T17:36:34.126407-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:36:52.798453-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['uQxpM1NEPvV1a9y33LvYY962ZnM1V8QsGQAErd2U2qrYNvNN0EHNl3qsB7eDrHZn'], 'number': ['5']}>
+2024-06-14T17:36:52.810442-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:37:11.676305-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['UcEEioxJGoyM0CWJtwrC2giuERLpHj456cHTXAMZTj4JDYbtqpDrpaCUgBd1dSd0'], 'number': ['5']}>
+2024-06-14T17:37:11.686296-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:37:20.748116-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['adzBOi5dBx2yFcmHi9jJE7MivhYDDaXvmdCQtuktOsyviyBrf2vy116I71qf9J6q'], 'number': ['1']}>
+2024-06-14T17:37:20.751113-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:39:27.448446-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['T4JYwjKcBLAmVy80mQGxrtp5rLEEk1Bw54MdbvZsOG6jyUnKjJSmOnJv3v6gQAKr'], 'number': ['1']}>
+2024-06-14T17:39:27.450447-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:39:34.001850-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['B4hHnXxdJN7YBZuXTtZNteL0ijmosWzkN4kW29MtWIDVelJHQmbCQ85qU3O0YvIf'], 'number': ['5']}>
+2024-06-14T17:39:34.002850-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:40:31.216285-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['0TMwWktL5aPckF2UiFy8P0orzrXaBxhCcTPLBwI1i5l9X1hEfyKXcUIRbbpM76qx'], 'number': ['4']}>
+2024-06-14T17:40:31.217284-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:40:45.606182-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['DvYKC92seopFrRNTSpc1J14hAwWO7ujWPv1ZhlhIrjVC4d2DPioQ6VoHcgoqD3sR'], 'number': ['4']}>
+2024-06-14T17:40:45.611174-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['DvYKC92seopFrRNTSpc1J14hAwWO7ujWPv1ZhlhIrjVC4d2DPioQ6VoHcgoqD3sR'], 'number': ['2']}>
+2024-06-14T17:40:45.611174-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:40:45.612173-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:40:56.126726-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['lT3gpYhcObZX8ogmMTqVFMWnSs2MtUhCxT6v4aws16vULKv6JMCK2GgNucuoZtqx'], 'number': ['1']}>
+2024-06-14T17:40:56.128725-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:40:56.133721-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['lT3gpYhcObZX8ogmMTqVFMWnSs2MtUhCxT6v4aws16vULKv6JMCK2GgNucuoZtqx'], 'number': ['1']}>
+2024-06-14T17:40:56.134718-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:41:06.302980-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['rwZ9zUYW5NC7S5xxAwxJB4erPg4Bm3l9Dw2oe6dciI84vrMhxpJyYYyRr0wdSCu4'], 'number': ['1']}>
+2024-06-14T17:41:06.304975-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['rwZ9zUYW5NC7S5xxAwxJB4erPg4Bm3l9Dw2oe6dciI84vrMhxpJyYYyRr0wdSCu4'], 'number': ['4']}>
+2024-06-14T17:41:06.312967-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:41:06.312967-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T17:41:30.450415-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['iHvu4NDNudKiWFrW8oBOUPkivl7X4kZXuHyJJZS3H8gfz1GG5hNDhJEI75zzAT8S'], 'number': ['5']}>
+2024-06-14T17:41:30.453411-0400 -- INFO -- display_number -- line 110
+	 Received number: 5
+2024-06-14T17:41:30.455409-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['iHvu4NDNudKiWFrW8oBOUPkivl7X4kZXuHyJJZS3H8gfz1GG5hNDhJEI75zzAT8S'], 'number': ['3']}>
+2024-06-14T17:41:30.459401-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:41:35.682502-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['2bYq4jQrNMdlZf4hB8c7mIf7Ifk5YdWleb1FJv5H0HJiCBj1y1oWJCzxkZMHuM5g'], 'number': ['3']}>
+2024-06-14T17:41:35.684502-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:41:35.687497-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['2bYq4jQrNMdlZf4hB8c7mIf7Ifk5YdWleb1FJv5H0HJiCBj1y1oWJCzxkZMHuM5g'], 'number': ['3']}>
+2024-06-14T17:41:35.690495-0400 -- INFO -- display_number -- line 110
+	 Received number: 3
+2024-06-14T17:42:01.495215-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['lCOK9w18uXyka6qR3wUtdsBuxO7CATO3xCRZOIgoHS4hNsFB0p6iAmVU9yze6sXY'], 'number': ['2']}>
+2024-06-14T17:42:01.496735-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:42:01.503234-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['lCOK9w18uXyka6qR3wUtdsBuxO7CATO3xCRZOIgoHS4hNsFB0p6iAmVU9yze6sXY'], 'number': ['1']}>
+2024-06-14T17:42:01.505234-0400 -- INFO -- display_number -- line 110
+	 Received number: 1
+2024-06-14T17:42:17.394915-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['StSoAXXqpkIGJhhSTT2yxV68N9HX1UcN4tVDf9cGCfeDmDwCQMenUPqypT9zxtlI'], 'number': ['2']}>
+2024-06-14T17:42:17.401906-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['StSoAXXqpkIGJhhSTT2yxV68N9HX1UcN4tVDf9cGCfeDmDwCQMenUPqypT9zxtlI'], 'number': ['2']}>
+2024-06-14T17:42:17.401906-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:42:17.402904-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:52:14.455723-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['G2cQZ3wjMtexkirunCLytqeUqEKMdspjS2f5EfLzZoKuXEGekvXnQkyk2ocoJ1ye'], 'number': ['2']}>
+2024-06-14T17:52:14.456722-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T17:52:14.460718-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['G2cQZ3wjMtexkirunCLytqeUqEKMdspjS2f5EfLzZoKuXEGekvXnQkyk2ocoJ1ye'], 'number': ['4']}>
+2024-06-14T17:52:14.461716-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T18:07:32.078298-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['56227c4CTlJFckcVJXspD4mRlWF6coZGh65hMojS6gfCPGrFGQEe0YGhXG7IIX8B'], 'number': ['2']}>
+2024-06-14T18:07:32.086289-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T18:07:32.153315-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['56227c4CTlJFckcVJXspD4mRlWF6coZGh65hMojS6gfCPGrFGQEe0YGhXG7IIX8B'], 'number': ['4']}>
+2024-06-14T18:07:32.158419-0400 -- INFO -- display_number -- line 110
+	 Received number: 4
+2024-06-14T18:07:35.107652-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['qPJxr2KyKvm2rwid7ca6HRk0PBrp7qAkCPMM6eZOXqSZ4SxX45mV4LEqrlT1DZJf'], 'number': ['2']}>
+2024-06-14T18:07:35.109649-0400 -- INFO -- display_number -- line 110
+	 Received number: 2
+2024-06-14T18:07:35.113653-0400 -- INFO -- display_number -- line 108
+	 POST data: <QueryDict: {'csrfmiddlewaretoken': ['qPJxr2KyKvm2rwid7ca6HRk0PBrp7qAkCPMM6eZOXqSZ4SxX45mV4LEqrlT1DZJf'], 'number': ['2']}>
+2024-06-14T18:07:35.116641-0400 -- INFO -- display_number -- line 110
+	 Received number: 2

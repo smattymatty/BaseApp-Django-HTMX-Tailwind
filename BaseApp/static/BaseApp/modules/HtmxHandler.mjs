@@ -20,6 +20,14 @@ export class HtmxHandler {
     if (DEBUG) {
       console.log(`Triggering HTMX request for button ${this.button.id}`);
       console.log(`HTMX attributes: ${JSON.stringify(this.htmxAttributes)}`);
+      console.log(`Method: ${this.htmxAttributes["hx-post"] ? "POST" : "GET"}`);
+      console.log(
+        `URL: ${
+          this.htmxAttributes["hx-post"] ||
+          this.htmxAttributes["hx-get"] ||
+          this.htmxAttributes["hx-boost"]
+        }`
+      );
     }
     const hasValidRequestAttribute =
       this.htmxAttributes["hx-get"] ||
@@ -56,11 +64,11 @@ export class HtmxHandler {
       return;
     }
     // Determine the request type based on hx-boost or hx-get or hx-post
-    const method = this.htmxAttributes["hx-boost"] ? "POST" : "GET";
+    const method = this.htmxAttributes["hx-post"] ? "POST" : "GET";
     const url =
-      this.htmxAttributes["hx-boost"] ||
+      this.htmxAttributes["hx-post"] ||
       this.htmxAttributes["hx-get"] ||
-      this.htmxAttributes["hx-post"];
+      this.htmxAttributes["hx-boost"];
     // Trigger the HTMX request using htmx.ajax()
     htmx.ajax(method, url, {
       target: this.htmxAttributes["hx-target"],

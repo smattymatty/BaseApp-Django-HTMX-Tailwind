@@ -182,62 +182,62 @@ This project includes JavaScript modules to add interactive features to your Dja
 
 Check the console for warnings and errors that should guide you through the process in case you are stuck.
 
-### ToggledButtonGroup
+## ToggledButtonGroup
 Visit [BaseApp/button_examples.html](BaseApp/templates/BaseApp//ui_elements/sections/buttons_examples.html) for an example.
 ![Gif of buttons changing](https://i.imgur.com/lfe5AWF.gif)
 The `ToggledButtonGroup` class allows you to create interactive button groups where only one button can be active at a time. Clicking a button toggles its active state. You can customize the appearance of active buttons, choose the initially active button, and easily manage multiple button groups on your page.
 
-#### Basic Usage
+### Basic Usage
 
 1. **HTML Structure**:
 
 ```html
-<div id="myButtonGroup-button-group"> 
+{% load button_group_tags %}
+<form id="myButtonGroup-button-group"> 
     <button>Button 1</button>
     <button>Button 2</button>
     <button>Button 3</button>
-</div>
+</form>
 ```
-- Create a div container with an ID ending in "-button-group".
+
+- load the `button_group_tags` template tag
+
+- Create a container with an ID ending in "-button-group".
+    - The container does not have to be a form, but it is recommended for `hx-post` integration.
 - Place your buttons inside this container.
 
 `myButtonGroup`: The ID of the button group container.
 
-2. **Data Attributes**:
+2. **Customize with Data Attributes (Optional)**:
 
 ```html
-<div id="myButtonGroup-button-group"
+<form id="myButtonGroup-button-group"
      data-active-class="bg-blue-500 text-white"
      data-initial-active="2">
-</div>
+</form>
 
 ```
 `data-active-class`: Specifies the CSS class(es) to apply to the active button. You can include multiple classes separated by spaces (e.g., bg-blue-500 text-white).
 
 `data-initial-active`: Determines which button should be active when the page loads. It can be:
+"none": No button is active initially. (DEFAULT)
 "first": Activates the first button.
 "last": Activates the last button.
-"none": No button is active initially.
 "random": A random button is activated.
-1, 2, 3, etc.: Activates the button at the specified index (1-based).
+"0", "1", "2", etc.: Activates the button at the specified index.
 
-3. **JavaScript Initialization**:
+3. **Initialize with the Django Template Tag**:
 
-```javascript
-import { ToggledButtonGroup } from "{% static 'BaseApp/button_handlers.mjs' %}";
-ToggledButtonGroup.initAll(); 
-// Initializes all button groups on the page
+```html
+<div id="myButtonGroup-button-group">
+    ...
+</div>
+{% init_button_groups "myButtonGroup" %} 
 ```
 
-- If you want to initialize only specific groups, you can pass a filter to `initAll()`:
+- You can initialize all button groups on the page with `{% init_button_groups %}` or you can initialize a specific button groups with `{% init_button_groups "name1" "name2" "name3" %}`.
 
-```javascript
-ToggledButtonGroup.initAll("myButtonGroup"); 
-// Initializes only the group with ID "myButtonGroup-button-group"
-ToggledButtonGroup.initAll("example1 example2 example3"); 
-// Initializes three button groups with IDs "example1-button-group", "example2-button-group", and "example3-button-group"
-```
-#### HTMX Integration
+### HTMX Integration (GET)
 The `ToggledButtonGroup` class seamlessly integrates with HTMX, a powerful library for building modern, interactive user interfaces with less JavaScript. You can easily use HTMX to update portions of your page in response to button clicks within your toggled button group.
 
 - **HTMX Library:** Ensure that you have included the HTMX library in your HTML.
@@ -270,3 +270,103 @@ The `ToggledButtonGroup` class seamlessly integrates with HTMX, a powerful libra
 <div id="contentArea"></div>
 ```
 In this example, the initial active button is randomly selected, and will automatically perform the first HTMX request when the page loads.
+
+### HTMX Integration (POST)
+
+The ToggledButtonGroup class automates the process of sending POST requests using HTMX when a button in the group is intially activated. Follow these steps to integrate POST requests into your button group:
+
+1. Include Django's CSRF Token:
+- To ensure the security of your POST requests, include Django's CSRF token in your form element. Django provides a convenient template tag for this:
+```html
+<form id="myButtonGroup-button-group">
+    {% csrf_token %}
+    ...
+</form>
+```
+2. Add buttons with the `hx-post` attribute to your button group:
+```html
+<button hx-post="{% url 'BaseApp:display_number' %}"
+        hx-trigger="click"
+        hx-target="#result-container"
+        hx-swap="innerHTML"
+        name="number"
+        value="0"
+        class="...">
+            Button
+</button>
+<button hx-post="{% url 'BaseApp:display_number' %}"
+        hx-trigger="click"
+        hx-target="#result-container"
+        hx-swap="innerHTML"
+        name="number"
+        value="1"
+        class="...">
+    Button
+</button>
+```
+
+`hx-post`: This attribute indicates that an HTTP POST request should be sent when the button is clicked. You'll specify the URL of your Django view function that handles the request.
+`name`: This attribute specifies the name of the form field that will be submitted with the POST request.
+`value`: This attribute specifies the value of the form field that will be submitted with the POST request.
+
+3. Create a Django view function that handles the POST request:
+```python
+from django.http import HttpResponse
+from django.template import loader
+from django.views.decorators.http import require_POST
+
+@require_POST
+def display_number(request):
+    # Retrieve the button value from the POST data
+    number = request.POST.get('number')
+    # Render the template with the number
+    template = loader.get_template('BaseApp/tests/number_display.html')
+    context = {'number': number}
+    return HttpResponse(template.render(context, request))
+```
+
+**Full Example:**
+```html
+{% load button_group_tags %}
+<div id="myButtonGroup-button-group" 
+    data-active-class="bg-blue-500 text-white" data-initial-active="random">
+    <button hx-post="{% url 'BaseApp:display_number' %}"
+            hx-trigger="mousedown"
+            hx-target="#result-container"
+            hx-swap="innerHTML"
+            name="number"
+            value="0"
+            class="...">
+            Button 0
+    </button>
+    <button hx-post="{% url 'BaseApp:display_number' %}"
+            hx-trigger="mousedown"
+            hx-target="#result-container"
+            hx-swap="innerHTML"
+            name="number"
+            value="1"
+            class="...">
+            Button 1
+    </button>
+    <button hx-post="{% url 'BaseApp:display_number' %}"
+            hx-trigger="mousedown"
+            hx-target="#result-container"
+            hx-swap="innerHTML"
+            name="number"
+            value="2"
+            class="...">
+            Button 2
+    </button>
+</div>
+
+<div id="result-container"></div>
+
+{% init_button_groups "myButtonGroup" %}
+```
+How it Works
+
+1. When a button is clicked, HTMX intercepts the event.
+2. HTMX constructs a POST request to the specified URL ({% url 'BaseApp:display_number' %}).
+3. The request includes the data from the button, which can include the csrf token if the button is in the form or if the button has the hx-include attribute.
+4. Your Django view function (display_number) processes the POST data and returns a response.
+5. HTMX updates the specified target element (result-container) with the content returned from the server.

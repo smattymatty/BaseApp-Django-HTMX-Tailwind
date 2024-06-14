@@ -2,7 +2,9 @@ from typing import Any
 
 from django.views.generic.base import TemplateView
 from django.template import loader
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from django.conf import settings
+from django.views.decorators.http import require_POST
 
 from BaseApp.utils import get_module_logger
 
@@ -95,3 +97,27 @@ class CardsView(BaseView):
 class TypographyView(BaseView):
     template_name = "BaseApp/ui_elements/typography.html"
     title = "UI Elements - Typography"
+
+
+@require_POST
+def display_number(request):
+    try:
+        # Retrieve the button value from the POST data
+        number = request.POST.get('number')
+        # Log the POST data (for debugging)
+        module_logger.info(f"POST data: {request.POST}")
+        # Log the received number (for debugging)
+        module_logger.info(f"Received number: {number}")
+
+        # Render the template with the number
+        template = loader.get_template('BaseApp/tests/number_display.html')
+        context = {'number': number}
+        return HttpResponse(template.render(context, request))
+
+    except Exception as e:
+        # Handle exceptions and log errors
+        module_logger.error(f"Error in display_number: {e}")
+        if settings.DEBUG:
+            return JsonResponse({'error': f'Error: {e}'}, status=500)
+        else:
+            return JsonResponse({'error': 'Internal Server Error'}, status=500)
