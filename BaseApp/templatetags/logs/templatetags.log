@@ -1,0 +1,84 @@
+2024-06-16T00:45:15.569838-0400DEBUG
+init_toggled_button_groups39init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example');
+        </script>
+    
+2024-06-16T00:45:15.575374-0400DEBUG
+init_toggled_button_groups39init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example1 example2 example3');
+        </script>
+    
+2024-06-16T00:45:15.583933-0400DEBUG
+init_toggled_button_groups39init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('  example1  example2     example3  ');
+        </script>
+    
+2024-06-16T00:46:26.318762-0400DEBUG
+init_toggled_button_groups39init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example');
+        </script>
+    
+2024-06-16T00:46:26.329751-0400DEBUG
+init_toggled_button_groups39init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example1 example2 example3');
+        </script>
+    
+2024-06-16T00:46:26.339740-0400DEBUG
+init_toggled_button_groups39init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('  example1  example2     example3  ');
+        </script>
+    
+2024-06-16T00:47:02.072683-0400DEBUG
+init_toggled_button_groups40init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example');
+        </script>
+    
+2024-06-16T00:47:02.078687-0400DEBUG
+init_toggled_button_groups40init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example1 example2 example3');
+        </script>
+    
+2024-06-16T00:47:02.085680-0400DEBUG
+init_toggled_button_groups40init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example1 example2 example3');
+        </script>
+    
+2024-06-16T00:47:56.216620-0400DEBUG
+init_toggled_button_groups40init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example');
+        </script>
+    
+2024-06-16T00:47:56.226610-0400DEBUG
+init_toggled_button_groups40init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example1 example2 example3');
+        </script>
+    
+2024-06-16T00:47:56.235601-0400DEBUG
+init_toggled_button_groups40init_toggled_button_groups tag generated JavaScript code: 
+        <script type="module">
+            import { ToggledButtonGroup } from "/static/BaseApp/modules/ToggledButtonGroup.mjs";
+            ToggledButtonGroup.initAll('example1 example2 example3');
+        </script>
+    

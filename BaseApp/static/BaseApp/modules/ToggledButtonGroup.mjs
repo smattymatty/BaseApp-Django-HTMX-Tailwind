@@ -6,7 +6,7 @@ const DEBUG = false;
  * and optionally trigger HTMX requests.
  *
  * Usage:
- *   1. Create a button group container element in your HTML with an ID ending in "-button-group".
+ *   1. Create a button group container element in your HTML with an ID ending in "-toggled-button-group".
  *   2. Add "button" elements inside the container.
  *   3. (Optional) Set `data-active-class` on the container to customize the active class (default is "active").
  *   4. (Optional) Set `data-initial-active` on the container to define the initially active button (options: "first", "last", "none", "random" or a number for the button index).
@@ -16,7 +16,9 @@ const DEBUG = false;
 export class ToggledButtonGroup {
   constructor(config) {
     this.groupId = config.groupId;
-    this.container = document.getElementById(`${this.groupId}-button-group`);
+    this.container = document.getElementById(
+      `${this.groupId}-toggled-button-group`
+    );
     this.buttons = this.container
       ? this.container.querySelectorAll("button")
       : [];
@@ -26,7 +28,7 @@ export class ToggledButtonGroup {
     // ERROR CHECKING
     if (!this.container) {
       console.error(
-        `[ToggledButtonGroup Error] Button group container with ID "${this.groupId}-button-group" not found. Please ensure the container element exists and has the correct ID.`
+        `[ToggledButtonGroup Error] Button group container with ID "${this.groupId}-toggled-button-group" not found. Please ensure the container element exists and has the correct ID.`
       );
       return;
     }
@@ -157,16 +159,18 @@ export class ToggledButtonGroup {
 }
 ToggledButtonGroup.initAll = function (groupFilter = "") {
   // Use this to Initialize all button groups
-  // with an empty string, it will check for all elements with the ID ending in "-button-group"
-  // given a string as argument, it will only check for elements with the ID starting with the string and ending in "-button-group"
+  // with an empty string, it will check for all elements with the ID ending in "-toggled-button-group"
+  // given a string as argument, it will only check for elements with the ID starting with the string and ending in "-toggled-button-group"
   // if the string includes spaces, it will split the string and call itself recursively
   const initializedGroups = new Set();
   const initializeGroup = (groupId) => {
     if (initializedGroups.has(groupId)) return; // Skip if already initialized
-    const groupElement = document.getElementById(`${groupId}-button-group`);
+    const groupElement = document.getElementById(
+      `${groupId}-toggled-button-group`
+    );
     if (!groupElement) {
       console.error(
-        `[ToggledButtonGroup Error] Button group container with ID "${groupId}-button-group" not found.`
+        `[ToggledButtonGroup Error] Button group container with ID "${groupId}-toggled-button-group" not found.`
       );
       return;
     }
@@ -189,9 +193,9 @@ ToggledButtonGroup.initAll = function (groupFilter = "") {
   } else {
     // Initialize all groups if no filter is provided
     document
-      .querySelectorAll('[id$="-button-group"]')
+      .querySelectorAll('[id$="-toggled-button-group"]')
       .forEach((groupElement) => {
-        initializeGroup(groupElement.id.replace("-button-group", ""));
+        initializeGroup(groupElement.id.replace("-toggled-button-group", ""));
       });
   }
 };

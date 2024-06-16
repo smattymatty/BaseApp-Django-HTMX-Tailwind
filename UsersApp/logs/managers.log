@@ -4913,3 +4913,119 @@ DETAIL:  Key (email)=(test1@example.com) already exists.
 	 Creating user with username: testuser and email: test@example.com
 2024-06-02T00:28:31.141418-0400 -- SUCCESS -- create_user -- line 63
 	 User testuser created successfully.
+2024-06-16T00:10:19.027013-0400DEBUG
+create_user43Creating user with username: testuser4 and email: test@example.com
+2024-06-16T00:10:19.453997-0400SUCCESS
+create_user63User testuser4 created successfully.
+2024-06-16T00:10:19.460980-0400DEBUG
+create_user43Creating user with username: testuser3 and email: test@example.com
+2024-06-16T00:10:19.837870-0400SUCCESS
+create_user63User testuser3 created successfully.
+2024-06-16T00:10:19.940259-0400DEBUG
+create_user43Creating user with username: testuser and email: test@example.com
+2024-06-16T00:10:20.340471-0400SUCCESS
+create_user63User testuser created successfully.
+2024-06-16T00:10:20.343478-0400DEBUG
+create_user43Creating user with username: testuser2 and email: test@example.com
+2024-06-16T00:10:20.724470-0400SUCCESS
+create_user63User testuser2 created successfully.
+2024-06-16T00:10:20.832760-0400DEBUG
+create_user43Creating user with username: admin and email: admin@example.com
+2024-06-16T00:10:21.212448-0400SUCCESS
+create_user63User admin created successfully.
+2024-06-16T00:10:21.308882-0400DEBUG
+create_user43Creating user with username: testuser5 and email: test@example.com
+2024-06-16T00:10:21.690341-0400SUCCESS
+create_user63User testuser5 created successfully.
+2024-06-16T00:10:22.076446-0400DEBUG
+create_user43Creating user with username: testuser5 and email: test@example.com
+2024-06-16T00:10:22.485525-0400SUCCESS
+create_user63User testuser5 created successfully.
+2024-06-16T00:10:22.948645-0400DEBUG
+create_user43Creating user with username: testuser and email: None
+2024-06-16T00:10:22.949644-0400ERROR
+create_user69Value Error on creating user: Users must have an email address
+2024-06-16T00:10:22.951642-0400DEBUG
+create_user43Creating user with username: None and email: email@email.com
+2024-06-16T00:10:22.951642-0400ERROR
+create_user69Value Error on creating user: Users must have a username
+2024-06-16T00:10:23.047060-0400DEBUG
+create_user43Creating user with username: testuser1 and email: test_edge_password1@example.com
+2024-06-16T00:10:23.445995-0400SUCCESS
+create_user63User testuser1 created successfully.
+2024-06-16T00:10:23.446793-0400DEBUG
+create_user43Creating user with username: testuser2 and email: test_edge_password2@example.com
+2024-06-16T00:10:23.851966-0400SUCCESS
+create_user63User testuser2 created successfully.
+2024-06-16T00:10:23.852715-0400DEBUG
+create_user43Creating user with username: testuser3 and email: test_edge_password3@example.com
+2024-06-16T00:10:24.223503-0400SUCCESS
+create_user63User testuser3 created successfully.
+2024-06-16T00:10:24.226486-0400DEBUG
+create_user43Creating user with username: testuser and email: user&%$#@example.com
+2024-06-16T00:10:24.227485-0400ERROR
+create_user74Validation Error on creating user: ['Invalid email format']
+2024-06-16T00:10:24.230482-0400DEBUG
+create_user43Creating user with username: same and email: same@example.com
+2024-06-16T00:10:24.232479-0400ERROR
+create_user74Validation Error on creating user: ['Your password should NOT be the same as your username or email!']
+2024-06-16T00:10:24.234478-0400DEBUG
+create_user43Creating user with username: admin and email: test_reserved_users1@example.com
+2024-06-16T00:10:24.236487-0400ERROR
+create_user74Validation Error on creating user: ['admin has been reserved! Pick another one!']
+2024-06-16T00:10:24.237486-0400DEBUG
+create_user43Creating user with username: null and email: test_reserved_users2@example.com
+2024-06-16T00:10:24.240472-0400ERROR
+create_user74Validation Error on creating user: ['null has been reserved! Pick another one!']
+2024-06-16T00:10:24.240472-0400DEBUG
+create_user43Creating user with username: undefined and email: test_reserved_users3@example.com
+2024-06-16T00:10:24.242479-0400ERROR
+create_user74Validation Error on creating user: ['undefined has been reserved! Pick another one!']
+2024-06-16T00:10:24.244467-0400DEBUG
+create_user43Creating user with username: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa and email: testedge@example.com
+2024-06-16T00:10:24.611846-0400ERROR
+create_user74Validation Error on creating user: {'username': ['Ensure this value has at most 30 characters (it has 255).']}
+2024-06-16T00:10:24.613732-0400DEBUG
+create_user43Creating user with username: user!@# and email: test_username_special_chars1@example.com
+2024-06-16T00:10:24.615742-0400ERROR
+create_user74Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-16T00:10:24.616731-0400DEBUG
+create_user43Creating user with username: user name and email: test_username_special_chars2@example.com
+2024-06-16T00:10:24.618730-0400ERROR
+create_user74Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-16T00:10:24.619743-0400DEBUG
+create_user43Creating user with username: 😊👍 and email: test_username_special_chars3@example.com
+2024-06-16T00:10:24.635792-0400ERROR
+create_user74Validation Error on creating user: ['Username can only contain letters, numbers, hyphens, and underscores.']
+2024-06-16T00:10:24.646760-0400DEBUG
+create_user43Creating user with username: testuser_for_unusual_email1 and email: user+something@example.com
+2024-06-16T00:10:25.020508-0400SUCCESS
+create_user63User testuser_for_unusual_email1 created successfully.
+2024-06-16T00:10:25.021503-0400DEBUG
+create_user43Creating user with username: testuser_for_unusual_email2 and email: user@subdomain.example.com
+2024-06-16T00:10:25.396299-0400SUCCESS
+create_user63User testuser_for_unusual_email2 created successfully.
+2024-06-16T00:10:25.398299-0400DEBUG
+create_user43Creating user with username: testuser and email: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com
+2024-06-16T00:10:25.769072-0400ERROR
+create_user74Validation Error on creating user: {'email': ['Ensure this value has at most 50 characters (it has 262).']}
+2024-06-16T00:10:25.878101-0400DEBUG
+create_user43Creating user with username: testuser and email: testuser@example.com
+2024-06-16T00:10:26.264276-0400SUCCESS
+create_user63User testuser created successfully.
+2024-06-16T00:10:26.363080-0400DEBUG
+create_user43Creating user with username: testuser1 and email: test1@example.com
+2024-06-16T00:10:26.764666-0400SUCCESS
+create_user63User testuser1 created successfully.
+2024-06-16T00:10:26.765665-0400DEBUG
+create_user43Creating user with username: testuser2 and email: test1@example.com
+2024-06-16T00:10:26.767676-0400ERROR
+create_user74Validation Error on creating user: ['Email already Exists: test1@example.com']
+2024-06-16T00:10:26.770658-0400DEBUG
+create_user43Creating user with username: testuser and email: invalidemail
+2024-06-16T00:10:26.772656-0400ERROR
+create_user74Validation Error on creating user: ['Invalid email format']
+2024-06-16T00:10:26.775653-0400DEBUG
+create_user43Creating user with username: testuser and email: test@example.com
+2024-06-16T00:10:27.186525-0400SUCCESS
+create_user63User testuser created successfully.

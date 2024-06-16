@@ -74,6 +74,14 @@ def get_menu_examples(request):
     return HttpResponse(template.render(context, request))
 
 
+def get_button_example_minimal(request):
+    template = loader.get_template(
+        'BaseApp/ui_elements/partials/buttons/button_example_minimal.html')
+    context = {
+    }
+    return HttpResponse(template.render(context, request))
+
+
 class ComponentsView(BaseView):
     template_name = 'BaseApp/components.html'
     title = "Components"
@@ -102,10 +110,8 @@ class TypographyView(BaseView):
 @require_POST
 def display_number(request):
     try:
-        # Retrieve the button value from the POST data
+        # Retrieve the button value from the POST daa
         number = request.POST.get('number')
-        # Log the POST data (for debugging)
-        module_logger.info(f"POST data: {request.POST}")
         # Log the received number (for debugging)
         module_logger.info(f"Received number: {number}")
 

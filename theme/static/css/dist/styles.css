@@ -1552,6 +1552,12 @@ select {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -2119,6 +2125,10 @@ select {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-black\/60 {
+  color: rgb(0 0 0 / 0.6);
+}
+
 .text-black\/70 {
   color: rgb(0 0 0 / 0.7);
 }
@@ -2159,6 +2169,10 @@ select {
 
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
+}
+
+.text-black\/50 {
+  color: rgb(0 0 0 / 0.5);
 }
 
 .opacity-0 {

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import BaseView, HomeView, UIElementView, ComponentsView, DocumentationView, ButtonsView, CardsView, TypographyView, get_django_info, get_tailwind_info, get_htmx_info, get_buttons_examples, get_menu_examples, display_number
+from .views import BaseView, HomeView, UIElementView, ComponentsView, DocumentationView, ButtonsView, CardsView, TypographyView, get_django_info, get_tailwind_info, get_htmx_info, get_buttons_examples, get_menu_examples, display_number, get_button_example_minimal
 
 urlpatterns = [
     path('', BaseView.as_view(), name='base'),
@@ -19,4 +19,6 @@ urlpatterns = [
     path('ui-elements/menus/examples/',
          get_menu_examples, name="menus-examples"),
     path('display_number/', display_number, name="display_number"),
+    path('ui-elements/buttons/examples/minimal/',
+         get_button_example_minimal, name="button-example-minimal"),
 ]

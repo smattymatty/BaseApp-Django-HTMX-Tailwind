@@ -183,13 +183,13 @@ This project provides a collection of JavaScript modules designed to supercharge
 **without the need for any custom JavaScript code**.
 Simply load the corresponding template tags, add some data attributes to your HTML elements, and let the magic happen!
 
-- Seamless Django Integration: The modules are built to work effortlessly with Django's templating system.
-- Zero JavaScript Overhead: You don't need to write or manage any custom JavaScript code.
-- Enhanced User Experience: Add rich interactivity to your web pages with minimal effort.
-- Customizable: Tailor the modules to your specific design and functionality needs using intuitive data attributes.
+- **Seamless Django Integration:** The modules are built to work effortlessly with Django's templating system.
+- **Zero JavaScript Overhead:** You don't need to write or manage any custom JavaScript code.
+- **Enhanced User Experience:** Add rich interactivity to your web pages with minimal effort.
+- **Customizable:** Tailor the modules to your specific design and functionality needs using intuitive data attributes.
 
 ## ToggledButtonGroup
-Visit [BaseApp/button_examples.html](BaseApp/templates/BaseApp//ui_elements/sections/buttons_examples.html) for an example.
+[button_example_1]](BaseApp/ui_elements/partials/button_example_1.html) for an example.
 ![Gif of buttons changing](https://i.imgur.com/lfe5AWF.gif)
 The `ToggledButtonGroup` class allows you to create interactive button groups where only one button can be active at a time. Clicking a button toggles its active state. You can customize the appearance of active buttons, choose the initially active button, and easily manage multiple button groups on your page.
 
@@ -199,7 +199,7 @@ The `ToggledButtonGroup` class allows you to create interactive button groups wh
 
 ```html
 {% load button_group_tags %}
-<form id="myButtonGroup-button-group"> 
+<form id="myButtonGroup-toggled-button-group"> 
     <button>Button 1</button>
     <button>Button 2</button>
     <button>Button 3</button>
@@ -208,7 +208,7 @@ The `ToggledButtonGroup` class allows you to create interactive button groups wh
 
 - load the `button_group_tags` template tag
 
-- Create a container with an ID ending in "-button-group".
+- Create a container with an ID ending in "-toggled-button-group".
     - The container does not have to be a form, but it is recommended for `hx-post` integration.
 - Place your buttons inside this container.
 
@@ -217,7 +217,7 @@ The `ToggledButtonGroup` class allows you to create interactive button groups wh
 2. **Customize with Data Attributes (Optional)**:
 
 ```html
-<form id="myButtonGroup-button-group"
+<form id="myButtonGroup-toggled-button-group"
      data-active-class="bg-blue-500 text-white"
      data-initial-active="2">
 </form>
@@ -235,7 +235,7 @@ The `ToggledButtonGroup` class allows you to create interactive button groups wh
 3. **Initialize with the Django Template Tag**:
 
 ```html
-<div id="myButtonGroup-button-group">
+<div id="myButtonGroup-toggled-button-group">
     ...
 </div>
 {% init_button_groups "myButtonGroup" %} 
@@ -244,15 +244,15 @@ The `ToggledButtonGroup` class allows you to create interactive button groups wh
 - You can initialize all button groups on the page with `{% init_button_groups %}` or you can initialize a specific button groups with `{% init_button_groups "name1" "name2" "name3" %}`.
 
 ### HTMX Integration (GET)
-The `ToggledButtonGroup` class seamlessly integrates with HTMX. If your buttons have the `hx-get` attribute, the `ToggledButtonGroup` class will automatically update the page based on the `data-initial-active` attribute.
+The ToggledButtonGroup class seamlessly integrates with HTMX. When your buttons include the hx-get attribute, HTMX will automatically handle fetching and updating the content based on the initially active button (as specified by the data-initial-active attribute).
 
-- **HTMX Attributes:** Add HTMX attributes to the buttons within your button group container. The most common attributes you'll use are:
+- **HTMX Attributes**: Add standard HTMX attributes to the buttons within your button group container:
     - `hx-get`: Specifies the URL to fetch when the button is clicked.
     - `hx-target`: Specifies the element on the page to update with the content returned by the HTMX request.
     - `hx-swap`: Specifies how the returned content should be swapped into the target element (e.g., "innerHTML", "outerHTML", "beforeend").
 **Example:**
 ```html
-<div id="myButtonGroup-button-group"
+<div id="myButtonGroup-toggled-button-group"
      data-initial-active="random">
     <button hx-get="/get-content-1" 
             hx-target="#contentArea"
@@ -277,12 +277,12 @@ In this example, the initial active button is randomly selected, and will automa
 
 ### HTMX Integration (POST)
 
-The ToggledButtonGroup class automates the process of sending POST requests using HTMX when a button in the group is intially activated. Follow these steps to integrate POST requests into your button group:
+The ToggledButtonGroup class automates sending POST requests using HTMX when a button in the group is initially activated.
 
 1. Include Django's CSRF Token:
 - To ensure the security of your POST requests, include Django's CSRF token in your form element. Django provides a convenient template tag for this:
 ```html
-<form id="myButtonGroup-button-group">
+<form id="myButtonGroup-toggled-button-group">
     {% csrf_token %}
     ...
 </form>
@@ -332,7 +332,7 @@ def display_number(request):
 **Full Example:**
 ```html
 {% load button_group_tags %}
-<div id="myButtonGroup-button-group" 
+<div id="myButtonGroup-toggled-button-group" 
     data-active-class="bg-blue-500 text-white" data-initial-active="random">
     <button hx-post="{% url 'BaseApp:display_number' %}"
             hx-trigger="mousedown"

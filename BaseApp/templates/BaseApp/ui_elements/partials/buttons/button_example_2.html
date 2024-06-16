@@ -1,8 +1,9 @@
+{% load button_group_tags %}
 <div class="flex flex-col space-y-2 border border-y-4 border-black/10 rounded-lg p-4 bg-slate-200/100">
     <h4 class="text-lg font-bold text-center text-black/70">
         Responsive Buttons, toggled active, various sizes, initial random, light theme
     </h4>
-    <form id="example2-button-group"
+    <form id="example2-toggled-button-group"
           data-active-class="bg-white hover:bg-white font-bold text-black border-b-4 border-black/60"
           data-initial-active="random"
           class="flex flex-wrap gap-2 justify-center transition-all duration-300 ease-linear">
@@ -55,3 +56,4 @@
     </form>
     <div id="result-container2" class="text-black/80"></div>
 </div>
+{% init_toggled_button_groups "example2" %}

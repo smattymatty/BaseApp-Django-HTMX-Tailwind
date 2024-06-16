@@ -116,3 +116,33 @@ LINE 1: ...profile"."user_id", "UsersApp_profile"."history", "UsersApp_...
 	 Creating Profile for testuser1
 2024-06-02T00:28:31.137965-0400 -- DEBUG -- create_user_profile -- line 63
 	 Creating Profile for testuser
+2024-06-16T00:10:19.431001-0400DEBUG
+create_user_profile63Creating Profile for testuser4
+2024-06-16T00:10:19.834875-0400DEBUG
+create_user_profile63Creating Profile for testuser3
+2024-06-16T00:10:20.336489-0400DEBUG
+create_user_profile63Creating Profile for testuser
+2024-06-16T00:10:20.721474-0400DEBUG
+create_user_profile63Creating Profile for testuser2
+2024-06-16T00:10:21.208453-0400DEBUG
+create_user_profile63Creating Profile for admin
+2024-06-16T00:10:21.686336-0400DEBUG
+create_user_profile63Creating Profile for testuser5
+2024-06-16T00:10:22.482449-0400DEBUG
+create_user_profile63Creating Profile for testuser5
+2024-06-16T00:10:23.440996-0400DEBUG
+create_user_profile63Creating Profile for testuser1
+2024-06-16T00:10:23.848982-0400DEBUG
+create_user_profile63Creating Profile for testuser2
+2024-06-16T00:10:24.220491-0400DEBUG
+create_user_profile63Creating Profile for testuser3
+2024-06-16T00:10:25.018509-0400DEBUG
+create_user_profile63Creating Profile for testuser_for_unusual_email1
+2024-06-16T00:10:25.393438-0400DEBUG
+create_user_profile63Creating Profile for testuser_for_unusual_email2
+2024-06-16T00:10:26.261279-0400DEBUG
+create_user_profile63Creating Profile for testuser
+2024-06-16T00:10:26.761686-0400DEBUG
+create_user_profile63Creating Profile for testuser1
+2024-06-16T00:10:27.183527-0400DEBUG
+create_user_profile63Creating Profile for testuser
