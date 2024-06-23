@@ -5029,3 +5029,7 @@ create_user74Validation Error on creating user: ['Invalid email format']
 create_user43Creating user with username: testuser and email: test@example.com
 2024-06-16T00:10:27.186525-0400SUCCESS
 create_user63User testuser created successfully.
+2024-06-18T19:52:05.915172-0400DEBUG
+create_user43Creating user with username: admin and email: admin@admin.com
+2024-06-18T19:52:06.500816-0400SUCCESS
+create_user63User admin created successfully.

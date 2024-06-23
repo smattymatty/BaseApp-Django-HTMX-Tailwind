@@ -2,7 +2,6 @@ import re
 
 from django import template
 from django.templatetags.static import static
-from django.utils.html import escapejs
 from django.utils.safestring import mark_safe
 
 from BaseApp.exceptions import TemplateTagInitError
@@ -15,8 +14,8 @@ register = template.Library()
 VALID_GROUP_ID_PATTERN = re.compile(r'^[a-zA-Z0-9_\-]+$')
 
 
-@register.simple_tag
-def init_toggled_button_groups(*group_ids: str):
+@register.simple_tag(takes_context=True)
+def init_toggled_button_groups(context, *group_ids: str):
     """
     Generates the JavaScript code to initialize ToggledButtonGroup instances.
     Args:
@@ -39,8 +38,8 @@ def init_toggled_button_groups(*group_ids: str):
             raise TemplateTagInitError(
                 f"Group ID '{group_id}' contains invalid characters. Only alphanumeric characters, hyphens, and underscores are allowed.", reserved_suffix
             )
-    # Escape group_ids to ensure no XSS injection can happen
-    escaped_group_ids = [escapejs(group_id) for group_id in group_ids]
+    context['TOGGLED_BUTTON_GROUPS_INITIALIZED'] = True
+
     module_path = static("BaseApp/modules/ToggledButtonGroup.mjs")
     js_code = f"""
         <script type="module">

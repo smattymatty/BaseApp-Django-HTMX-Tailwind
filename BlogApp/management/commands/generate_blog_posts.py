@@ -1,4 +1,4 @@
-# blog_app/management/commands/generate_blog_posts.py
+# pylint: disable=no-member
 import random
 
 from faker import Faker

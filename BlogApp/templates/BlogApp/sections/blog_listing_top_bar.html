@@ -3,6 +3,7 @@
     <form id="blog-search-form" class="flex flex-grow">
         {% csrf_token %}
         <div class="w-full flex flex-grow">
+            <!-- this input will be submitted when the user stops typing -->
             <input id="blog-search-input"
                    type="text"
                    name="search_query"
