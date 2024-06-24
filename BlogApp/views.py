@@ -6,7 +6,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.http import require_http_methods
 
 import BlogApp.logic as logic
-from BaseApp.views import BaseView
+from BaseApp.views import BasePage
 from BaseApp.utils import get_module_logger
 from core import settings
 
@@ -15,9 +15,11 @@ from .models import BlogCategory, BlogPost
 module_logger = get_module_logger("views", __file__)
 
 
-class BlogView(BaseView):
-    template_name = 'BlogApp/blog.html'
+class BlogView(BasePage):
+    template_name = 'BlogApp/base.html'
     title = "Blog"
+    page_description = "Welcome to my blog where I will be sharing my thoughts and experiences on various topics related to web development."
+    extended_header = True
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

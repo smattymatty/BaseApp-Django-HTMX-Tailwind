@@ -5,3 +5,10 @@ venv/
 credentials.py
 /htmlcov/
 .coverage
+__pycache__/
+*.pyc
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/

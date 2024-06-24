@@ -5033,3 +5033,17 @@ create_user63User testuser created successfully.
 create_user43Creating user with username: admin and email: admin@admin.com
 2024-06-18T19:52:06.500816-0400SUCCESS
 create_user63User admin created successfully.
+2024-06-23T01:31:12.740298-0400DEBUG
+create_user43Creating user with username: admin and email: admin@admin.py
+2024-06-23T01:31:13.212262-0400SUCCESS
+create_user63User admin created successfully.
+2024-06-23T01:32:34.379167-0400DEBUG
+create_user43Creating user with username: admin and email: admin@admin.com
+2024-06-23T01:32:34.757359-0400ERROR
+create_user74Validation Error on creating user: {'username': ['User with this Username already exists.']}
+2024-06-23T01:32:34.758345-0400ERROR
+create_superuser119Validation Error on creating superuser: {'username': ['User with this Username already exists.']}
+2024-06-23T01:33:02.183023-0400DEBUG
+create_user43Creating user with username: admin2 and email: admin2@admin.com
+2024-06-23T01:33:02.600385-0400SUCCESS
+create_user63User admin2 created successfully.

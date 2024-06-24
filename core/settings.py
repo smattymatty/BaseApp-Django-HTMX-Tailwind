@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'BaseApp',
     'UsersApp',
     'BlogApp',
-    'HtmxApp',
+    'FlashCardApp',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

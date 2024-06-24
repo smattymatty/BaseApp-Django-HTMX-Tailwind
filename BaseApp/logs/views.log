@@ -3076,3 +3076,443 @@ get_blog_post_list36page_number=1, search_query=''
 get_blog_post_list36page_number=1, search_query='west'
 2024-06-21T13:35:22.790380-0400DEBUG
 get_blog_post_list36page_number=1, search_query=''
+2024-06-22T23:16:07.021429-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-22T23:41:38.424327-0400DEBUG
+get_tailwind_info38get_tailwind_info
+2024-06-22T23:43:19.445048-0400DEBUG
+get_tailwind_info38get_tailwind_info
+2024-06-22T23:50:44.306657-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-22T23:51:05.711172-0400INFO
+display_number120Received number: 0
+2024-06-22T23:51:05.717166-0400INFO
+display_number120Received number: 3
+2024-06-22T23:51:36.428887-0400INFO
+display_number120Received number: 0
+2024-06-22T23:51:36.433880-0400INFO
+display_number120Received number: 1
+2024-06-22T23:54:43.582971-0400DEBUG
+get_tailwind_info42get_tailwind_info
+2024-06-22T23:54:54.221732-0400INFO
+display_number120Received number: 0
+2024-06-22T23:54:54.225727-0400INFO
+display_number120Received number: 3
+2024-06-22T23:55:07.503533-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:07.506532-0400INFO
+display_number120Received number: 4
+2024-06-22T23:55:09.271688-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:09.272679-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:10.564787-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:10.565785-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:12.025238-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:12.026236-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:13.386340-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:13.387339-0400INFO
+display_number120Received number: 1
+2024-06-22T23:55:14.786797-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:14.787795-0400INFO
+display_number120Received number: 4
+2024-06-22T23:55:17.505687-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:17.506685-0400INFO
+display_number120Received number: 4
+2024-06-22T23:55:18.989510-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:18.991090-0400INFO
+display_number120Received number: 3
+2024-06-22T23:55:20.503124-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:20.510103-0400INFO
+display_number120Received number: 4
+2024-06-22T23:55:32.420819-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:32.421817-0400INFO
+display_number120Received number: 4
+2024-06-22T23:55:34.369115-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:34.370114-0400INFO
+display_number120Received number: 4
+2024-06-22T23:55:37.375509-0400INFO
+display_number120Received number: 3
+2024-06-22T23:55:37.920840-0400INFO
+display_number120Received number: 2
+2024-06-22T23:55:38.613906-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:38.944841-0400INFO
+display_number120Received number: 3
+2024-06-22T23:55:39.241095-0400INFO
+display_number120Received number: 1
+2024-06-22T23:55:39.554365-0400INFO
+display_number120Received number: 4
+2024-06-22T23:55:39.879978-0400INFO
+display_number120Received number: 2
+2024-06-22T23:55:40.445884-0400INFO
+display_number120Received number: 0
+2024-06-22T23:55:40.833580-0400INFO
+display_number120Received number: 3
+2024-06-22T23:55:42.167643-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-22T23:55:47.238918-0400DEBUG
+get_blog_post_list36page_number=1, search_query='ba'
+2024-06-22T23:55:49.462354-0400DEBUG
+get_blog_post_list36page_number=1, search_query='res'
+2024-06-22T23:55:51.682612-0400DEBUG
+get_blog_post_list36page_number=2, search_query='res'
+2024-06-22T23:55:52.082175-0400DEBUG
+get_blog_post_list36page_number=3, search_query='res'
+2024-06-22T23:55:56.915268-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-22T23:55:57.437061-0400DEBUG
+get_blog_post_list36page_number=2, search_query=''
+2024-06-22T23:55:57.876151-0400DEBUG
+get_blog_post_list36page_number=3, search_query=''
+2024-06-22T23:55:58.604129-0400DEBUG
+get_blog_post_list36page_number=4, search_query=''
+2024-06-22T23:55:59.160111-0400DEBUG
+get_blog_post_list36page_number=5, search_query=''
+2024-06-22T23:56:00.122592-0400DEBUG
+get_blog_post_list36page_number=6, search_query=''
+2024-06-22T23:56:00.783795-0400DEBUG
+get_blog_post_list36page_number=7, search_query=''
+2024-06-22T23:56:01.764280-0400DEBUG
+get_blog_post_list36page_number=8, search_query=''
+2024-06-22T23:56:02.278781-0400DEBUG
+get_blog_post_list36page_number=9, search_query=''
+2024-06-22T23:56:03.166534-0400DEBUG
+get_blog_post_list36page_number=10, search_query=''
+2024-06-22T23:56:04.245115-0400DEBUG
+get_blog_post_list36page_number=11, search_query=''
+2024-06-22T23:56:06.051720-0400DEBUG
+get_blog_post_list36page_number=12, search_query=''
+2024-06-22T23:56:10.156293-0400DEBUG
+get_blog_post_list36page_number=13, search_query=''
+2024-06-22T23:56:26.833257-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-22T23:56:26.966415-0400DEBUG
+get_blog_post_list36page_number=2, search_query=''
+2024-06-22T23:56:27.038959-0400DEBUG
+get_blog_post_list36page_number=3, search_query=''
+2024-06-22T23:56:36.770653-0400DEBUG
+get_blog_post_list36page_number=4, search_query=''
+2024-06-22T23:56:39.932425-0400DEBUG
+get_blog_post_list36page_number=5, search_query=''
+2024-06-22T23:56:43.498242-0400DEBUG
+get_blog_post_list36page_number=6, search_query=''
+2024-06-22T23:56:48.336042-0400DEBUG
+get_blog_post_list36page_number=7, search_query=''
+2024-06-23T00:07:20.031073-0400DEBUG
+get_tailwind_info42get_tailwind_info
+2024-06-23T00:07:26.454036-0400DEBUG
+get_tailwind_info42get_tailwind_info
+2024-06-23T00:09:15.963504-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:09:19.157094-0400DEBUG
+get_blog_post_list36page_number=2, search_query=''
+2024-06-23T00:09:21.281363-0400DEBUG
+get_blog_post_list36page_number=3, search_query=''
+2024-06-23T00:09:21.974523-0400DEBUG
+get_blog_post_list36page_number=4, search_query=''
+2024-06-23T00:09:23.168580-0400DEBUG
+get_blog_post_list36page_number=5, search_query=''
+2024-06-23T00:09:33.950013-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:09:39.856766-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:10:10.522606-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:10:48.266791-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:12:16.368505-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:12:57.769388-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:12:58.766071-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:13:03.279619-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:13:04.312261-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:13:32.205724-0400DEBUG
+get_blog_post_list36page_number=1, search_query=''
+2024-06-23T00:14:10.575878-0400DEBUG
+get_blog_post_list37page_number=1, search_query=''
+2024-06-23T00:15:14.522528-0400DEBUG
+get_blog_post_list37page_number=1, search_query=''
+2024-06-23T00:15:17.310099-0400DEBUG
+get_blog_post_list37page_number=1, search_query=''
+2024-06-23T00:15:43.221950-0400DEBUG
+get_blog_post_list37page_number=1, search_query=''
+2024-06-23T00:16:12.348517-0400DEBUG
+get_blog_post_list37page_number=1, search_query=''
+2024-06-23T00:16:32.856909-0400DEBUG
+get_blog_post_list37page_number=1, search_query=''
+2024-06-23T00:16:58.553308-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:17:26.326109-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:17:27.804119-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:17:44.499014-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:17:48.538872-0400DEBUG
+get_blog_post_list38page_number=2, search_query=''
+2024-06-23T00:18:37.373987-0400INFO
+display_number124Received number: 0
+2024-06-23T00:18:37.376985-0400INFO
+display_number124Received number: 2
+2024-06-23T00:19:25.063593-0400INFO
+display_number124Received number: 0
+2024-06-23T00:19:25.069700-0400INFO
+display_number124Received number: 3
+2024-06-23T00:19:49.726324-0400INFO
+display_number124Received number: 0
+2024-06-23T00:19:49.728320-0400INFO
+display_number124Received number: 2
+2024-06-23T00:19:51.433678-0400INFO
+display_number124Received number: 0
+2024-06-23T00:19:51.435674-0400INFO
+display_number124Received number: 0
+2024-06-23T00:19:52.263170-0400INFO
+display_number124Received number: 0
+2024-06-23T00:19:52.264171-0400INFO
+display_number124Received number: 2
+2024-06-23T00:19:54.692205-0400INFO
+display_number124Received number: 0
+2024-06-23T00:19:54.693204-0400INFO
+display_number124Received number: 3
+2024-06-23T00:26:12.724749-0400INFO
+display_number124Received number: 0
+2024-06-23T00:26:12.726747-0400INFO
+display_number124Received number: 4
+2024-06-23T00:27:22.627848-0400INFO
+display_number126Received number: 0
+2024-06-23T00:27:22.630846-0400INFO
+display_number126Received number: 4
+2024-06-23T00:27:42.387325-0400INFO
+display_number126Received number: 0
+2024-06-23T00:27:42.399649-0400INFO
+display_number126Received number: 2
+2024-06-23T00:27:50.742423-0400INFO
+display_number126Received number: 0
+2024-06-23T00:27:50.748416-0400INFO
+display_number126Received number: 0
+2024-06-23T00:27:59.190569-0400INFO
+display_number126Received number: 0
+2024-06-23T00:27:59.198561-0400INFO
+display_number126Received number: 0
+2024-06-23T00:28:11.490506-0400INFO
+display_number126Received number: 0
+2024-06-23T00:28:11.493503-0400INFO
+display_number126Received number: 0
+2024-06-23T00:28:34.300405-0400INFO
+display_number126Received number: 0
+2024-06-23T00:28:34.309395-0400INFO
+display_number126Received number: 1
+2024-06-23T00:28:44.324124-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:29:08.802305-0400INFO
+display_number126Received number: 0
+2024-06-23T00:29:08.806225-0400INFO
+display_number126Received number: 2
+2024-06-23T00:29:11.872928-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:29:17.301081-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:29:19.002416-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:29:22.235902-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:29:31.202543-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:29:45.712626-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:29:52.867880-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:30:10.019403-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:30:54.805206-0400INFO
+display_number126Received number: 0
+2024-06-23T00:30:54.810199-0400INFO
+display_number126Received number: 4
+2024-06-23T00:30:56.304042-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:31:01.720991-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:31:04.186266-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:31:06.190096-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:31:16.604610-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:31:19.611712-0400INFO
+display_number126Received number: 0
+2024-06-23T00:31:19.617705-0400INFO
+display_number126Received number: 0
+2024-06-23T00:31:20.966133-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:31:52.777139-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:31:56.491686-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:32:41.072844-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:32:44.669628-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:33:09.063199-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:33:45.387471-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:33:51.466671-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:33:55.034110-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:34:10.858662-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:34:14.139583-0400INFO
+display_number126Received number: 0
+2024-06-23T00:34:14.143580-0400INFO
+display_number126Received number: 1
+2024-06-23T00:34:16.497534-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:34:23.316254-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:34:32.920051-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:34:41.004316-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:34:53.285169-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:34:56.834314-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:35:00.609490-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:35:05.213403-0400INFO
+display_number126Received number: 0
+2024-06-23T00:35:05.216399-0400INFO
+display_number126Received number: 2
+2024-06-23T00:35:28.927016-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:35:47.797335-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:35:57.391878-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:35:59.813511-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:36:01.687364-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:36:06.282483-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:36:09.909215-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:36:25.897131-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:36:29.231256-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:36:30.839208-0400INFO
+display_number126Received number: 0
+2024-06-23T00:36:30.847200-0400INFO
+display_number126Received number: 4
+2024-06-23T00:37:58.652548-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:38:48.764211-0400INFO
+display_number126Received number: 0
+2024-06-23T00:38:48.769210-0400INFO
+display_number126Received number: 1
+2024-06-23T00:38:49.796503-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:38:57.708224-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:39:02.666840-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:39:05.191157-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:39:12.461198-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:39:16.138661-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T00:40:11.689284-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:40:24.528113-0400DEBUG
+get_blog_post_list38page_number=2, search_query=''
+2024-06-23T00:40:59.608661-0400DEBUG
+get_blog_post_list38page_number=3, search_query=''
+2024-06-23T00:41:11.026181-0400DEBUG
+get_blog_post_list38page_number=4, search_query=''
+2024-06-23T00:41:11.859551-0400DEBUG
+get_blog_post_list38page_number=5, search_query=''
+2024-06-23T00:41:12.828275-0400DEBUG
+get_blog_post_list38page_number=6, search_query=''
+2024-06-23T00:41:15.042199-0400DEBUG
+get_blog_post_list38page_number=7, search_query=''
+2024-06-23T00:41:19.125539-0400DEBUG
+get_blog_post_list38page_number=8, search_query=''
+2024-06-23T00:42:37.838173-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:43:07.010728-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:43:07.165568-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T00:43:09.541207-0400DEBUG
+get_tailwind_info46get_tailwind_info
+2024-06-23T23:05:21.723416-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T23:05:23.259978-0400DEBUG
+get_tailwind_info47get_tailwind_info
+2024-06-23T23:05:26.951806-0400INFO
+display_number127Received number: 0
+2024-06-23T23:05:26.960797-0400INFO
+display_number127Received number: 0
+2024-06-23T23:05:28.740847-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-23T23:46:37.010825-0400DEBUG
+get_tailwind_info47get_tailwind_info
+2024-06-23T23:46:38.744852-0400DEBUG
+get_tailwind_info47get_tailwind_info
+2024-06-23T23:55:33.166112-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-24T00:09:38.727327-0400DEBUG
+get_blog_post_list38page_number=1, search_query=''
+2024-06-24T00:09:40.419017-0400INFO
+display_number127Received number: 0
+2024-06-24T00:09:40.535982-0400INFO
+display_number127Received number: 4
+2024-06-24T00:09:42.685466-0400INFO
+display_number127Received number: 0
+2024-06-24T00:09:42.715066-0400INFO
+display_number127Received number: 3
+2024-06-24T00:09:44.163183-0400INFO
+display_number127Received number: 0
+2024-06-24T00:09:44.182162-0400INFO
+display_number127Received number: 2
+2024-06-24T00:09:45.919229-0400INFO
+display_number127Received number: 0
+2024-06-24T00:09:45.923223-0400INFO
+display_number127Received number: 1
+2024-06-24T00:09:46.670906-0400INFO
+display_number127Received number: 0
+2024-06-24T00:09:46.674903-0400INFO
+display_number127Received number: 4
+2024-06-24T00:09:47.443272-0400INFO
+display_number127Received number: 0
+2024-06-24T00:09:47.447269-0400INFO
+display_number127Received number: 1
+2024-06-24T00:09:49.231890-0400INFO
+display_number127Received number: 0
+2024-06-24T00:09:49.231890-0400INFO
+display_number127Received number: 1
+2024-06-24T00:09:51.082677-0400INFO
+display_number127Received number: 0
+2024-06-24T00:09:51.083688-0400INFO
+display_number127Received number: 3
+2024-06-24T02:54:28.624460-0400DEBUG
+get_tailwind_info47get_tailwind_info

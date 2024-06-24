@@ -1,0 +1,27 @@
+{% extends 'BaseApp/base.html' %}
+{% block content %}
+    <h1 class="base-font text-2xl w-full text-center font-bold py-2 -mt-2 rounded-t-lg bg-gradient-to-r from-black/20 from-10% via-blue-300/10 via-50% to-black/20 to-90% border-b-4 border-white/10">
+        {% if title %}
+        {{ title }}
+        {% endif %}
+    </h1>
+    <div class="bg-black/30 border-b-2 border-black/50 shadow-lg
+    {% if not extended_header %}
+    rounded-b-lg mb-4
+    {% endif %}">
+        {% if page_description %}
+        <p class="text-center text-lg py-2 prose w-full mx-auto text-white/40">
+            {{ page_description }}
+        </p>
+        {% endif %}
+        {% if page_disclaimer %}
+        <p class="text-center text-base py-2 prose w-full mx-auto text-white/40
+        {% if not extended_header %}
+        pb-3
+        {% endif %}">
+            {{ page_disclaimer }}
+        </p>
+        {% endif %}
+    </div>
+    {% block main_content %}{% endblock %}
+{% endblock content %}

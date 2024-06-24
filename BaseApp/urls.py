@@ -1,8 +1,13 @@
 from django.urls import path
-from .views import BaseView, HomeView, UIElementView, ComponentsView, DocumentationView, ButtonsView, CardsView, TypographyView, get_django_info, get_tailwind_info, get_htmx_info, get_buttons_examples, get_menu_examples, display_number, get_button_example_minimal
+from .views import (
+    BasePage, HomeView, UIElementView, ComponentsView, DocumentationView,
+    ButtonsView, CardsView, TypographyView, get_django_info, get_tailwind_info,
+    get_htmx_info, get_buttons_examples, get_menu_examples, display_number,
+    get_button_example_minimal
+)
 
 urlpatterns = [
-    path('', BaseView.as_view(), name='base'),
+    path('', BasePage.as_view(), name='base'),
     path('home/', HomeView.as_view(), name="home"),
     path('ui-elements/', UIElementView.as_view(), name="ui-elements"),
     path('ui-elements/buttons/', ButtonsView.as_view(), name="buttons"),

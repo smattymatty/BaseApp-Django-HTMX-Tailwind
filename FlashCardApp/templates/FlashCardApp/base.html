@@ -1,0 +1,12 @@
+{% extends 'BaseApp/layouts/page_layout.html' %}
+{% block main_content %}
+    <div hx-get="{% url 'FlashCardApp:deck_list' %}"
+         hx-target="#flash-card-app-container"
+         hx-swap="innerHTML"
+         hx-trigger="load"
+         hx-indicator="#flash-card-app-container"
+         id="flash-card-app-container"
+         class="bg-black/30 py-2 border-b-2 border-black/50 shadow-lg">
+        <p class="text-center text-lg py-2 prose w-full mx-auto text-white/40">This is a flash card app.</p>
+    </div>
+{% endblock %}

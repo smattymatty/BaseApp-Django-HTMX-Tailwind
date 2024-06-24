@@ -28,6 +28,6 @@ navbar_items = {
         DropdownNavItem("Home", reverse('BaseApp:home')),
     ],
     "Tools": [
-        DropdownNavItem("Home", reverse('BaseApp:home')),
+        DropdownNavItem("Flash Cards", reverse('FlashCardApp:base')),
     ],
 }

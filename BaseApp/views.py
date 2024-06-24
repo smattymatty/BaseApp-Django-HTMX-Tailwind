@@ -11,19 +11,28 @@ from BaseApp.utils import get_module_logger
 module_logger = get_module_logger("views", __file__)
 
 
-class BaseView(TemplateView):
+class BasePage(TemplateView):
     template_name = 'BaseApp/base.html'
     title = "Base"
+    page_description = "This is a base template for all pages."
+    page_disclaimer = ""
+    extended_header = False
 
     def get_context_data(self, **kwargs: Any) -> dict:
         context = super().get_context_data(**kwargs)
         context['title'] = self.title
+        context['page_description'] = self.page_description
+        context['page_disclaimer'] = self.page_disclaimer
+        context['extended_header'] = self.extended_header
         return context
 
 
-class HomeView(BaseView):
+class HomeView(BasePage):
     template_name = 'BaseApp/home/home.html'
     title = "Home"
+    page_description = "I am a hobby developer who loves to learn and tinker with new technologies."
+    page_disclaimer = "This website is a personal project to learn more about web development and to share my knowledge with others."
+    extended_header = True
 
 
 def get_django_info(request):
@@ -53,9 +62,11 @@ def get_htmx_info(request):
     return HttpResponse(template.render(context, request))
 
 
-class UIElementView(BaseView):
-    template_name = 'BaseApp/ui_elements/ui-elements.html'
-    title = "UI Elements"
+class UIElementView(BasePage):
+    template_name = 'BaseApp/ui_elements/base.html'
+    title = "User Interface Elements"
+    page_description = ""
+    extended_header = True
 
 
 def get_buttons_examples(request):
@@ -82,27 +93,27 @@ def get_button_example_minimal(request):
     return HttpResponse(template.render(context, request))
 
 
-class ComponentsView(BaseView):
+class ComponentsView(BasePage):
     template_name = 'BaseApp/components.html'
     title = "Components"
 
 
-class DocumentationView(BaseView):
+class DocumentationView(BasePage):
     template_name = 'BaseApp/documentation.html'
     title = "Documentation"
 
 
-class ButtonsView(BaseView):
+class ButtonsView(BasePage):
     template_name = "BaseApp/ui_elements/buttons.html"
     title = "UI Elements - Buttons"
 
 
-class CardsView(BaseView):
+class CardsView(BasePage):
     template_name = "BaseApp/ui_elements/cards.html"
     title = "UI Elements - Cards"
 
 
-class TypographyView(BaseView):
+class TypographyView(BasePage):
     template_name = "BaseApp/ui_elements/typography.html"
     title = "UI Elements - Typography"
 

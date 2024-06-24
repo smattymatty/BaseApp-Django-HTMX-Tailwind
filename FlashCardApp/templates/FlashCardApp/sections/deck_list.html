@@ -1,0 +1,15 @@
+<h2 class="text-2xl font-bold text-center">Decks</h2>
+<div class="container mx-auto p-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {% for deck in decks %}
+            <div class="flex flex-col bg-gray-300 border-b-4 hover:cursor-pointer border-slate-950/50 rounded-lg shadow-md p-4 transition-all duration-300 ease-linear hover:border-4 hover:scale-105  hover:border-slate-950/30 hover:bg-gray-100">
+                <h2 class="flex flex-grow text-xl font-bold mb-2 text-black/80">{{ deck.name }}</h2>
+                <p class="text-right text-black/80 opacity-80 text-sm">{{ deck.subject }}</p>
+            </div>
+        {% endfor %}
+        <div class="bg-green-300/80 border-b-4 border-slate-950/50 rounded-lg shadow-md p-4 hover:cursor-pointer hover:bg-green-300 transition-all duration-300 ease-linear hover:border-4 hover:scale-105 hover:border-slate-950/30">
+            <h2 class="select-none text-7xl text-center font-bold mb-2 text-black/80">+</h2>
+            <!-- Add form for creating a new deck -->
+        </div>
+    </div>
+</div>

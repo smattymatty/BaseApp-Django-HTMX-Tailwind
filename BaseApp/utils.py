@@ -1,6 +1,12 @@
+import os
+
+from functools import wraps
+from django.http import HttpResponse
+from django.shortcuts import redirect
+from django.urls import reverse
+
 from loguru import logger
 from bleach import clean
-import os
 
 from .constants import LOG_FORMAT
 
@@ -47,3 +53,19 @@ def join_paths(*paths):
     Joins multiple paths into a single path, handling different OS path separators.
     """
     return os.path.join(*paths)
+
+
+def require_htmx(view_func):
+    """
+    Decorator to ensure that the view is only accessible via HTMX.
+    Example usage:
+        @require_htmx(view_func)
+        def my_view(request):
+            ...
+    """
+    @wraps(view_func)
+    def _wrapped_view(request, *args, **kwargs):
+        if not request.htmx:
+            return redirect(reverse("BaseApp:home"))
+        return view_func(request, *args, **kwargs)
+    return _wrapped_view
