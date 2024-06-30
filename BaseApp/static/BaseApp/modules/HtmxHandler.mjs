@@ -14,7 +14,7 @@ export class HtmxHandler {
       }
     }
   }
-
+  // TODO: DEBUG Uncaught TypeError: this.htmxHandlers[buttonIndex].triggerHtmxRequest is not a function
   triggerHtmxRequest() {
     // DEBUG
     if (DEBUG) {

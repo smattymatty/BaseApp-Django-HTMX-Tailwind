@@ -82,3 +82,547 @@ init_toggled_button_groups40init_toggled_button_groups tag generated JavaScript 
             ToggledButtonGroup.initAll('example1 example2 example3');
         </script>
     
+2024-06-30T01:19:47.997127+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:47.997127+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:48.022264+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:48.022264+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:48.023506+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:48.023506+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:48.024607+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:48.024607+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:48.026032+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:19:48.026032+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.632392+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.632392+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.633502+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.633502+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.634455+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.634455+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.635395+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.635395+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.636346+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:15.636346+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:20:40.282076+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.282076+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.283473+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.283473+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.284595+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.284595+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.285552+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.285552+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.286479+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:40.286479+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.977379+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.977379+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.978574+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.978574+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.979538+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.979538+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.980461+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.980461+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.981381+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:20:51.981381+0000DEBUG
+init_content_toggles16init_content_toggles toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:27:03.955420+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('',)
+2024-06-30T01:27:03.955420+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('',)
+2024-06-30T01:28:32.123250+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('',)
+2024-06-30T01:28:32.123250+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('',)
+2024-06-30T01:29:39.999056+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('',)
+2024-06-30T01:29:39.999056+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('',)
+2024-06-30T01:29:56.312159+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.312159+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.313271+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.313271+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.314389+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.314389+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.316100+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.316100+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.317521+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:29:56.317521+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-',)
+2024-06-30T01:30:11.296098+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('',)
+2024-06-30T01:30:11.296098+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('',)
+2024-06-30T01:34:09.058407+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-46',)
+2024-06-30T01:34:09.058407+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-46',)
+2024-06-30T01:34:09.059553+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-47',)
+2024-06-30T01:34:09.059553+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-47',)
+2024-06-30T01:34:09.060587+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-48',)
+2024-06-30T01:34:09.060587+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-48',)
+2024-06-30T01:34:09.061632+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-49',)
+2024-06-30T01:34:09.061632+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-49',)
+2024-06-30T01:34:09.062570+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-50',)
+2024-06-30T01:34:09.062570+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-50',)
+2024-06-30T01:34:29.852982+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:34:29.852982+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-1',)
+2024-06-30T01:34:29.854127+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:34:29.854127+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-2',)
+2024-06-30T01:34:29.855095+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-3',)
+2024-06-30T01:34:29.855095+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-3',)
+2024-06-30T01:34:29.856037+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-4',)
+2024-06-30T01:34:29.856037+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-4',)
+2024-06-30T01:34:29.857019+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-5',)
+2024-06-30T01:34:29.857019+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-5',)
+2024-06-30T01:43:08.044479+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-26',)
+2024-06-30T01:43:08.044479+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-26',)
+2024-06-30T01:43:08.045873+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-27',)
+2024-06-30T01:43:08.045873+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-27',)
+2024-06-30T01:43:08.047109+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-28',)
+2024-06-30T01:43:08.047109+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-28',)
+2024-06-30T01:43:08.048488+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-29',)
+2024-06-30T01:43:08.048488+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-29',)
+2024-06-30T01:43:08.049814+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-30',)
+2024-06-30T01:43:08.049814+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-30',)
+2024-06-30T01:46:18.444029+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-46',)
+2024-06-30T01:46:18.444029+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-46',)
+2024-06-30T01:46:18.445214+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-47',)
+2024-06-30T01:46:18.445214+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-47',)
+2024-06-30T01:46:18.446292+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-48',)
+2024-06-30T01:46:18.446292+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-48',)
+2024-06-30T01:46:18.447238+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-49',)
+2024-06-30T01:46:18.447238+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-49',)
+2024-06-30T01:46:18.448158+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-50',)
+2024-06-30T01:46:18.448158+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-50',)
+2024-06-30T01:46:30.659820+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-21',)
+2024-06-30T01:46:30.659820+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-21',)
+2024-06-30T01:46:30.661029+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-22',)
+2024-06-30T01:46:30.661029+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-22',)
+2024-06-30T01:46:30.662359+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-23',)
+2024-06-30T01:46:30.662359+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-23',)
+2024-06-30T01:46:30.663594+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-24',)
+2024-06-30T01:46:30.663594+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-24',)
+2024-06-30T01:46:30.664880+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-25',)
+2024-06-30T01:46:30.664880+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-25',)
+2024-06-30T01:47:01.367147+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-46',)
+2024-06-30T01:47:01.367147+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-46',)
+2024-06-30T01:47:01.368235+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-47',)
+2024-06-30T01:47:01.368235+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-47',)
+2024-06-30T01:47:01.369160+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-48',)
+2024-06-30T01:47:01.369160+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-48',)
+2024-06-30T01:47:01.370180+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-49',)
+2024-06-30T01:47:01.370180+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-49',)
+2024-06-30T01:47:01.371049+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-50',)
+2024-06-30T01:47:01.371049+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-50',)
+2024-06-30T01:47:14.244113+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-21',)
+2024-06-30T01:47:14.244113+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-21',)
+2024-06-30T01:47:14.245153+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-22',)
+2024-06-30T01:47:14.245153+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-22',)
+2024-06-30T01:47:14.246049+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-23',)
+2024-06-30T01:47:14.246049+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-23',)
+2024-06-30T01:47:14.246912+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-24',)
+2024-06-30T01:47:14.246912+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-24',)
+2024-06-30T01:47:14.247791+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-25',)
+2024-06-30T01:47:14.247791+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('card-from-deck-detail-25',)
+2024-06-30T02:26:02.665849+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:26:02.665849+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:26:02.667246+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:26:02.667246+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:26:02.667623+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:26:02.667623+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:26:02.667954+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:26:02.667954+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:26:02.669070+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:26:02.669070+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:26:02.669372+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:26:02.669372+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:26:02.669683+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:26:02.669683+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:26:02.670167+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:26:02.670167+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:26:52.439798+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:26:52.439798+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:26:52.441616+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:26:52.441616+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:26:52.442120+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:26:52.442120+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:26:52.442559+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:26:52.442559+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:26:52.443734+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:26:52.443734+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:26:52.444069+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:26:52.444069+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:26:52.444370+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:26:52.444370+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:26:52.444980+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:26:52.444980+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:27:26.907606+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:27:26.907606+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:27:26.908822+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:27:26.908822+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:27:26.909258+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:27:26.909258+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:27:26.909632+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:27:26.909632+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:27:26.911085+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:27:26.911085+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:27:26.911486+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:27:26.911486+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:27:26.911816+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:27:26.911816+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:27:26.912297+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:27:26.912297+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:06.462973+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:06.462973+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:06.464092+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:06.464092+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:06.464402+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:06.464402+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:06.464670+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:06.464670+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:06.465720+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:06.465720+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:06.466179+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:06.466179+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:06.466538+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:06.466538+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:06.467254+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:06.467254+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:13.666903+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:13.666903+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:13.668113+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:13.668113+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:13.668436+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:13.668436+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:13.668785+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:13.668785+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:13.669933+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:13.669933+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:13.670224+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:13.670224+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:13.670548+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:13.670548+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:13.671256+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:13.671256+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:23.750758+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:23.750758+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:23.752375+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:23.752375+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:23.752823+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:23.752823+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:23.753251+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:23.753251+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:23.754590+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:23.754590+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:23.754913+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:23.754913+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:23.755269+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:23.755269+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:23.756051+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:23.756051+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:31.869451+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:31.869451+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:31.870898+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:31.870898+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:31.871280+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:31.871280+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:31.871622+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:31.871622+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:31.872716+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:31.872716+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:31.873053+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:31.873053+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:31.873399+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:31.873399+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:31.874056+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:31.874056+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:42.191945+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:42.191945+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:42.193521+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:42.193521+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:42.193994+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:42.193994+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:42.194424+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:42.194424+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:42.195763+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:42.195763+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:42.196090+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:42.196090+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:42.196439+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:42.196439+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:42.197080+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:42.197080+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:49.175267+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:49.175267+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('basic',)
+2024-06-30T02:28:49.176806+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:49.176806+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-1',)
+2024-06-30T02:28:49.177300+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:49.177300+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-2',)
+2024-06-30T02:28:49.177727+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:49.177727+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('panel-3',)
+2024-06-30T02:28:49.179572+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:49.179572+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-1',)
+2024-06-30T02:28:49.180152+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:49.180152+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-2',)
+2024-06-30T02:28:49.180636+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:49.180636+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('accordion-3',)
+2024-06-30T02:28:49.181581+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)
+2024-06-30T02:28:49.181581+0000DEBUG
+init_content_toggles16init_content_toggles tag generated JavaScript code: toggle_ids: ('hover-dropdown',)

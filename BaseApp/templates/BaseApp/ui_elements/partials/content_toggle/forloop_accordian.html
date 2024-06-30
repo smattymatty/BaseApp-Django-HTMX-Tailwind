@@ -1,0 +1,34 @@
+{% load content_toggle_tags string_filters %}
+<h3 class="text-2xl font-bold mb-4">Stylish Accordion</h3>
+    
+<div class="space-y-2">
+    {% comment %}
+        Generic for loop to showcase how to use the content toggle tag 
+        with dynamically generated IDs.
+    {% endcomment %}
+    {% for i in "123" %}
+    <div id="accordion-{{ i }}-toggle-container"
+            data-trigger-event="click"
+            data-close-event="click"
+            data-active-class-for-button="bg-blue-500 text-white"
+            data-active-class-for-content="max-h-40"
+            data-animation-delay="300"
+            data-close-others="true">
+        <button id="accordion-{{ i }}-toggle-trigger" class="w-full px-4 py-2 bg-gray-200 text-left rounded transition-colors duration-300">
+            Accordion Item {{ i }}
+        </button>
+        <div id="accordion-{{ i }}-toggle-content" class="overflow-hidden max-h-0 transition-all duration-300">
+            <div class="p-4 bg-white">
+                This is the content for accordion item {{ i }}. It can contain any HTML content.
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% comment %}
+        Copy the same loop and use concat from the string_filters 
+        template tag to generate the IDs for each accordion item.
+{% endcomment %}
+{% for i in "123" %}
+    {% init_content_toggles "accordion-"|concat:i %}
+{% endfor %}

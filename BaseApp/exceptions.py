@@ -15,4 +15,5 @@ class TemplateTagInitError(TemplateSyntaxError):
         if reserved_suffix:
             super().__init__(
                 f"{msg}\n\nDo not include the '{reserved_suffix}' suffix in this tag's argument.\nIf your group's ID is 'example-abc{reserved_suffix}', use 'example-abc' as the argument."
+        
             )

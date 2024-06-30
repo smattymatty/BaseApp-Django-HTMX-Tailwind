@@ -6,7 +6,7 @@ from django.http import HttpResponse, JsonResponse
 from django.conf import settings
 from django.views.decorators.http import require_POST
 
-from BaseApp.utils import get_module_logger
+from BaseApp.utils import get_module_logger, require_htmx
 
 module_logger = get_module_logger("views", __file__)
 
@@ -38,7 +38,7 @@ class HomeView(BasePage):
 def get_django_info(request):
     template = loader.get_template('BaseApp/home/partials/django_info.html')
     context = {
-        'django_version': "5.0.2",
+        'django_version': "???",
     }
     return HttpResponse(template.render(context, request))
 
@@ -48,7 +48,7 @@ def get_tailwind_info(request):
     template = loader.get_template(
         'BaseApp/home/partials/tailwind_partial.html')
     context = {
-        'tailwind_version': "3.0.24",
+        'tailwind_version': "?",
     }
     return HttpResponse(template.render(context, request))
 
@@ -57,7 +57,7 @@ def get_htmx_info(request):
     template = loader.get_template(
         'BaseApp/home/partials/htmx_info.html')
     context = {
-        'htmx_version': "3.0.4",
+        'htmx_version': "??",
     }
     return HttpResponse(template.render(context, request))
 
@@ -68,29 +68,68 @@ class UIElementView(BasePage):
     page_description = ""
     extended_header = True
 
+    @require_htmx
+    @staticmethod
+    def get_buttons_examples(request):
+        template = loader.get_template(
+            'BaseApp/ui_elements/sections/buttons_examples.html')
+        context = {
+        }
+        return HttpResponse(template.render(context, request))
 
-def get_buttons_examples(request):
-    template = loader.get_template(
-        'BaseApp/ui_elements/sections/buttons_examples.html')
-    context = {
-    }
-    return HttpResponse(template.render(context, request))
+    @require_htmx
+    @staticmethod
+    def get_toggled_content_examples(request):
+        template = loader.get_template(
+            'BaseApp/ui_elements/sections/toggled_content_examples.html')
+        context = {
+        }
+        return HttpResponse(template.render(context, request))
 
-
-def get_menu_examples(request):
-    template = loader.get_template(
-        'BaseApp/ui_elements/sections/menu_examples.html')
-    context = {
-    }
-    return HttpResponse(template.render(context, request))
-
-
-def get_button_example_minimal(request):
-    template = loader.get_template(
-        'BaseApp/ui_elements/partials/buttons/button_example_minimal.html')
-    context = {
-    }
-    return HttpResponse(template.render(context, request))
+    @require_htmx
+    @staticmethod
+    def get_button_example_minimal(request):
+        template = loader.get_template(
+            'BaseApp/ui_elements/partials/buttons/button_example_minimal.html')
+        context = {
+        }
+        return HttpResponse(template.render(context, request))
+    
+    @require_htmx
+    @staticmethod
+    def content_toggle_basic(request):
+        template = loader.get_template(
+            'BaseApp/ui_elements/partials/content_toggle/basic.html')
+        context = {
+        }
+        return HttpResponse(template.render(context, request))
+    
+    @require_htmx
+    @staticmethod
+    def content_toggle_multi_toggle_panel(request):
+        template = loader.get_template(
+            'BaseApp/ui_elements/partials/content_toggle/multi_toggle_panel.html')
+        context = {
+        }
+        return HttpResponse(template.render(context, request))
+    
+    @require_htmx
+    @staticmethod
+    def content_toggle_forloop_accordian(request):
+        template = loader.get_template(
+            'BaseApp/ui_elements/partials/content_toggle/forloop_accordian.html')
+        context = {
+        }
+        return HttpResponse(template.render(context, request))
+    
+    @require_htmx
+    @staticmethod
+    def content_toggle_hover_dropdown(request):
+        template = loader.get_template(
+            'BaseApp/ui_elements/partials/content_toggle/hover_dropdown.html')
+        context = {
+        }
+        return HttpResponse(template.render(context, request))
 
 
 class ComponentsView(BasePage):

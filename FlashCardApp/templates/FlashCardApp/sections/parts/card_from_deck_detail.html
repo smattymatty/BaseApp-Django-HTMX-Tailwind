@@ -1,0 +1,31 @@
+{% load content_toggle_tags string_filters %}
+<div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 overflow-hidden">
+    <div class="h-2 bg-blue-500"></div>
+    <div class="p-6">
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">{{ card.question.question }}</h2>
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-sm font-medium text-gray-600">{{ card.question.type }}</span>
+            <span class="px-2 py-1 text-xs font-semibold rounded-full {% if card.question.difficulty == 'EASY' %} bg-green-100 text-green-800 {% elif card.question.difficulty == 'MEDIUM' %} bg-yellow-100 text-yellow-800 {% else %} bg-red-100 text-red-800 {% endif %}">
+                {{ card.question.difficulty }}
+            </span>
+        </div>
+        <div class="flex flex-col space-y-2"
+             id="card-from-deck-detail-{{ card.id }}-toggle-container"
+             data-trigger-event="click"
+             data-close-event="click"
+             data-active-class-for-button="bg-black/50"
+             data-active-class-for-content="opacity-100"
+             data-delayed-active-class-for-content="translate-y-0"
+             data-animation-delay="50">
+             <p>Debug: card.id = {{ card.id }}</p>
+            <button id="card-from-deck-detail-{{ card.id }}-toggle-trigger"
+                    class="bg-black/30 transition-colors duration-300 px-4 py-2 rounded">Toggle Content</button>
+            <div id="card-from-deck-detail-{{ card.id }}-toggle-content"
+                 class="text-black/80 hidden opacity-0 -translate-y-2 transition-all duration-300">
+                <!-- Your togglable content here -->
+                Yo Yo!
+            </div>
+        </div>
+    </div>
+</div>
+{% init_content_toggles "card-from-deck-detail-"|concat:card.id %}

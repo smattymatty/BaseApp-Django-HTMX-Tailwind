@@ -1,3 +1,13 @@
-<div class="flex flex-col space-y-2">
-    <h3 class="text-2xl font-bold text-center mt-2">Deck Details {{ deck.name }}</h3>
+<div class="max-w-4xl mx-auto p-6">
+    <h3 class="text-3xl font-bold text-center mb-6">{{ deck.name }}</h3>
+    <div class="bg-amber-100/80 p-6 rounded-lg shadow-lg mb-8 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-2 bg-amber-400/80"></div>
+        <p class="text-gray-700 mb-4">{{ deck.description }}</p>
+        <span class="text-sm text-gray-600">Cards: {{ deck.cards.count }}</span>
+    </div>
+    <div class="space-between-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for card in deck.cards.all %}
+            {% include 'FlashCardApp/sections/parts/card_from_deck_detail.html' with card=card %}
+        {% endfor %}
+    </div>
 </div>

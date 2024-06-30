@@ -1,0 +1,38 @@
+{% load content_toggle_tags string_filters %}
+<h3 class="text-2xl font-bold mb-4">Multi-Toggle Panel</h3>    
+<div class="bg-white p-4 rounded shadow">
+    <div class="flex space-x-4 mb-4">
+        {% comment %}
+            Generic for loop to showcase how to use the content toggle tag 
+            with dynamically generated IDs.
+        {% endcomment %}
+        {% for i in "123" %}
+        <div id="panel-{{ i }}-toggled-container"
+                data-trigger-event="click"
+                data-close-event="click"
+                data-active-class-for-button="bg-blue-500 text-white"
+                data-active-class-for-content="opacity-100"
+                data-animation-delay="150">
+            <button id="panel-{{ i }}-toggle-trigger" class="px-4 py-2 bg-gray-200 rounded transition-colors duration-300">
+                Panel {{ i }}
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="relative h-40">
+        {% for i in "123" %}
+        <div id="panel-{{ i }}-toggle-content" class="absolute inset-0 bg-gray-100 p-4 rounded hidden opacity-0 transition-opacity duration-300">
+            This is the content for Panel {{ i }}. Each panel can have unique content.
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% comment %}
+    Copy the same loop and use concat from the string_filters 
+    template tag to generate the IDs for each panel.
+{% endcomment %}
+{% for i in "123" %}
+    {% init_content_toggles "panel-"|concat:i %}
+{% endfor %}

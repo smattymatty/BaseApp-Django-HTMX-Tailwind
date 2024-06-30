@@ -1,0 +1,17 @@
+{% load content_toggle_tags %}
+<h3 class="text-2xl font-bold mb-4">Basic Click Toggle</h3>
+
+<div id="basic-toggle-container"
+        data-trigger-event="click"
+        data-close-event="click"
+        data-active-class-for-button="bg-gray-200 font-bold"
+        data-active-class-for-content="opacity-100"
+        data-animation-delay="100"
+        class="text-black">
+    <button id="basic-toggle-trigger" class="px-4 py-2 bg-gray-400 rounded">Toggle Content</button>
+    <div id="basic-toggle-content" class="mt-2 p-4 bg-white rounded shadow hidden opacity-0 transition-opacity duration-300">
+        This is the toggled content. Click the button to show/hide.
+    </div>
+</div>
+
+{% init_content_toggles "basic" %}

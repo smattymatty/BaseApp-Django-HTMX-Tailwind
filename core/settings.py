@@ -145,8 +145,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TAILWIND_APP_NAME = 'theme'
 
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
-
 AUTH_USER_MODEL = 'UsersApp.User'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "optional"
+
