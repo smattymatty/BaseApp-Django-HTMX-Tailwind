@@ -5,6 +5,7 @@ from django.template import loader
 from django.http import HttpResponse, JsonResponse
 from django.conf import settings
 from django.views.decorators.http import require_POST
+from django.urls import reverse
 
 from BaseApp.utils import get_module_logger, require_htmx
 
@@ -94,7 +95,7 @@ class UIElementView(BasePage):
         context = {
         }
         return HttpResponse(template.render(context, request))
-    
+
     @require_htmx
     @staticmethod
     def content_toggle_basic(request):
@@ -103,7 +104,7 @@ class UIElementView(BasePage):
         context = {
         }
         return HttpResponse(template.render(context, request))
-    
+
     @require_htmx
     @staticmethod
     def content_toggle_multi_toggle_panel(request):
@@ -112,7 +113,7 @@ class UIElementView(BasePage):
         context = {
         }
         return HttpResponse(template.render(context, request))
-    
+
     @require_htmx
     @staticmethod
     def content_toggle_forloop_accordian(request):
@@ -121,7 +122,7 @@ class UIElementView(BasePage):
         context = {
         }
         return HttpResponse(template.render(context, request))
-    
+
     @require_htmx
     @staticmethod
     def content_toggle_hover_dropdown(request):
@@ -177,3 +178,18 @@ def display_number(request):
             return JsonResponse({'error': f'Error: {e}'}, status=500)
         else:
             return JsonResponse({'error': 'Internal Server Error'}, status=500)
+
+
+@require_htmx
+def get_back_button(request, url, target_element):
+    """
+    Returns a back button for the given URL
+    """
+    if url == 'none':
+        return HttpResponse('')
+    template = loader.get_template('BaseApp/navigation/back_button.html')
+    context = {
+        'previous_url': reverse(url),
+        'back_button_target_element': target_element
+    }
+    return HttpResponse(template.render(context, request))

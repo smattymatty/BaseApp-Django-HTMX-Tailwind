@@ -1,5 +1,7 @@
 import { initialActiveStrategies } from "./strategies.mjs";
 import { HtmxHandler } from "./HtmxHandler.mjs";
+import { logger } from "./LoggingUtils.mjs";
+const MODULE_NAME = 'ToggledButtonGroup';
 const DEBUG = false;
 /**
  * A class to manage a group of buttons that toggle an 'active' class
@@ -15,30 +17,25 @@ const DEBUG = false;
  */
 export class ToggledButtonGroup {
   constructor(config) {
+    logger.info(`Initializing "${config.groupId}-toggled-button-group"`,
+      MODULE_NAME, 'constructor');
     this.groupId = config.groupId;
     this.container = document.getElementById(
       `${this.groupId}-toggled-button-group`
     );
+    if (!this.container) {
+      logger.error(`Button group container with ID "${this.groupId}-toggled-button-group" not found. Please ensure the container element exists and has the correct ID.`, MODULE_NAME, 'constructor');
+    }
     this.buttons = this.container
       ? this.container.querySelectorAll("button")
       : [];
     this.activeClass = config.activeClass || "active";
     this.initialActive = config.initialActive || "none";
     this.htmxHandlers = [];
-    // ERROR CHECKING
-    if (!this.container) {
-      console.error(
-        `[ToggledButtonGroup Error] Button group container with ID "${this.groupId}-toggled-button-group" not found. Please ensure the container element exists and has the correct ID.`
-      );
-      return;
-    }
     const buttonIds = new Set(); // Use a Set to track unique IDs
     for (const button of this.buttons) {
       if (buttonIds.has(button.id) && button.id !== "") {
-        console.error(
-          `[ToggledButtonGroup Error] Duplicate button ID "${button.id}" found in group "${this.groupId}". Each button must have a unique ID.`
-        );
-        return;
+        logger.error(`Duplicate button ID "${button.id}" found in group "${this.groupId}". Each button must have a unique ID.`, MODULE_NAME, 'constructor');
       }
       buttonIds.add(button.id);
     }
@@ -50,37 +47,23 @@ export class ToggledButtonGroup {
       ...Array.from({ length: this.buttons.length }, (_, i) => i.toString()),
     ];
     if (!validInitialActiveValues.includes(this.initialActive)) {
-      console.error(
-        `[ToggledButtonGroup Error] Invalid data-initial-active value "${
-          this.initialActive
-        }" for group "${
-          this.groupId
-        }". Valid values are: ${validInitialActiveValues.join(", ")}`
-      );
+      logger.error(`Invalid data-initial-active value "${this.initialActive}" for group "${this.groupId}". Valid values are: ${validInitialActiveValues.join(", ")}`, MODULE_NAME, 'constructor');
       return;
     }
     if (this.htmxHandlers.length > 0 && typeof htmx === "undefined") {
       //check if the array buttonsWithHxAttributes is empty and if the type of the var htmx is undefined
-      console.error(
-        `[ToggledButtonGroup Error] HTMX attributes found, but the HTMX library is not included. Please make sure to include the HTMX JavaScript library before using this component.`
-      );
+      logger.error(`HTMX attributes found, but the HTMX library is not included. Please make sure to include the HTMX JavaScript library before using this component.`, MODULE_NAME, 'constructor');
       return;
     }
     this.init();
   }
   init() {
-    // ERROR CHECKING
     if (!this.buttons.length) {
-      console.error(
-        `[ToggledButtonGroup Error] Button group with ID "${this.groupId}" has no buttons.`
-      );
+      logger.error(`Button group with ID "${this.groupId}" has no buttons.`);
       return;
     }
-    // WARNING CHECKING
     if (this.activeClass.trim() === "") {
-      console.warn(
-        `Warning: Active class for button group "${this.groupId}" is empty or invalid. Using default "active" class.`
-      );
+      logger.warning(`Active class for button group "${this.groupId}" is empty or invalid. Using default "active" class.`);
       this.activeClass = "active";
     }
     // When button is clicked, set active class
@@ -103,9 +86,7 @@ export class ToggledButtonGroup {
     }
     // ERROR CHECKING
     if (!strategy) {
-      console.error(
-        `Error: Invalid initial_active option "${this.initialActive}".`
-      );
+      logger.error(`Invalid initial_active option "${this.initialActive}".`, MODULE_NAME, 'setInitialActiveButton', 5);
       return;
     }
     // Set initial active button
@@ -157,7 +138,11 @@ export class ToggledButtonGroup {
     });
   }
 }
+
 ToggledButtonGroup.initAll = function (groupFilter = "") {
+  if (DEBUG) {
+    logger.startTimer('ToggledButtonGroup.initAll');
+  }
   // Use this to Initialize all button groups
   // with an empty string, it will check for all elements with the ID ending in "-toggled-button-group"
   // given a string as argument, it will only check for elements with the ID starting with the string and ending in "-toggled-button-group"
@@ -169,12 +154,9 @@ ToggledButtonGroup.initAll = function (groupFilter = "") {
       `${groupId}-toggled-button-group`
     );
     if (!groupElement) {
-      console.error(
-        `[ToggledButtonGroup Error] Button group container with ID "${groupId}-toggled-button-group" not found.`
-      );
+      logger.error(`Button group container with ID "${groupId}-toggled-button-group" not found.`, MODULE_NAME, 'initAll');
       return;
     }
-    console.log(`Initializing ToggledButtonGroup with ID "${groupElement.id}"`);
     const config = {
       groupId,
       activeClass: groupElement.dataset.activeClass || "active",
@@ -197,5 +179,8 @@ ToggledButtonGroup.initAll = function (groupFilter = "") {
       .forEach((groupElement) => {
         initializeGroup(groupElement.id.replace("-toggled-button-group", ""));
       });
+  }
+  if (DEBUG) {
+    logger.endTimer('ToggledButtonGroup.initAll');
   }
 };

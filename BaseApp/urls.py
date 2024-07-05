@@ -2,7 +2,7 @@ from django.urls import path
 from .views import (
     BasePage, HomeView, UIElementView, ComponentsView, DocumentationView,
     ButtonsView, CardsView, TypographyView, get_django_info, get_tailwind_info,
-    get_htmx_info, display_number
+    get_htmx_info, display_number, get_back_button
 )
 
 urlpatterns = [
@@ -33,4 +33,6 @@ urlpatterns = [
          UIElementView.content_toggle_forloop_accordian, name="content-toggle-forloop-accordian"),
     path('ui-elements/content-toggle/hover-dropdown/',
          UIElementView.content_toggle_hover_dropdown, name="content-toggle-hover-dropdown"),
+    path('ui-elements/back-button/<str:url>/<str:target_element>/',
+         get_back_button, name="back-button"),
 ]

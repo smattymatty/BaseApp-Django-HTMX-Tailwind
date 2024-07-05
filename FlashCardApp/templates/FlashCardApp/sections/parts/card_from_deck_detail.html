@@ -1,4 +1,4 @@
-{% load content_toggle_tags string_filters %}
+{% load content_toggle_tags string_enchants %}
 <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 overflow-hidden">
     <div class="h-2 bg-blue-500"></div>
     <div class="p-6">
@@ -17,7 +17,7 @@
              data-active-class-for-content="opacity-100"
              data-delayed-active-class-for-content="translate-y-0"
              data-animation-delay="50">
-             <p>Debug: card.id = {{ card.id }}</p>
+            <p>Debug: card.id = {{ card.id }}</p>
             <button id="card-from-deck-detail-{{ card.id }}-toggle-trigger"
                     class="bg-black/30 transition-colors duration-300 px-4 py-2 rounded">Toggle Content</button>
             <div id="card-from-deck-detail-{{ card.id }}-toggle-content"

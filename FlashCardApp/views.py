@@ -1,15 +1,10 @@
 from django.shortcuts import render, get_object_or_404
-
 from BaseApp.views import BasePage
 from BaseApp.utils import require_htmx
-
 from .models import Deck
 
 
 class FlashCardAppView(BasePage):
-    """
-    The main view for the FlashCardApp
-    """
     template_name = "FlashCardApp/base.html"
     title = "Flash Card App"
     page_description = "This is a flash card app."
@@ -17,29 +12,33 @@ class FlashCardAppView(BasePage):
     @staticmethod
     @require_htmx
     def deck_list(request):
-        """
-        Display a list of all decks in the database
-        """
         context = {
-            'decks': Deck.objects.all()
+            'decks': Deck.objects.all(),
+            'title': 'Deck List'  # Add a title for this view
         }
-        return render(
-            request,
-            'FlashCardApp/sections/deck_list.html',
-            context
-        )
+        return render(request, 'FlashCardApp/sections/deck_list.html', context)
+
+    @staticmethod
+    @require_htmx
+    def deck_list_options(request):
+        context = {}
+        return render(request, 'FlashCardApp/sections/parts/options_menu/deck_list_options.html', context)
 
     @staticmethod
     @require_htmx
     def deck_detail(request, deck_id):
-        """
-        Display the details of a specific deck
-        """
+        deck = get_object_or_404(Deck, pk=deck_id)
         context = {
-            'deck': get_object_or_404(Deck, pk=deck_id)
+            'deck': deck,
+            'title': f'Deck: {deck.name}'  # Dynamic title for each deck
         }
-        return render(
-            request,
-            'FlashCardApp/sections/deck_detail.html',
-            context
-        )
+        return render(request, 'FlashCardApp/sections/deck_detail.html', context)
+
+    @staticmethod
+    @require_htmx
+    def deck_detail_options(request, deck_id):
+        deck = get_object_or_404(Deck, pk=deck_id)
+        context = {
+            'deck': deck,
+        }
+        return render(request, 'FlashCardApp/sections/parts/options_menu/deck_detail_options.html', context)

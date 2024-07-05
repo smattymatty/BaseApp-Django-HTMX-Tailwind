@@ -1,3 +1,21 @@
+{% load menu_tags %}
+
+<!-- Back button -->
+<div hx-trigger="load"
+     hx-get="{% url 'BaseApp:back-button' 'FlashCardApp:deck_list' '#flash-card-app-container' %}"
+     hx-target="#flash-card-back-button"
+     hx-swap="innerHTML"
+     hx-push-url="false">
+</div>
+<!-- Options Menu -->
+<div
+     hx-trigger="load"
+     hx-get="{% url 'FlashCardApp:deck_options' deck.id %}"
+     hx-target="#flashcard-app-menu-toggle-content"
+     hx-swap="innerHTML"
+     hx-push-url="false"
+></div>
+
 <div class="max-w-4xl mx-auto p-6">
     <h3 class="text-3xl font-bold text-center mb-6">{{ deck.name }}</h3>
     <div class="bg-amber-100/80 p-6 rounded-lg shadow-lg mb-8 relative overflow-hidden">

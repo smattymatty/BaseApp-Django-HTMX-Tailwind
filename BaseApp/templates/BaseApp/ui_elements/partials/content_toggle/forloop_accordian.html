@@ -1,34 +1,55 @@
-{% load content_toggle_tags string_filters %}
-<h3 class="text-2xl font-bold mb-4">Stylish Accordion</h3>
-    
-<div class="space-y-2">
-    {% comment %}
-        Generic for loop to showcase how to use the content toggle tag 
-        with dynamically generated IDs.
-    {% endcomment %}
-    {% for i in "123" %}
-    <div id="accordion-{{ i }}-toggle-container"
-            data-trigger-event="click"
-            data-close-event="click"
-            data-active-class-for-button="bg-blue-500 text-white"
-            data-active-class-for-content="max-h-40"
-            data-animation-delay="300"
-            data-close-others="true">
-        <button id="accordion-{{ i }}-toggle-trigger" class="w-full px-4 py-2 bg-gray-200 text-left rounded transition-colors duration-300">
-            Accordion Item {{ i }}
-        </button>
-        <div id="accordion-{{ i }}-toggle-content" class="overflow-hidden max-h-0 transition-all duration-300">
-            <div class="p-4 bg-white">
-                This is the content for accordion item {{ i }}. It can contain any HTML content.
+{% load content_toggle_tags string_enchants %}
+<div class="flex flex-col space-y-2 border border-y-4 border-white/10 rounded-lg p-4 bg-slate-900/50">
+    <h3 class="text-lg font-bold text-center text-white mb-4">Stylish Accordion</h3>
+    <div class="space-y-2">
+        {% comment %}
+            Generic for loop to showcase how to use the content toggle tag
+            with dynamically generated IDs.
+            The "overflow-hidden" toggle type is used to hide the content
+            when the accordion item is closed.
+            The "max-h-96" active class is used to set the max height of the content
+            to 96px when the accordion item is open.
+        {% endcomment %}
+        {% for i in "123456789" %}
+            <div id="accordion-{{ i }}-toggle-container"
+                 data-trigger-event="click"
+                 data-close-event="click"
+                 data-active-class-for-button="bg-indigo-600 text-white hover:bg-indigo-700"
+                 data-active-class-for-content="opacity-100 max-h-96"
+                 data-animation-delay="266"
+                 data-close-others="true"
+                 data-toggle-type="class"
+                 class="bg-black/20 rounded-md overflow-hidden">
+                <button id="accordion-{{ i }}-toggle-trigger"
+                        class="w-full px-6 py-4 text-left transition-all duration-300 flex justify-between items-center text-white hover:bg-black/30">
+                    <span class="text-lg font-semibold">Accordion Item {{ i }}</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-300"
+                         fill="none"
+                         stroke="currentColor"
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="accordion-{{ i }}-toggle-content"
+                     class="max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-6 text-white">
+                        <p class="mb-4">This is the content for accordion item {{ i }}. It can contain any HTML content.</p>
+                        <ul class="list-disc list-inside">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% comment %}
-        Copy the same loop and use concat from the string_filters 
-        template tag to generate the IDs for each accordion item.
+    Copy the same loop and use concat from the string_enchants
+    template tag to generate the IDs for each accordion item.
 {% endcomment %}
-{% for i in "123" %}
+{% for i in "123456789" %}
     {% init_content_toggles "accordion-"|concat:i %}
 {% endfor %}

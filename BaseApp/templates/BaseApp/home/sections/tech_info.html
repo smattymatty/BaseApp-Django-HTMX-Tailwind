@@ -1,37 +1,36 @@
-{% load static %}
-<div class="bg-black/10 text-center bg-gradient-to-b from-black/20 from-0% via-blue-300/5 via-5% to-black/20 to-50%">
-    <span class="text-sm text-white/30">Click to learn more about technologies used on this website</span>
-    <div id="tech-info-toggled-button-group"
-         data-active-class="bg-black/50 hover:bg-black/50 font-bold text-white border-b-4 border-white/20"
-         data-initial-active="random"
-         class="flex gap-4 p-2 px-6 w-full justify-evenly">
-        <button id="django-info-button"
-                hx-get="{% url 'BaseApp:django-info' %}"
-                hx-target="#home-tech-info-output"
-                hx-swap="innerHTML"
-                class="flex-grow w-full text-base lg:text-lg px-4 md:px-8 py-4 border-x border-white/10 rounded-md transition-all duration-100 ease-linear bg-black/20  hover:bg-black/30">
-            Django
-        </button>
-        <button id="tailwind-info-button"
-                hx-get="{% url 'BaseApp:tailwind-info' %}"
-                hx-target="#home-tech-info-output"
-                hx-swap="innerHTML"
-                class="flex-grow w-full text-base lg:text-lg px-4 md:px-8 py-4 border-x border-white/10 rounded-md transition-all duration-100 ease-linear bg-black/20  hover:bg-black/30">
-            TailwindCSS
-        </button>
-        <button id="htmx-info-button"
-                hx-get="{% url 'BaseApp:htmx-info' %}"
-                hx-target="#home-tech-info-output"
-                hx-swap="innerHTML"
-                class="flex-grow w-full text-base lg:text-lg px-4 md:px-8 py-4 border-x border-white/10 rounded-md transition-all duration-100 ease-linear bg-black/20  hover:bg-black/30">
-            HTMX
-        </button>
+{% load content_toggle_tags action_invoker_tags string_enchants %}
+<div class="flex flex-col border border-y-4 border-white/10 rounded-lg p-4 bg-slate-900/50">
+    <h3 class="text-lg font-bold text-center text-white mb-2">Multi-Toggle Panel</h3>
+    <div class="flex flex-col gap-4">
+        <div id="tech-info-button-container"
+             class="flex flex-wrap justify-center gap-2">
+            {% for i in "Backend-Framework,CSS-Framework,Hypermedia-Extension"|split:"," %}
+                <button id="panel-{{ i }}-toggle-trigger"
+                        class="flex justify-center text-base lg:text-lg px-4 py-4 border-x border-white/10 rounded-md transition-all duration-300 ease-in-out bg-black/20 hover:bg-black/30 text-white/50">
+                    {{ i|replace:"-, " }}
+                </button>
+            {% endfor %}
+        </div>
     </div>
-    <div class="border-b-4 border-white/10 rounded-b-lg pb-4 text-center w-full">
-        <div class="prose transition-all duration-300 ease-linear h-auto text-white/40 w-full mx-auto"
-             id="home-tech-info-output"></div>
+    <div class="w-full">
+        {% for i in "Backend-Framework,CSS-Framework,Hypermedia-Extension"|split:"," %}
+            <div id="panel-{{ i }}-toggle-container"
+                 data-trigger-event="click"
+                 data-close-event="click"
+                 data-active-class-for-button="flex-grow bg-black/50 hover:bg-black/50 font-bold text-white border-b-4 border-white/20"
+                 data-active-class-for-content="max-h-96 opacity-100 mt-2 py-4"
+                 data-delayed-active-class-for-content="px-16"
+                 data-animation-delay="266"
+                 data-toggle-type="class"
+                 class="w-full">
+                <div id="panel-{{ i }}-toggle-content"
+                     class="max-h-0 opacity-0 mt-0 overflow-hidden px-4 bg-black/20 rounded-md transition-all duration-300 ease-in-out text-white">
+                    This is the content for Panel {{ i }}. Each panel can have unique content.
+                </div>
+            </div>
+            {% init_content_toggles "panel-"|concat:i %}
+        {% endfor %}
     </div>
 </div>
-<script type="module">import { ToggledButtonGroup } from "{% static 'BaseApp/modules/ToggledButtonGroup.mjs' %}";
-    ToggledButtonGroup.initAll("tech-info")
-</script>
+</div>
+{% invoke_action "on-load" "click" "last" "tech-info-button-container" %}

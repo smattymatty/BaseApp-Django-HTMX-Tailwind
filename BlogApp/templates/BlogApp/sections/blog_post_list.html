@@ -5,7 +5,7 @@
 {% if has_next %}
     <form>
         <!-- this form will be submitted when the user scrolls to the bottom of the page -->
-        <input name="page" value="{{ blog_posts.next_page_number }}" hidden>
+        <input name="page" value="{{ blog_posts.next_page_number }}" hidden />
         <div hx-trigger="intersect once"
              hx-post="{% url 'BlogApp:blog-post-list' %}"
              hx-target="#blog-page-main"

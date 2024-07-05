@@ -1,18 +1,76 @@
 {% load content_toggle_tags %}
-
-<h1 class="text-2xl font-bold mb-4">Hover Dropdown Menu</h1>
-    
-<div id="hover-dropdown-toggle-container"
-        data-trigger-event="hover"
-        data-close-event="mouseleave"
-        data-active-class-for-content="opacity-100 translate-y-0"
-        data-animation-delay="50">
-    <button id="hover-dropdown-toggle-trigger" class="px-4 py-2 bg-blue-500 text-white rounded">Hover Me</button>
-    <div id="hover-dropdown-toggle-content" class="absolute mt-1 w-48 bg-white rounded shadow-lg hidden opacity-0 -translate-y-2 transition-all duration-300">
-        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">Option 1</a>
-        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">Option 2</a>
-        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">Option 3</a>
-    </div>
+<div class="bg-slate-900 text-white">
+    <h3 class="text-lg font-bold text-center text-white mb-4 mt-4">Hover Dropdown Menu</h3>
+    <nav class="container mx-auto px-4 py-6">
+        <ul class="flex justify-center space-x-8">
+            <!-- Home item -->
+            <li>
+                <a href="#" class="hover:text-blue-300 transition-colors duration-200">Home</a>
+            </li>
+            <!-- Products dropdown -->
+            <li class="relative group"
+                id="products-toggle-container"
+                data-trigger-event="hover"
+                data-close-event="mouseleave"
+                data-active-class-for-content="opacity-100 translate-y-0"
+                data-animation-delay="100"
+                data-toggle-type="class">
+                <button id="products-toggle-trigger"
+                        class="hover:text-blue-300 transition-colors duration-200">Products</button>
+                <div class="absolute left-0 top-full pt-2 -mt-2">
+                    <div id="products-toggle-content"
+                         class="relative w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 translate-y-2 transition-all duration-200 ease-in-out">
+                        <ul class="py-2">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-blue-100">Product 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-blue-100">Product 2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-blue-100">Product 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <!-- Services dropdown (similar changes as Products) -->
+            <li class="relative group"
+                id="services-toggle-container"
+                data-trigger-event="hover"
+                data-close-event="mouseleave"
+                data-active-class-for-content="opacity-100 translate-y-0"
+                data-animation-delay="100"
+                data-toggle-type="class">
+                <button id="services-toggle-trigger"
+                        class="hover:text-blue-300 transition-colors duration-200">Services</button>
+                <div class="absolute left-0 top-full pt-2 -mt-2">
+                    <div id="services-toggle-content"
+                         class="relative w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 translate-y-2 transition-all duration-200 ease-in-out">
+                        <ul class="py-2">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-blue-100">Service 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-blue-100">Service 2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-blue-100">Service 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <!-- About item -->
+            <li>
+                <a href="#" class="hover:text-blue-300 transition-colors duration-200">About</a>
+            </li>
+            <!-- Contact item -->
+            <li>
+                <a href="#" class="hover:text-blue-300 transition-colors duration-200">Contact</a>
+            </li>
+        </ul>
+    </nav>
 </div>
-
-{% init_content_toggles "hover-dropdown" %}
+{% init_content_toggles "products" %}
+{% init_content_toggles "services" %}

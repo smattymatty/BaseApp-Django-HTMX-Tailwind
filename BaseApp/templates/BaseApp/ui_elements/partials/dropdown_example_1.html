@@ -7,18 +7,27 @@
      data-animation-delay="100"
      data-handle-outside-click="true"
      class="relative inline-block">
-  <button id="my-dropdown-toggle-trigger"
-          class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300">
-    Dropdown Menu
-  </button>
-  <div id="my-dropdown-toggle-content"
-       class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden opacity-0 transform -translate-y-2 transition-all duration-300 ease-in-out">
-    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Option 1</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Option 2</a>
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Option 3</a>
+    <button id="my-dropdown-toggle-trigger"
+            class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300">
+        Dropdown Menu
+    </button>
+    <div id="my-dropdown-toggle-content"
+         class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden opacity-0 transform -translate-y-2 transition-all duration-300 ease-in-out">
+        <div class="py-1"
+             role="menu"
+             aria-orientation="vertical"
+             aria-labelledby="options-menu">
+            <a href="#"
+               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+               role="menuitem">Option 1</a>
+            <a href="#"
+               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+               role="menuitem">Option 2</a>
+            <a href="#"
+               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+               role="menuitem">Option 3</a>
+        </div>
     </div>
-  </div>
 </div>
 <script type="module">
 import { ContentToggleHandler } from "{% static 'BaseApp/modules/ContentToggleHandler.mjs' %}";

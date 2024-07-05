@@ -1,0 +1,9 @@
+{% if previous_url %}
+    <button hx-get="{{ previous_url }}"
+            hx-target="{{ back_button_target_element }}"
+            hx-swap="innerHTML"
+            hx-push-url="true"
+            class="bg-white/50 hover:bg-white/70 px-4 py-2 text-black/70 hover:text-black rounded-md transition duration-300 ease-in-out">
+        &larr; Back to {{ previous_url|title }}
+    </button>
+{% endif %}

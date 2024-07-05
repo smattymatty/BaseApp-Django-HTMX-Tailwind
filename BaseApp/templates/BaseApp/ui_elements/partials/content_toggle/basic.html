@@ -1,17 +1,22 @@
 {% load content_toggle_tags %}
-<h3 class="text-2xl font-bold mb-4">Basic Click Toggle</h3>
-
-<div id="basic-toggle-container"
-        data-trigger-event="click"
-        data-close-event="click"
-        data-active-class-for-button="bg-gray-200 font-bold"
-        data-active-class-for-content="opacity-100"
-        data-animation-delay="100"
-        class="text-black">
-    <button id="basic-toggle-trigger" class="px-4 py-2 bg-gray-400 rounded">Toggle Content</button>
-    <div id="basic-toggle-content" class="mt-2 p-4 bg-white rounded shadow hidden opacity-0 transition-opacity duration-300">
-        This is the toggled content. Click the button to show/hide.
+<div class="flex flex-col space-y-2 border border-y-4 border-white/10 rounded-lg p-4 bg-slate-900/50">
+    <h3 class="text-lg font-bold text-center text-white">Basic Click Toggle</h3>
+    <div id="basic-toggle-container"
+         data-trigger-event="click"
+         data-close-event="click"
+         data-active-class-for-button="bg-black/50 hover:bg-black/50 font-bold text-white border-b-4 border-white/20"
+         data-active-class-for-content=""
+         data-delayed-active-class-for-content="opacity-100"
+         data-animation-delay="266"
+         class="flex flex-col space-y-2">
+        <button id="basic-toggle-trigger"
+                class="flex-grow w-full text-base lg:text-lg px-4 md:px-8 py-4 border-x border-white/10 rounded-md transition-all duration-100 ease-linear bg-black/20 hover:bg-black/30 text-white">
+            Toggle Content
+        </button>
+        <div id="basic-toggle-content"
+             class="mt-2 p-4 bg-black/20 rounded-md shadow hidden opacity-0 -translate-y-2 transition-all duration-300 text-white">
+            This is the toggled content. Click the button to show/hide.
+        </div>
     </div>
 </div>
-
 {% init_content_toggles "basic" %}

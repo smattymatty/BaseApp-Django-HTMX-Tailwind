@@ -1,3 +1,8 @@
+import { setup_logger } from './LoggingUtils.mjs';
+import { validateConfig } from './ConfigValidator.mjs';
+const MODULE_NAME = 'ContentToggleHandler';
+const DEBUG = true;
+const logger = setup_logger(MODULE_NAME, DEBUG);
 /**
  * ContentToggleHandler: A class to manage togglable content elements with various trigger and close options.
  *
@@ -15,7 +20,7 @@
  *    - data-close-others: "true" or "false" (default) - whether to close other open toggles when this one opens
  *    - data-handle-outside-click: "true" or "false" (default) - whether to close on clicks outside the container
  *                                 (only applies when data-close-event is "click")
- * 
+ *
  * 5. Initialize the toggle(s) by calling ContentToggleHandler.initAll() in your JavaScript:
  *    - To initialize all toggles: ContentToggleHandler.initAll()
  *    - To initialize specific toggle(s): ContentToggleHandler.initAll('toggle-id-1 toggle-id-2')
@@ -41,34 +46,46 @@
  * ContentToggleHandler.initAll('my-toggle');
  */
 
-const DEBUG = true;
-
 export class ContentToggleHandler {
   static instances = [];
 
   constructor(config) {
+    // TODO: add validation for config
+
     this.containerId = config.containerId;
-    this.container = document.getElementById(`${this.containerId}-toggle-container`);
-    this.triggerEvent = config.triggerEvent || "click";
-    this.closeEvent = config.closeEvent || "mouseleave";
-    this.activeClassForButton = config.activeClassForButton || "";
-    this.activeClassForContent = config.activeClassForContent || "";
-    this.delayedActiveClassForContent = config.delayedActiveClassForContent || "";
+    this.container = document.getElementById(
+      `${this.containerId}-toggle-container`
+    );
+    this.triggerEvent = config.triggerEvent || 'click';
+    this.closeEvent = config.closeEvent || 'mouseleave';
+    this.activeClassForButton = config.activeClassForButton || '';
+    this.activeClassForContent = config.activeClassForContent || '';
+    this.delayedActiveClassForContent =
+      config.delayedActiveClassForContent || '';
     this.animationDelay = config.animationDelay || 50; // milliseconds
     this.closeOthers = config.closeOthers || false;
     this.shouldHandleOutsideClick = config.handleOutsideClick || false;
-
+    this.toggleType = config.toggleType || 'hidden';
 
     if (!this.container) {
-      console.error(`[ContentToggleHandler Error] Container with ID "${this.containerId}-toggle-container" not found.`);
+      logger.error(
+        `[ContentToggleHandler Error] Container with ID "${this.containerId}-toggle-container" not found.`,
+        'constructor'
+      );
       return;
     }
 
-    this.triggerElement = document.getElementById(`${this.containerId}-toggle-trigger`);
-    this.contentElement = document.getElementById(`${this.containerId}-toggle-content`);
+    this.triggerElement = document.getElementById(
+      `${this.containerId}-toggle-trigger`
+    );
+    this.contentElement = document.getElementById(
+      `${this.containerId}-toggle-content`
+    );
 
     if (!this.triggerElement || !this.contentElement) {
-      console.error(`[ContentToggleHandler Error] Missing trigger or content element in container "${this.containerId}".`);
+      logger.error(
+        `[ContentToggleHandler Error] Missing trigger or content element in container "${this.containerId}".`
+      );
       return;
     }
 
@@ -77,141 +94,229 @@ export class ContentToggleHandler {
   }
 
   init() {
-    if (DEBUG) console.log(`[DEBUG] Setting up event listeners for ${this.containerId}`);
-  
-    if (this.triggerEvent === "hover") {
-      this.container.addEventListener("mouseenter", this.showContent.bind(this));
+    if (DEBUG)
+      logger.debug(
+        `Setting up event listeners for ${this.containerId}`,
+        'init'
+      );
+
+    if (this.triggerEvent === 'hover') {
+      this.container.addEventListener(
+        'mouseenter',
+        this.showContent.bind(this)
+      );
     } else {
-      this.triggerElement.addEventListener("click", this.toggleContent.bind(this));
+      this.triggerElement.addEventListener(
+        'click',
+        this.toggleContent.bind(this)
+      );
     }
-  
-    if (this.closeEvent === "mouseleave") {
-      this.container.addEventListener("mouseleave", this.hideContent.bind(this));
-    } else if (this.closeEvent === "click") {
+
+    if (this.closeEvent === 'mouseleave') {
+      this.container.addEventListener(
+        'mouseleave',
+        this.hideContent.bind(this)
+      );
+    } else if (this.closeEvent === 'click') {
       if (this.shouldHandleOutsideClick) {
-        document.addEventListener("click", this.handleOutsideClick.bind(this));
+        document.addEventListener('click', this.handleOutsideClick.bind(this));
       }
     }
   }
 
   showContent() {
-    if (DEBUG) console.log(`[DEBUG] Showing content for ${this.containerId}, closeOthers: ${this.closeOthers}`);
-    
+    if (DEBUG)
+      logger.debug(
+        `Showing content for ${this.containerId}, closeOthers: ${this.closeOthers}`,
+        'showContent'
+      );
+
     if (this.closeOthers) {
-      if (DEBUG) console.log(`[DEBUG] Closing other instances for ${this.containerId}`);
-      ContentToggleHandler.instances.forEach(instance => {
+      ContentToggleHandler.instances.forEach((instance) => {
         if (instance !== this) {
           instance.hideContentWithoutClosingOthers();
         }
       });
     }
 
-    this.contentElement.classList.remove("hidden");
-    if (this.activeClassForButton) {
-      this.triggerElement.classList.add(...this.activeClassForButton.split(' '));
+    // Remove hidden class immediately if using hidden toggle type
+    if (this.toggleType === 'hidden') {
+      this.contentElement.classList.remove('hidden');
+    }
+
+    // Use requestAnimationFrame to ensure the browser has time to process the removal of 'hidden'
+    requestAnimationFrame(() => {
+      if (this.activeClassForButton) {
+        this.triggerElement.classList.add(
+          ...this.activeClassForButton.split(' ')
+        );
+      }
+      if (this.activeClassForContent) {
+        this.contentElement.classList.add(
+          ...this.activeClassForContent.split(' ')
+        );
+      }
+      if (this.delayedActiveClassForContent) {
+        setTimeout(() => {
+          this.contentElement.classList.add(
+            ...this.delayedActiveClassForContent.split(' ')
+          );
+        }, this.animationDelay);
+      }
+    });
+  }
+
+  hideContent() {
+    if (DEBUG)
+      logger.debug(`Hiding content for ${this.containerId}`, 'hideContent');
+
+    if (this.delayedActiveClassForContent) {
+      this.contentElement.classList.remove(
+        ...this.delayedActiveClassForContent.split(' ')
+      );
     }
     if (this.activeClassForContent) {
-      this.contentElement.classList.add(...this.activeClassForContent.split(' '));
+      this.contentElement.classList.remove(
+        ...this.activeClassForContent.split(' ')
+      );
     }
-    if (this.delayedActiveClassForContent) {
+    if (this.activeClassForButton) {
+      this.triggerElement.classList.remove(
+        ...this.activeClassForButton.split(' ')
+      );
+    }
+
+    if (this.toggleType === 'hidden') {
       setTimeout(() => {
-        this.contentElement.classList.add(...this.delayedActiveClassForContent.split(' '));
+        this.contentElement.classList.add('hidden');
       }, this.animationDelay);
     }
   }
 
-  hideContent() {
-    if (DEBUG) console.log(`[DEBUG] Hiding content for ${this.containerId}`);
-
-    if (this.delayedActiveClassForContent) {
-      this.contentElement.classList.remove(...this.delayedActiveClassForContent.split(' '));
-    }
-    if (this.activeClassForContent) {
-      this.contentElement.classList.remove(...this.activeClassForContent.split(' '));
-    }
-    if (this.activeClassForButton) {
-      this.triggerElement.classList.remove(...this.activeClassForButton.split(' '));
-    }
-    setTimeout(() => {
-      this.contentElement.classList.add("hidden");
-    }, this.animationDelay);
-  }
-
   toggleContent() {
-    if (DEBUG) console.log(`[DEBUG] Toggling content for ${this.containerId}`);
-  
-    if (this.contentElement.classList.contains("hidden")) {
+    if (DEBUG)
+      logger.debug(`Toggling content for ${this.containerId}`, 'toggleContent');
+
+    const isContentVisible =
+      this.toggleType === 'hidden'
+        ? !this.contentElement.classList.contains('hidden')
+        : this.activeClassForContent
+            .split(' ')
+            .some((cls) => this.contentElement.classList.contains(cls));
+
+    if (!isContentVisible) {
       this.showContent();
     } else {
-      this.hideContentWithoutClosingOthers();
-    }
-  }
-  
-  hideContentWithoutClosingOthers() {
-    if (DEBUG) console.log(`[DEBUG] Hiding content for ${this.containerId} without closing others`);
-  
-    if (this.delayedActiveClassForContent) {
-      this.contentElement.classList.remove(...this.delayedActiveClassForContent.split(' '));
-    }
-    if (this.activeClassForContent) {
-      this.contentElement.classList.remove(...this.activeClassForContent.split(' '));
-    }
-    if (this.activeClassForButton) {
-      this.triggerElement.classList.remove(...this.activeClassForButton.split(' '));
-    }
-    setTimeout(() => {
-      this.contentElement.classList.add("hidden");
-    }, this.animationDelay);
-  }
-  handleOutsideClick(event) {
-    if (!this.container.contains(event.target) && !this.contentElement.classList.contains("hidden")) {
-      if (DEBUG) console.log(`[DEBUG] Outside click detected for ${this.containerId}`);
       this.hideContent();
     }
   }
 
-  static initAll(containerFilter = "") {
-    if (DEBUG) console.log(`[DEBUG] Initializing all ContentToggleHandlers with filter: "${containerFilter}"`);
-    
+  hideContentWithoutClosingOthers() {
+    if (DEBUG)
+      logger.debug(
+        `Hiding content for ${this.containerId} without closing others`,
+        'hideContentWithoutClosingOthers'
+      );
+
+    if (this.delayedActiveClassForContent) {
+      this.contentElement.classList.remove(
+        ...this.delayedActiveClassForContent.split(' ')
+      );
+    }
+    if (this.activeClassForContent) {
+      this.contentElement.classList.remove(
+        ...this.activeClassForContent.split(' ')
+      );
+    }
+    if (this.activeClassForButton) {
+      this.triggerElement.classList.remove(
+        ...this.activeClassForButton.split(' ')
+      );
+    }
+  }
+
+  handleOutsideClick(event) {
+    if (
+      !this.container.contains(event.target) &&
+      !this.contentElement.classList.contains('hidden')
+    ) {
+      if (DEBUG)
+        logger.debug(
+          `Outside click detected for ${this.containerId}`,
+          'handleOutsideClick'
+        );
+      this.hideContent();
+    }
+  }
+
+  static initAll(containerFilter = '') {
+    if (DEBUG)
+      logger.debug(
+        `Initializing all ContentToggleHandlers with filter: "${containerFilter}"`,
+        'initAll'
+      );
+
     const initializedContainers = new Set();
 
     const initializeContainer = (containerId) => {
       if (initializedContainers.has(containerId)) return;
 
-      const containerElement = document.getElementById(`${containerId}-toggle-container`);
+      const containerElement = document.getElementById(
+        `${containerId}-toggle-container`
+      );
       if (!containerElement) {
-        console.error(`[ContentToggleHandler Error] Container with ID "${containerId}-toggle-container" not found.`);
+        logger.error(
+          `Container with ID "${containerId}-toggle-container" not found.`,
+          'initializeContainer'
+        );
         return;
       }
 
-      if (DEBUG) console.log(`[DEBUG] Initializing ContentToggleHandler with ID "${containerElement.id}"`);
-      
+      if (DEBUG)
+        logger.debug(
+          `Initializing ContentToggleHandler with ID "${containerElement.id}"`,
+          'initializeContainer'
+        );
+
       const config = {
         containerId,
-        triggerEvent: containerElement.dataset.triggerEvent || "click",
-        closeEvent: containerElement.dataset.closeEvent || "mouseleave",
-        activeClassForButton: containerElement.dataset.activeClassForButton || "",
-        activeClassForContent: containerElement.dataset.activeClassForContent || "",
-        delayedActiveClassForContent: containerElement.dataset.delayedActiveClassForContent || "",
+        triggerEvent: containerElement.dataset.triggerEvent || 'click',
+        closeEvent: containerElement.dataset.closeEvent || 'mouseleave',
+        activeClassForButton:
+          containerElement.dataset.activeClassForButton || '',
+        activeClassForContent:
+          containerElement.dataset.activeClassForContent || '',
+        delayedActiveClassForContent:
+          containerElement.dataset.delayedActiveClassForContent || '',
         animationDelay: parseInt(containerElement.dataset.animationDelay) || 50,
-        closeOthers: containerElement.dataset.closeOthers === "true",
-        handleOutsideClick: containerElement.dataset.handleOutsideClick === "true",
+        closeOthers: containerElement.dataset.closeOthers === 'true',
+        handleOutsideClick:
+          containerElement.dataset.handleOutsideClick === 'true',
+        toggleType: containerElement.dataset.toggleType || 'hidden',
       };
-      if (DEBUG) console.log(`[DEBUG] Config for ${containerId}:`, config);
+      if (DEBUG)
+        logger.debug(
+          `Config for ${containerId}: ${config}`,
+          'initializeContainer'
+        );
       new ContentToggleHandler(config);
       initializedContainers.add(containerId);
     };
 
     if (containerFilter) {
-      if (containerFilter.includes(" ")) {
-        containerFilter.split(" ").forEach(initializeContainer);
+      if (containerFilter.includes(' ')) {
+        containerFilter.split(' ').forEach(initializeContainer);
       } else {
         initializeContainer(containerFilter);
       }
     } else {
-      document.querySelectorAll('[id$="-toggle-container"]').forEach((containerElement) => {
-        initializeContainer(containerElement.id.replace("-toggle-container", ""));
-      });
+      document
+        .querySelectorAll('[id$="-toggle-container"]')
+        .forEach((containerElement) => {
+          initializeContainer(
+            containerElement.id.replace('-toggle-container', '')
+          );
+        });
     }
   }
 }

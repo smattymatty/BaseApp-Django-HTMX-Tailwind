@@ -1,11 +1,34 @@
+{% load menu_tags %}
 <h2 class="text-2xl font-bold text-center">Decks</h2>
-<div class="container mx-auto p-4">
+
+<!-- Back button -->
+ <!-- It is empty because it is the first view of the app -->
+<div hx-trigger="load"
+     hx-get="{% url 'BaseApp:back-button' 'none' 'none' %}"
+     hx-target="#flash-card-back-button"
+     hx-swap="innerHTML"
+     hx-push-url="false">
+</div>
+
+<!-- Options Menu -->
+<div
+     hx-trigger="load"
+     hx-get="{% url 'FlashCardApp:deck_list_options' %}"
+     hx-target="#flashcard-app-menu-toggle-content"
+     hx-swap="innerHTML"
+     hx-push-url="false"
+></div>
+
+
+<div
+     class="container mx-auto p-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {% for deck in decks %}
             <div hx-get="{% url 'FlashCardApp:deck_detail' deck.id %}"
                  hx-target="#flash-card-app-container"
                  hx-swap="innerHTML"
                  hx-trigger="mousedown"
+                 hx-push-url="true"
                  class="flex flex-col bg-gray-300 border-b-4 hover:cursor-pointer border-slate-950/50 rounded-lg shadow-md p-4 transition-all duration-300 ease-linear hover:border-4 hover:scale-105  hover:border-slate-950/30 hover:bg-gray-100">
                 <h2 class="flex flex-grow text-xl font-bold mb-2 text-black/80">{{ deck.name }}</h2>
                 <p class="text-right text-black/80 opacity-80 text-sm">{{ deck.subject }}</p>
