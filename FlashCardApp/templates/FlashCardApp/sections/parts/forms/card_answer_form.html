@@ -1,0 +1,86 @@
+{% load button_group_tags string_enchants %}
+<div id="card-from-deck-detail-{{ card.id }}-toggle-container"
+     data-trigger-event="hover"
+     data-close-event="mouseleave"
+     data-active-class-for-button=""
+     data-active-class-for-content="opacity-100 max-h-96"
+     data-animation-delay="100"
+     data-toggle-type="class"
+     data-handle-outside-click="true"
+     class="flex-grow flex flex-col">
+    <form id="card-from-deck-detail-{{ card.id }}-toggle-trigger"
+          hx-post="{% url 'FlashCardApp:card_answer_result' card.id %}"
+          hx-target="#card-from-deck-detail-{{ card.id }}-toggle-container"
+          hx-swap="innerHTML"
+          class="text-black/80 transition-all duration-300 opacity-100">
+        {% csrf_token %}
+        {% if card.question.type == "TRUE_FALSE" %}
+    <div id="true-false-{{ card.id }}-toggled-button-group"
+         data-active-class="font-bold flex-grow ring-2 ring-blue-500"
+         class="flex justify-between m-2 space-x-2 px-6 md:px-3 lg:px-0">
+        <button type="button"
+                id="true-false-{{ card.id }}-true-button"
+                name="answer"
+                value="True"
+                class="flex-0 transition-all duration-300 px-8 py-2 bg-green-500 text-white rounded-md">True</button>
+        <button type="button"
+                id="true-false-{{ card.id }}-false-button"
+                name="answer"
+                value="False"
+                class="flex-0 transition-all duration-300 px-8 py-2 bg-red-500 text-white rounded-md">False</button>
+    </div>
+
+        {% elif card.question.type == "NUMERIC" %}
+            <div class="flex items-center my-2">
+                <button type="button"
+                        onclick="decrementCounter({{ card.id }})"
+                        class="px-2 py-2 bg-gray-200 rounded-l-md">-</button>
+                <input type="number"
+                       name="answer"
+                       id="numeric-answer-{{ card.id }}"
+                       value="0"
+                       class="hide-arrows w-full px-4 py-2 text-center rounded-none bg-blue-950/10 focus:bg-blue-950/20 text-black/50 focus:text-black/80 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <button type="button"
+                        onclick="incrementCounter({{ card.id }})"
+                        class="px-2 py-2 bg-gray-200 rounded-r-md">+</button>
+            </div>
+        {% else %}
+            <!-- Default to text input -->
+            <input type="text"
+                   name="answer"
+                   placeholder="Answer"
+                   class="w-full px-4 py-2 rounded-md bg-blue-950/10 focus:bg-blue-950/20 hover:bg-blue-950/30 active:bg-blue-950/40 text-black/50 focus:text-black/80 hover:text-black/60 active:text-black/80 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   required>
+        {% endif %}
+        <button type="submit"
+                id="card-from-deck-detail-{{ card.id }}-toggle-content"
+                class="max-h-0 opacity-0 overflow-hidden transition-all text-white px-4 py-2 rounded-md w-full duration-300 ease-in-out mt-2 bg-blue-800/70 hover:bg-blue-900/80">
+            Submit
+        </button>
+    </form>
+</div>
+{% init_toggled_button_groups "true-false-"|concat:card.id %}
+<style>
+    /* Hide arrows in Chrome, Safari, Edge, and Opera */
+    .hide-arrows::-webkit-outer-spin-button,
+    .hide-arrows::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Hide arrows in Firefox */
+    .hide-arrows[type="number"] {
+        -moz-appearance: textfield;
+    }
+</style>
+<script>
+    function decrementCounter(cardId) {
+        const input = document.getElementById(`numeric-answer-${cardId}`);
+        input.value = parseInt(input.value) - 1;
+    }
+
+    function incrementCounter(cardId) {
+        const input = document.getElementById(`numeric-answer-${cardId}`);
+        input.value = parseInt(input.value) + 1;
+    }
+</script>

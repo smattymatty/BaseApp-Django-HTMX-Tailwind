@@ -121,6 +121,14 @@ export class ContentToggleHandler {
       if (this.shouldHandleOutsideClick) {
         document.addEventListener('click', this.handleOutsideClick.bind(this));
       }
+    } else if (this.closeEvent === 'none') {
+      // do nothing
+    } else {
+      logger.error(
+        `[ContentToggleHandler Error] Invalid closeEvent: "${this.closeEvent}".`,
+        'constructor'
+      );
+      return;
     }
   }
 

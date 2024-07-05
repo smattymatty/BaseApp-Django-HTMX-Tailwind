@@ -19,7 +19,7 @@ class BlogView(BasePage):
     template_name = 'BlogApp/base.html'
     title = "Blog"
     page_description = "Welcome to my blog where I will be sharing my thoughts and experiences on various topics related to web development."
-    extended_header = True
+    header_is_extended = True
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

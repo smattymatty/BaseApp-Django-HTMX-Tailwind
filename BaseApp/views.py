@@ -17,14 +17,14 @@ class BasePage(TemplateView):
     title = "Base"
     page_description = "This is a base template for all pages."
     page_disclaimer = ""
-    extended_header = False
+    header_is_extended = False
 
     def get_context_data(self, **kwargs: Any) -> dict:
         context = super().get_context_data(**kwargs)
         context['title'] = self.title
         context['page_description'] = self.page_description
         context['page_disclaimer'] = self.page_disclaimer
-        context['extended_header'] = self.extended_header
+        context['header_is_extended'] = self.header_is_extended
         return context
 
 
@@ -33,7 +33,7 @@ class HomeView(BasePage):
     title = "Home"
     page_description = "I am a hobby developer who loves to learn and tinker with new technologies."
     page_disclaimer = "This website is a personal project to learn more about web development and to share my knowledge with others."
-    extended_header = True
+    header_is_extended = True
 
 
 def get_django_info(request):
@@ -67,7 +67,7 @@ class UIElementView(BasePage):
     template_name = 'BaseApp/ui_elements/base.html'
     title = "User Interface Elements"
     page_description = ""
-    extended_header = True
+    header_is_extended = True
 
     @require_htmx
     @staticmethod
@@ -181,12 +181,12 @@ def display_number(request):
 
 
 @require_htmx
-def get_back_button(request, url, target_element):
+def get_back_button(request, url, target_element='none'):
     """
     Returns a back button for the given URL
     """
-    if url == 'none':
-        return HttpResponse('')
+    if target_element == 'none':
+        target_element = ''
     template = loader.get_template('BaseApp/navigation/back_button.html')
     context = {
         'previous_url': reverse(url),
